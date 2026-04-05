@@ -7,7 +7,7 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "Latest News", path: "/latest" },
   { label: "District News", path: "/districts" },
-  { label: "Politics", path: "/category/politics" },
+  { label: "Politics", path: "/pages/politics.html" }, 
   { label: "Business", path: "/category/business" },
   { label: "Agriculture", path: "/category/agriculture" },
   { label: "Education", path: "/category/education" },
