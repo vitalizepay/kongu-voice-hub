@@ -37,7 +37,7 @@ export default function Header() {
             </div>
             <div>
               <h1 className="text-xl font-display font-black text-foreground leading-tight">
-                Kongu Times
+                The Kongu Times
               </h1>
               <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
                 Voice of Kongu Region

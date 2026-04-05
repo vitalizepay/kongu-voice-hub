@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="text-primary-foreground font-display font-black text-xl">K</span>
               </div>
               <div>
-                <h3 className="text-lg font-display font-black">Kongu Times</h3>
+                <h3 className="text-lg font-display font-black">The Kongu Times</h3>
                 <p className="text-[10px] uppercase tracking-[0.2em] opacity-60">Voice of Kongu Region</p>
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-background/10 mt-10 pt-6 text-center text-xs opacity-50">
-          <p>© {new Date().getFullYear()} Kongu Times. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} The Kongu Times. All rights reserved.</p>
         </div>
       </div>
     </footer>

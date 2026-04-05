@@ -14,9 +14,9 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background pb-16 lg:pb-0">
       <Helmet>
-        <title>Kongu Times — Voice of Kongu Region</title>
+        <title>The Kongu Times — Voice of Kongu Region</title>
         <meta name="description" content="Your trusted digital news source for the Kongu region covering Coimbatore, Erode, Tiruppur, Salem, Namakkal, Karur, and Nilgiris." />
-        <meta property="og:title" content="Kongu Times — Voice of Kongu Region" />
+        <meta property="og:title" content="The Kongu Times — Voice of Kongu Region" />
         <meta property="og:description" content="Regional digital news platform for Tamil Nadu's Kongu belt." />
         <meta property="og:type" content="website" />
       </Helmet>

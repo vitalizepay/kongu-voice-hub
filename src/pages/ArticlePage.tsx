@@ -21,8 +21,8 @@ export default function ArticlePage() {
 
   const related = sampleArticles.filter(a => a.id !== id).slice(0, 4);
 
-  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(article.title + " - Kongu Times")}`;
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title + " - Kongu Times")}`;
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(article.title + " - The Kongu Times")}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title + " - The Kongu Times")}`;
   const fbUrl = `https://www.facebook.com/sharer/sharer.php?quote=${encodeURIComponent(article.title)}`;
 
   return (
