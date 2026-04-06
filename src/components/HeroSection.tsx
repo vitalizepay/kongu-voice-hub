@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { sampleArticles } from "@/data/sampleNews";
 import { Clock, Eye } from "lucide-react";
-import heroImage from "@/assets/hero-coimbatore.jpg";
 
 export default function HeroSection() {
   const featured = sampleArticles[0];
@@ -11,7 +10,7 @@ export default function HeroSection() {
       <Link to={`/article/${featured.id}`} className="block group">
         <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[21/9]">
           <img
-            src={heroImage}
+            src={featured.image}
             alt={featured.title}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             width={1920}
