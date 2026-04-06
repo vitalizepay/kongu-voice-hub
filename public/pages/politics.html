@@ -3,266 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Politics — Tamil Nadu Election 2026 | The Kongu Times</title>
-    <meta name="description" content="Complete constituency-wise data for Tamil Nadu Assembly Election 2026 including candidates from DMK, AIADMK, TVK, and NTK.">
+    <title>Politics — Tamil Nadu Election 2026 & Global News | The Kongu Times</title>
+    <meta name="description" content="Complete Tamil Nadu Assembly Election 2026 constituency data, global political news, economy updates, and security analysis by The Kongu Times.">
+    <meta property="og:title" content="Politics — TN Election 2026 & World News | The Kongu Times">
+    <meta property="og:description" content="234 constituency data, global politics digest, economy & security coverage.">
+    <meta property="og:type" content="article">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background: #f8f8f8;
-            font-family: 'Inter', sans-serif;
-            color: #1a1a1a;
-        }
-        
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{background:#f5f5f5;font-family:'Inter',sans-serif;color:#1a1a1a;line-height:1.6}
+
         /* Header */
-        .site-header {
-            background: #fff;
-            border-bottom: 3px solid #dc2626;
-            padding: 12px 24px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        .header-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: inherit;
-        }
-        .brand-icon {
-            width: 40px; height: 40px;
-            background: #dc2626;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-size: 22px;
-        }
-        .brand-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            font-weight: 900;
-            line-height: 1.1;
-        }
-        .brand-text p {
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: #666;
-            font-weight: 500;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #dc2626;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: #fef2f2;
-            transition: all 0.2s;
-        }
-        .back-link:hover { background: #fee2e2; }
+        .site-header{background:#fff;border-bottom:3px solid #dc2626;padding:12px 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+        .header-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+        .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+        .brand-icon{width:40px;height:40px;background:#dc2626;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-weight:900;font-size:22px}
+        .brand-text h1{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;line-height:1.1}
+        .brand-text p{font-size:9px;text-transform:uppercase;letter-spacing:2.5px;color:#666;font-weight:500}
+        .back-link{display:inline-flex;align-items:center;gap:6px;color:#dc2626;text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:8px;background:#fef2f2;transition:all .2s}
+        .back-link:hover{background:#fee2e2}
 
-        /* Page hero */
-        .page-hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d1a1a 100%);
-            color: white;
-            padding: 48px 24px 40px;
-        }
-        .page-hero-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .page-hero .category-tag {
-            display: inline-block;
-            background: #dc2626;
-            color: white;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 5px 14px;
-            border-radius: 4px;
-            margin-bottom: 16px;
-        }
-        .page-hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 12px;
-        }
-        .page-hero .subtitle {
-            font-size: 1rem;
-            opacity: 0.8;
-            max-width: 700px;
-            line-height: 1.6;
-        }
-        .page-hero .meta-row {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .stat-pill {
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(8px);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .stat-pill .num {
-            background: #dc2626;
-            color: white;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-weight: 700;
-        }
+        /* Tab nav */
+        .tab-nav{background:#fff;border-bottom:1px solid #e5e5e5;padding:0 24px;position:sticky;top:62px;z-index:90}
+        .tab-nav-inner{max-width:1400px;margin:0 auto;display:flex;gap:0;overflow-x:auto}
+        .tab-btn{padding:14px 24px;font-size:14px;font-weight:600;color:#666;border:none;background:none;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+        .tab-btn:hover{color:#1a1a1a;background:#fafafa}
+        .tab-btn.active{color:#dc2626;border-bottom-color:#dc2626}
 
-        /* Content */
-        .content-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-        .info-bar {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .info-chip {
-            background: white;
-            border: 1px solid #e5e5e5;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #444;
-        }
-        .info-chip strong { color: #dc2626; }
+        /* Hero */
+        .page-hero{background:linear-gradient(135deg,#1a1a1a 0%,#2d1a1a 100%);color:#fff;padding:48px 24px 40px}
+        .page-hero-inner{max-width:1400px;margin:0 auto}
+        .category-tag{display:inline-block;background:#dc2626;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 14px;border-radius:4px;margin-bottom:16px}
+        .page-hero h2{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1.2;margin-bottom:12px}
+        .page-hero .subtitle{font-size:1rem;opacity:.8;max-width:800px;line-height:1.6}
+        .meta-row{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+        .stat-pill{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);padding:8px 18px;border-radius:50px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px}
+        .stat-pill .num{background:#dc2626;color:#fff;padding:2px 10px;border-radius:20px;font-weight:700}
 
-        /* Table */
-        .table-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            border: 1px solid #e8e8e8;
-        }
-        .table-wrapper {
-            overflow-x: auto;
-            overflow-y: auto;
-            max-height: 72vh;
-            scrollbar-width: thin;
-        }
-        .candidate-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.82rem;
-            min-width: 900px;
-        }
-        .candidate-table th {
-            background: #1a1a1a;
-            color: white;
-            font-weight: 600;
-            padding: 14px 10px;
-            border: none;
-            font-size: 0.8rem;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            white-space: nowrap;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .candidate-table th:first-child {
-            border-radius: 0;
-        }
-        .candidate-table td {
-            border-bottom: 1px solid #f0f0f0;
-            padding: 10px;
-            color: #333;
-            vertical-align: top;
-        }
-        .candidate-table tbody tr:nth-child(even) td {
-            background-color: #fafafa;
-        }
-        .candidate-table tbody tr:hover td {
-            background-color: #fef2f2;
-        }
-        .candidate-table td:first-child {
-            font-weight: 600;
-            color: #dc2626;
-            text-align: center;
-            background-color: #fff8f8;
-        }
-        .candidate-table td:nth-child(2) {
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-        .candidate-table td:nth-child(3) {
-            font-weight: 500;
-            text-align: right;
-            font-family: 'Inter', monospace;
-            color: #666;
-        }
-        .empty-cell {
-            color: #ccc;
-        }
+        /* Section containers */
+        .content-section{max-width:1400px;margin:0 auto;padding:24px}
+        .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;margin-bottom:8px;color:#1a1a1a;display:flex;align-items:center;gap:10px}
+        .section-desc{color:#666;font-size:.9rem;margin-bottom:20px}
+        .tab-panel{display:none}
+        .tab-panel.active{display:block}
+
+        /* Info bar */
+        .info-bar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+        .info-chip{background:#fff;border:1px solid #e5e5e5;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:500;color:#444}
+        .info-chip strong{color:#dc2626}
+
+        /* Election Table */
+        .table-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06);border:1px solid #e8e8e8}
+        .table-wrapper{overflow-x:auto;overflow-y:auto;max-height:72vh;scrollbar-width:thin}
+        .candidate-table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:900px}
+        .candidate-table th{background:#1a1a1a;color:#fff;font-weight:600;padding:14px 10px;border:none;font-size:.8rem;position:sticky;top:0;z-index:10;white-space:nowrap;text-transform:uppercase;letter-spacing:.5px}
+        .candidate-table td{border-bottom:1px solid #f0f0f0;padding:10px;color:#333;vertical-align:top}
+        .candidate-table tbody tr:nth-child(even) td{background-color:#fafafa}
+        .candidate-table tbody tr:hover td{background-color:#fef2f2}
+        .candidate-table td:first-child{font-weight:600;color:#dc2626;text-align:center;background-color:#fff8f8}
+        .candidate-table td:nth-child(2){font-weight:600;color:#1a1a1a}
+        .candidate-table td:nth-child(3){font-weight:500;text-align:right;font-family:'Inter',monospace;color:#666}
+        .empty-cell{color:#ccc}
+        .table-footer{padding:16px 20px;background:#fafafa;border-top:1px solid #eee;font-size:12px;color:#888;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+
+        /* News cards grid */
+        .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;margin-bottom:32px}
+        .news-card{background:#fff;border-radius:14px;padding:24px;border:1px solid #eee;box-shadow:0 2px 12px rgba(0,0,0,.04);transition:all .25s}
+        .news-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-2px)}
+        .news-card .card-tag{display:inline-block;background:#fef2f2;color:#dc2626;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:4px;margin-bottom:10px}
+        .news-card .card-tag.economy{background:#fef9c3;color:#92400e}
+        .news-card .card-tag.security{background:#fee2e2;color:#991b1b}
+        .news-card .card-tag.science{background:#e0f2fe;color:#075985}
+        .news-card .card-tag.tech{background:#ede9fe;color:#5b21b6}
+        .news-card .card-tag.environment{background:#d1fae5;color:#065f46}
+        .news-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;line-height:1.35;margin-bottom:8px;color:#1a1a1a}
+        .news-card .card-meta{font-size:12px;color:#999;margin-bottom:10px;display:flex;gap:12px;flex-wrap:wrap}
+        .news-card p{font-size:.88rem;color:#555;line-height:1.65}
+        .news-card .significance{margin-top:10px;padding:10px 14px;background:#f8f8f8;border-radius:8px;font-size:.82rem;color:#444;border-left:3px solid #dc2626}
+
+        /* Executive summary */
+        .exec-summary{background:#fff;border-radius:16px;padding:32px;border:1px solid #eee;box-shadow:0 4px 20px rgba(0,0,0,.05);margin-bottom:28px}
+        .exec-summary p{font-size:.95rem;line-height:1.8;color:#333}
+
+        /* Category header */
+        .cat-header{display:flex;align-items:center;gap:10px;margin:32px 0 16px;padding-bottom:12px;border-bottom:2px solid #f0f0f0}
+        .cat-header .cat-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+        .cat-header .cat-icon.politics{background:#fef2f2}
+        .cat-header .cat-icon.economy{background:#fef9c3}
+        .cat-header .cat-icon.security{background:#fee2e2}
+        .cat-header .cat-icon.science{background:#e0f2fe}
+        .cat-header .cat-icon.tech{background:#ede9fe}
+        .cat-header .cat-icon.environment{background:#d1fae5}
+        .cat-header h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#1a1a1a}
 
         /* Footer */
-        .table-footer {
-            padding: 16px 20px;
-            background: #fafafa;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            color: #888;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .site-footer {
-            background: #1a1a1a;
-            color: #999;
-            text-align: center;
-            padding: 24px;
-            font-size: 13px;
-            margin-top: 40px;
-        }
-        .site-footer a { color: #dc2626; text-decoration: none; }
+        .site-footer{background:#1a1a1a;color:#999;text-align:center;padding:24px;font-size:13px;margin-top:40px}
+        .site-footer a{color:#dc2626;text-decoration:none}
 
-        @media (max-width: 768px) {
-            .page-hero { padding: 32px 16px 28px; }
-            .page-hero h2 { font-size: 1.5rem; }
-            .content-section { padding: 16px; }
-            .candidate-table th, .candidate-table td { padding: 7px 6px; font-size: 0.72rem; }
-            .brand-text h1 { font-size: 1.1rem; }
+        @media(max-width:768px){
+            .page-hero{padding:32px 16px 28px}.page-hero h2{font-size:1.5rem}
+            .content-section{padding:16px}
+            .candidate-table th,.candidate-table td{padding:7px 6px;font-size:.72rem}
+            .brand-text h1{font-size:1.1rem}
+            .news-grid{grid-template-columns:1fr}
+            .tab-btn{padding:12px 16px;font-size:13px}
+            .exec-summary{padding:20px}
+            .news-card{padding:18px}
         }
     </style>
 </head>
@@ -282,48 +129,319 @@
     </div>
 </header>
 
+<!-- Tab Navigation -->
+<nav class="tab-nav">
+    <div class="tab-nav-inner">
+        <button class="tab-btn active" onclick="switchTab('election')">🗳️ TN Election 2026</button>
+        <button class="tab-btn" onclick="switchTab('world')">🌍 World News Digest</button>
+        <button class="tab-btn" onclick="switchTab('economy')">📈 Economy & Markets</button>
+        <button class="tab-btn" onclick="switchTab('security')">🛡️ Security & Conflict</button>
+        <button class="tab-btn" onclick="switchTab('scitech')">🔬 Science & Tech</button>
+        <button class="tab-btn" onclick="switchTab('climate')">🌿 Environment</button>
+    </div>
+</nav>
+
 <!-- Hero -->
 <section class="page-hero">
     <div class="page-hero-inner">
-        <span class="category-tag">Politics</span>
-        <h2>🗳️ Tamil Nadu Assembly Election 2026</h2>
-        <p class="subtitle">Complete constituency-wise data with electors count and confirmed candidates from all major alliances — DMK (SPA), AIADMK (NDA), TVK, and NTK.</p>
+        <span class="category-tag">Politics & World Affairs</span>
+        <h2>Tamil Nadu Election 2026 & Global News Digest</h2>
+        <p class="subtitle">Complete constituency-wise election data with all 234 seats, plus comprehensive global political, economic, and security analysis — April 2026.</p>
         <div class="meta-row">
             <div class="stat-pill">📍 Total Seats <span class="num" id="totalSeatsCount">234</span></div>
             <div class="stat-pill">📅 Polling: April 23, 2026</div>
             <div class="stat-pill">📋 Results: May 4, 2026</div>
+            <div class="stat-pill">🌍 Global Coverage: 6 Sections</div>
         </div>
     </div>
 </section>
 
-<!-- Content -->
-<div class="content-section">
-    <div class="info-bar">
-        <div class="info-chip">✅ <strong>DMK</strong> candidates fully updated from official announcement</div>
-        <div class="info-chip">📊 AIADMK, TVK, NTK data from latest available sources</div>
-        <div class="info-chip">🔄 Last updated: <strong>April 6, 2026</strong></div>
-    </div>
-
-    <div class="table-card">
-        <div class="table-wrapper">
-            <table class="candidate-table" id="electionTable">
-                <thead>
-                    <tr>
-                        <th>AC No.</th>
-                        <th>Constituency</th>
-                        <th>Electors</th>
-                        <th>DMK (SPA)</th>
-                        <th>AIADMK (NDA)</th>
-                        <th>TVK</th>
-                        <th>NTK</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody"></tbody>
-            </table>
+<!-- ================ TAB: ELECTION ================ -->
+<div id="tab-election" class="tab-panel active">
+    <div class="content-section">
+        <div class="info-bar">
+            <div class="info-chip">✅ <strong>DMK</strong> candidates fully updated from official announcement</div>
+            <div class="info-chip">📊 AIADMK, TVK, NTK data from latest available sources</div>
+            <div class="info-chip">🔄 Last updated: <strong>April 6, 2026</strong></div>
         </div>
-        <div class="table-footer">
-            <span>✅ Sources: Election Commission electors data | Official party candidate lists (April 2026)</span>
-            <span>Published by <strong>The Kongu Times</strong></span>
+        <div class="table-card">
+            <div class="table-wrapper">
+                <table class="candidate-table" id="electionTable">
+                    <thead>
+                        <tr>
+                            <th>AC No.</th>
+                            <th>Constituency</th>
+                            <th>Electors</th>
+                            <th>DMK (SPA)</th>
+                            <th>AIADMK (NDA)</th>
+                            <th>TVK</th>
+                            <th>NTK</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <span>✅ Sources: Election Commission electors data | Official party candidate lists (April 2026)</span>
+                <span>Published by <strong>The Kongu Times</strong></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================ TAB: WORLD NEWS ================ -->
+<div id="tab-world" class="tab-panel">
+    <div class="content-section">
+        <div class="exec-summary">
+            <h2 class="section-title">📋 Executive Summary — Early April 2026</h2>
+            <p style="margin-top:14px">Early April 2026 saw intense geopolitical volatility and consequential policy moves. Pakistan circulated a tentative ceasefire proposal ("Islamabad Accord") to the U.S. and Iran as pressures mounted to halt the five-week war. Simultaneously, the U.S. conducted a daring rescue of a downed F-15 crewman from Iran, while President Trump publicly vowed severe strikes if Iran kept the Strait of Hormuz closed. Major elections and political shifts occurred worldwide: Italy's referendum overwhelmingly rejected PM Meloni's justice reforms, Denmark's ruling party suffered historic losses necessitating new coalition talks, and new leaders took power in Nepal and Myanmar. Economies responded with market jitters and policy recalibrations, even as science and environment made headlines: NASA launched the Artemis II crewed moon mission and severe weather warnings were issued globally.</p>
+        </div>
+
+        <div class="cat-header"><div class="cat-icon politics">🏛️</div><h3>Politics — Global & Major Countries</h3></div>
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="card-tag">Nepal</span>
+                <h3>Nepal's Ex-Rapper Balendra Shah Sworn in as PM</h3>
+                <div class="card-meta"><span>📅 Mar 27, 2026</span><span>📍 Kathmandu</span></div>
+                <p>The former Kathmandu mayor and rapper Balendra "Balen" Shah was sworn in as Nepal's new prime minister after his party surprisingly won the recent elections. His unconventional rise reflects a public desire for new leadership.</p>
+                <div class="significance"><strong>Significance:</strong> Shah's victory could bring fresh reforms to Nepal's chronically unstable politics and address economic challenges.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">Myanmar</span>
+                <h3>Myanmar's Junta Chief Becomes President</h3>
+                <div class="card-meta"><span>📅 Apr 3, 2026</span><span>📍 Naypyitaw</span></div>
+                <p>Myanmar's coup leader Senior Gen. Min Aung Hlaing easily won a parliament vote to become president, formalizing military rule under a civilian title. He secured 429 of 555 legislative votes.</p>
+                <div class="significance"><strong>Significance:</strong> This cements the junta's control behind a civilian guise, likely deepening Myanmar's international isolation even as civil war persists.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">Italy</span>
+                <h3>Italy Referendum Rejects Justice Reform</h3>
+                <div class="card-meta"><span>📅 Mar 23, 2026</span><span>📍 Rome</span></div>
+                <p>Italian voters overwhelmingly rejected proposed judicial reforms backed by PM Giorgia Meloni's coalition. Results showed roughly 54% voting "No" versus 46% "Yes" on high turnout.</p>
+                <div class="significance"><strong>Significance:</strong> This setback undermines Meloni's political momentum ahead of 2027 elections and may energize opposition unity.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">Denmark</span>
+                <h3>Denmark Election Yields Hung Parliament</h3>
+                <div class="card-meta"><span>📅 Mar 25, 2026</span><span>📍 Copenhagen</span></div>
+                <p>PM Mette Frederiksen's Social Democrats fell to their worst result since 1903 (projected 38 seats, down from 50). Left- and right-wing blocs both fell short, making centrist Moderates (14 seats) potential kingmakers.</p>
+                <div class="significance"><strong>Significance:</strong> Reflects voter fatigue with long-time incumbents amid cost-of-living and social issues.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">Congo</span>
+                <h3>Congo Republic's Sassou Set to Extend Rule</h3>
+                <div class="card-meta"><span>📅 Mar 10, 2026</span><span>📍 Brazzaville</span></div>
+                <p>President Denis Sassou Nguesso, in power since 1979, is poised for re-election after opposition coalition withdrew, ensuring a comfortable victory.</p>
+                <div class="significance"><strong>Significance:</strong> If confirmed, Sassou would extend his nearly 42-year reign; attention turns to his eventual succession.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">Central Africa</span>
+                <h3>CAR's Touadera Sworn for Third Term</h3>
+                <div class="card-meta"><span>📅 Mar 30, 2026</span><span>📍 Bangui</span></div>
+                <p>President Faustin-Archange Touadera was inaugurated for a contested third term, following a December 2025 election widely boycotted by opposition parties.</p>
+                <div class="significance"><strong>Significance:</strong> Consolidates Touadera's hold despite challenges from rebel groups; lingering legitimacy issues may destabilize CAR's fragile peace.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">Hungary</span>
+                <h3>Hungary Election Polls Favor Opposition</h3>
+                <div class="card-meta"><span>📅 Apr 1, 2026</span><span>📍 Budapest</span></div>
+                <p>Recent opinion polls show the opposition alliance led by conservative Péter Tisza widening its lead over PM Viktor Orbán's Fidesz party ahead of April 12 elections.</p>
+                <div class="significance"><strong>Significance:</strong> If this holds, it could break Orbán's 16-year rule and unlock long-blocked EU funding.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag">United States</span>
+                <h3>Trump Weighs Cabinet Shake-up Amid Iran War</h3>
+                <div class="card-meta"><span>📅 Apr 4, 2026</span><span>📍 Washington D.C.</span></div>
+                <p>Reports indicate President Trump is considering a broader reshuffle, including firing Attorney General Pam Bondi and potential changes at commerce and intelligence agencies.</p>
+                <div class="significance"><strong>Significance:</strong> Political turmoil reflects how the Middle East conflict impacts U.S. domestic policy and midterm preparations.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================ TAB: ECONOMY ================ -->
+<div id="tab-economy" class="tab-panel">
+    <div class="content-section">
+        <div class="cat-header"><div class="cat-icon economy">💹</div><h3>Economy & Markets</h3></div>
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="card-tag economy">Markets</span>
+                <h3>Markets Jitter as Trump Threatens Iran Strikes</h3>
+                <div class="card-meta"><span>📅 Apr 6, 2026</span></div>
+                <p>Global oil prices and stock indices spiked as President Trump declared he would rain "hell" on Iran's infrastructure if it did not reopen the Strait of Hormuz.</p>
+                <div class="significance"><strong>Significance:</strong> Highlights how geopolitical risks from war can quickly translate into commodity price shocks and investor uncertainty.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag economy">Banking</span>
+                <h3>JPMorgan's Dimon Warns of Inflation Risk</h3>
+                <div class="card-meta"><span>📅 Apr 6, 2026</span></div>
+                <p>Jamie Dimon wrote in his annual letter that the Iran war could cause oil and commodity supply shocks, making inflation "stickier" and potentially forcing central banks to keep interest rates higher for longer.</p>
+                <div class="significance"><strong>Significance:</strong> A stark caution from a leading banker underscores market anxiety that the regional conflict may undermine disinflation trends.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag economy">U.S. Fed</span>
+                <h3>U.S. Fed Faces Mixed Data</h3>
+                <div class="card-meta"><span>📅 Mar 6, 2026</span></div>
+                <p>February data showed job losses (unemployment rising to 4.4%) even as inflation remained near 4%, partly driven by a recent oil spike from the Middle East war.</p>
+                <div class="significance"><strong>Significance:</strong> Lingering inflation alongside a cooling labor market evokes "stagflation" fears, making Fed's upcoming policy decisions especially tricky.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag economy">France</span>
+                <h3>France Passes 2026 Budget</h3>
+                <div class="card-meta"><span>📅 Feb 2, 2026</span><span>📍 Paris</span></div>
+                <p>President Macron's government narrowly approved the 2026 budget after two failed no-confidence votes. Bond spreads fell as markets welcomed the resolution.</p>
+                <div class="significance"><strong>Significance:</strong> Ends a months-long fiscal crisis and lends stability to the €2.8 trillion economy.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag economy">Eurozone</span>
+                <h3>Eurozone Growth Nearly Stalls</h3>
+                <div class="card-meta"><span>📅 Mar 24, 2026</span></div>
+                <p>Flash PMI survey showed March eurozone private-sector growth cooling to a 10-month low (Composite PMI 50.5) as input costs surged amid the Iran war and supply chain strains.</p>
+                <div class="significance"><strong>Significance:</strong> The data rings "stagflation alarm bells," indicating the conflict-induced energy shock is denting Eurozone growth.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================ TAB: SECURITY ================ -->
+<div id="tab-security" class="tab-panel">
+    <div class="content-section">
+        <div class="cat-header"><div class="cat-icon security">⚔️</div><h3>Security & Conflict</h3></div>
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="card-tag security">Ceasefire</span>
+                <h3>Pakistan Mediates U.S.-Iran Ceasefire Proposal</h3>
+                <div class="card-meta"><span>📅 Apr 6, 2026</span><span>📍 Islamabad</span></div>
+                <p>Reports indicate Pakistan sent an "Islamabad Accord" ceasefire framework to both the U.S. and Iran, proposing a five-week halt in fighting, prisoner releases, and eventual withdrawal of foreign troops.</p>
+                <div class="significance"><strong>Significance:</strong> If accepted, the plan could de-escalate one of the most dangerous conflicts since WWII and stabilize Gulf oil flows.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag security">U.S.-Iran</span>
+                <h3>U.S. Rescues Downed Airman, Trump Escalates Threats</h3>
+                <div class="card-meta"><span>📅 Apr 5, 2026</span><span>📍 Washington</span></div>
+                <p>U.S. special forces carried out a "daring" raid inside Iran to rescue an airman from a recently shot-down F-15. Trump simultaneously warned Iran to open the Hormuz Strait or face strikes on energy targets.</p>
+                <div class="significance"><strong>Significance:</strong> Dramatically escalates tensions, showing how direct U.S. actions can rapidly widen the conflict's scope and threaten global oil supply.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag security">North Korea</span>
+                <h3>North Korea Fires Ballistic Missiles</h3>
+                <div class="card-meta"><span>📅 Mar 14, 2026</span><span>📍 Pyongyang</span></div>
+                <p>North Korea launched more than 10 short-range ballistic missiles into the East Sea amid joint U.S.-South Korea drills. Japan reported one missile landing outside its exclusive economic zone.</p>
+                <div class="significance"><strong>Significance:</strong> Underscores Pyongyang's quick-provocation strategy; keeps Northeast Asian tensions high as diplomacy remains stalled.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================ TAB: SCIENCE & TECH ================ -->
+<div id="tab-scitech" class="tab-panel">
+    <div class="content-section">
+        <div class="cat-header"><div class="cat-icon science">🚀</div><h3>Science & Health</h3></div>
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="card-tag science">Space</span>
+                <h3>NASA Artemis II Crewed Moon Launch</h3>
+                <div class="card-meta"><span>📅 Apr 1, 2026</span><span>📍 Cape Canaveral</span></div>
+                <p>NASA successfully launched four astronauts on Artemis II, the first human lunar mission since Apollo 17 in 1972. The SLS rocket sent Orion on a 10-day loop around the moon.</p>
+                <div class="significance"><strong>Significance:</strong> Renews the U.S. role in human deep-space exploration and ramps up competition with China's space program.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag science">Health</span>
+                <h3>Bangladesh Measles Outbreak Kills 15</h3>
+                <div class="card-meta"><span>📅 Apr 1, 2026</span><span>📍 Dhaka</span></div>
+                <p>Bangladesh confirmed 15 deaths from a recent measles outbreak, primarily affecting children. Emergency vaccinations were launched.</p>
+                <div class="significance"><strong>Significance:</strong> Highlights risk of vaccine-preventable diseases resurging amid falling routine immunization rates globally.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag science">Agriculture</span>
+                <h3>China Reports New Cattle Disease Strain</h3>
+                <div class="card-meta"><span>📅 Apr 2, 2026</span><span>📍 Beijing</span></div>
+                <p>China announced 219 cases of the SAT1 strain of foot-and-mouth disease in cattle. SAT1 is not previously seen in China and current vaccines offer no protection.</p>
+                <div class="significance"><strong>Significance:</strong> Poses a biosecurity threat to livestock and dairy markets; authorities need to develop new vaccines urgently.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag science">COVID-19</span>
+                <h3>COVID-19 Booster Trial Halted</h3>
+                <div class="card-meta"><span>📅 Apr 1, 2026</span></div>
+                <p>Pfizer and BioNTech stopped a U.S. trial of their updated COVID-19 vaccine in healthy 50–64-year-olds due to very low enrollment, citing stricter FDA requirements and waning public demand.</p>
+                <div class="significance"><strong>Significance:</strong> Indicates declining uptake of boosters and complicates U.S. planning for future booster approvals.</div>
+            </div>
+        </div>
+
+        <div class="cat-header" style="margin-top:40px"><div class="cat-icon tech">💻</div><h3>Technology</h3></div>
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="card-tag tech">China AI</span>
+                <h3>China Proposes Strict Rules for "Digital Humans"</h3>
+                <div class="card-meta"><span>📅 Apr 3, 2026</span><span>📍 Beijing</span></div>
+                <p>China's cybersecurity regulator issued draft regulations for AI-driven virtual avatars, requiring clear labelling of AI content and banning "intimate" interactions with minors.</p>
+                <div class="significance"><strong>Significance:</strong> Signals Beijing's push to regulate the booming AI media sector, balancing innovation with strict content controls.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag tech">UK AI</span>
+                <h3>UK Courts Anthropic After US AI Spat</h3>
+                <div class="card-meta"><span>📅 Apr 5, 2026</span><span>📍 London</span></div>
+                <p>The British government is reportedly offering incentives to attract Anthropic expansion in the UK after U.S. officials blocked the company from some defense contracts.</p>
+                <div class="significance"><strong>Significance:</strong> Underscores intensifying transatlantic tech competition in AI talent and strategic positioning.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag tech">Musk</span>
+                <h3>Musk Insists Banks Buy His AI Chatbot</h3>
+                <div class="card-meta"><span>📅 Apr 3, 2026</span><span>📍 New York</span></div>
+                <p>Elon Musk reportedly demanded banks managing the upcoming SpaceX IPO subscribe to his AI chatbot "Grok" as part of their fees.</p>
+                <div class="significance"><strong>Significance:</strong> Illustrates Musk's unconventional business tactics and raises questions about vendor influence in finance.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag tech">U.S. Policy</span>
+                <h3>U.S. Sets National AI Policy Framework</h3>
+                <div class="card-meta"><span>📅 Mar 20, 2026</span><span>📍 Washington</span></div>
+                <p>The White House unveiled a legislative agenda urging Congress to pre-empt state AI laws, focusing on child safety, infrastructure energy use, and AI innovation.</p>
+                <div class="significance"><strong>Significance:</strong> Reflects Washington's strategy to balance AI growth with safeguards and maintain U.S. tech leadership.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================ TAB: CLIMATE ================ -->
+<div id="tab-climate" class="tab-panel">
+    <div class="content-section">
+        <div class="cat-header"><div class="cat-icon environment">🌍</div><h3>Environment & Climate</h3></div>
+        <div class="news-grid">
+            <div class="news-card">
+                <span class="card-tag environment">China</span>
+                <h3>China Warns of Severe Floods and Droughts</h3>
+                <div class="card-meta"><span>📅 Apr 1, 2026</span><span>📍 Beijing</span></div>
+                <p>China's Water Resources Ministry cautioned that parts of northern and southern China could face extreme flooding in summer and intense droughts in winter/spring 2026.</p>
+                <div class="significance"><strong>Significance:</strong> Highlights China's mounting climate vulnerability; officials may need to accelerate water management and disaster-prep measures.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag environment">Greece</span>
+                <h3>Storm Batters Greece</h3>
+                <div class="card-meta"><span>📅 Apr 2, 2026</span><span>📍 Athens</span></div>
+                <p>Storm "Erminio" hit eastern Greece with torrential rain and high winds, killing one person and causing severe flooding in communities around Athens.</p>
+                <div class="significance"><strong>Significance:</strong> Exemplifies Europe's increasingly volatile spring weather linked to warming, raising concerns about urban flood defenses.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag environment">United States</span>
+                <h3>US to Monitor Microplastics in Water</h3>
+                <div class="card-meta"><span>📅 Apr 2, 2026</span><span>📍 Washington</span></div>
+                <p>U.S. health agencies announced they will begin tracking microplastics and trace pharmaceuticals as contaminants in drinking water for the first time under the Safe Drinking Water Act.</p>
+                <div class="significance"><strong>Significance:</strong> A major step in recognizing emerging pollutants; could prompt future regulations to protect public health.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag environment">UK Energy</span>
+                <h3>UK Renewable Power Hits Record in 2025</h3>
+                <div class="card-meta"><span>📅 Apr 2, 2026</span><span>📍 London</span></div>
+                <p>Data showed renewables supplied 52.5% of Britain's electricity in 2025, a new high. However, gas power generation also rose by 4.7%.</p>
+                <div class="significance"><strong>Significance:</strong> Highlights Britain's progress on climate goals, but uptick in gas underscores challenges in phasing out fossil fuels.</div>
+            </div>
+            <div class="news-card">
+                <span class="card-tag environment">Afghanistan</span>
+                <h3>Afghanistan Earthquake Kills 8</h3>
+                <div class="card-meta"><span>📅 Apr 3, 2026</span><span>📍 Kabul</span></div>
+                <p>A magnitude 5.9 quake struck Afghanistan's Hindu Kush region, collapsing a house in Kabul and killing eight people. Tremors were felt as far as Islamabad and Delhi.</p>
+                <div class="significance"><strong>Significance:</strong> Underscores the urgent need for earthquake-resistant infrastructure and disaster preparedness in the region.</div>
+            </div>
         </div>
     </div>
 </div>
@@ -331,200 +449,204 @@
 <!-- Footer -->
 <footer class="site-footer">
     <p>© 2026 <a href="/">The Kongu Times</a> — Voice of Kongu Region. All rights reserved.</p>
+    <p style="margin-top:6px;font-size:11px;color:#666">Published: April 6, 2026 | All content is original reporting by The Kongu Times editorial team.</p>
 </footer>
 
-    // --------------------------------------------------------------
-    // 1. ORIGINAL CANDIDATE DATA (AIADMK, TVK, NTK from sheet AC 1-180)
-    // --------------------------------------------------------------
+<script>
+    // Tab switching
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('tab-' + tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // ---- ELECTION TABLE DATA ----
     const originalCandidates = [
-        { ac:1, constName:"Gummidipoondi", dmk:"T.J. Govindarajan", aiadmk:"V. Sathan", tvk:"S. Vijayakumar", ntk:"Sridhar" },
-        { ac:2, constName:"Ponneri", dmk:"", aiadmk:"P. Balaraman", tvk:"Dr. M.S. Ravi", ntk:"Rajathi" },
-        { ac:3, constName:"Tiruttani", dmk:"", aiadmk:"K. Thiruthani", tvk:"Dr. M. Sathiyakumar", ntk:"Chandran" },
-        { ac:4, constName:"Thiruvallur", dmk:"V.G. Rajendran B.E.", aiadmk:"B.V. Ramana", tvk:"M. Thangavel", ntk:"Senthil Kumar" },
-        { ac:5, constName:"Poonamallee", dmk:"A. Krishnaswamy B.A., B.L.", aiadmk:"", tvk:"S.K. Sathya", ntk:"Mehala" },
-        { ac:6, constName:"Avadi", dmk:"S.M. Nasar", aiadmk:"", tvk:"S. Gopalakrishnan", ntk:"Punitha" },
-        { ac:7, constName:"Maduravoyal", dmk:"Karambakkam Ganapathy", aiadmk:"", tvk:"P. Thirupathi", ntk:"Revathi" },
-        { ac:8, constName:"Ambattur", dmk:"Dr. A.P. Poornima M.B.B.S., M.D.", aiadmk:"", tvk:"V. Karthiga Kanmani", ntk:"Aadhithan" },
-        { ac:9, constName:"Madhavaram", dmk:"S. Sudharsanam M.A., B.L.", aiadmk:"V. Moorthy", tvk:"S. Ragavendran", ntk:"Kruthika Elumalai" },
-        { ac:10, constName:"Thiruvottiyur", dmk:"", aiadmk:"K. Kuppan", tvk:"K. Elango", ntk:"Sathya Baskar" },
-        { ac:11, constName:"Dr. Radhakrishnan Nagar", dmk:"J.J. Ebenezer M.Com., B.L.", aiadmk:"Mr. R.S. Rajesh, D.M.E.", tvk:"A. Varadhan", ntk:"Vennila Thayumanavan" },
-        { ac:12, constName:"Perambur", dmk:"R.D. Sekar B.Com., B.L.", aiadmk:"", tvk:"C. Joseph Vijay", ntk:"Vetrithamizhan" },
-        { ac:13, constName:"Kolathur", dmk:"Muthuvel Karunanidhi Stalin B.A.", aiadmk:"Mr. P. Santhanakrishnan, ITI", tvk:"V.S. Babu", ntk:"Soundrapandian" },
-        { ac:14, constName:"Villivakkam", dmk:"Karthikeyan B.E., M.S.", aiadmk:"Mr. S.R. Vijayakumar, B.A., B.L.", tvk:"Adhav Arjuna", ntk:"Roshini" },
-        { ac:15, constName:"Thiru.Vi.Ka. Nagar", dmk:"", aiadmk:"Mrs. A. Porkodi, B.A., B.L.", tvk:"M. Kamaraj", ntk:"Jegadeesh Chander" },
-        { ac:16, constName:"Egmore", dmk:"Tamilan Prasanna B.A., B.L.", aiadmk:"Mr. Abhishek Rangasamy, B.Tech., B.L.", tvk:"A. Rajmohan", ntk:"Saranya" },
-        { ac:17, constName:"Royapuram", dmk:"", aiadmk:"D. Jayakumar", tvk:"E. Nithish Karthik", ntk:"Babumailan" },
-        { ac:18, constName:"Harbour", dmk:"P.K. Sekar Babu", aiadmk:"Mr. Royapuram R. Mano", tvk:"I. Suresh Babu", ntk:"Rufhkhan Sheriff" },
-        { ac:19, constName:"Chepauk-Thiruvallikeni", dmk:"Udhayanidhi Stalin B.Com.", aiadmk:"Mr. Adhirajaram, B.A., B.L.", tvk:"D. Selvam", ntk:"Ayisha Beham" },
-        { ac:20, constName:"Thousand Lights", dmk:"Dr. Ezhilan Naganathan M.B.B.S., M.D.", aiadmk:"Mrs. B. Valarmathi", tvk:"N. Anand", ntk:"Kalanjiyam" },
-        { ac:21, constName:"Anna Nagar", dmk:"M.K. Mohan", aiadmk:"Mrs. S. Gokula Indira, M.A., B.L.", tvk:"", ntk:"C. Shankar" },
-        { ac:22, constName:"Virugambakkam", dmk:"Prabhakar Raja M.Tech., M.B.A.", aiadmk:"Mr. Virugai V.N. Ravi, B.A.", tvk:"", ntk:"Santhosh" },
-        { ac:23, constName:"Saidapet", dmk:"", aiadmk:"", tvk:"M. Arul Prakasam", ntk:"Srividhya" },
-        { ac:24, constName:"T. Nagar", dmk:"", aiadmk:"", tvk:"N. Anand Ex. MLA", ntk:"Anusha Vijayakumar" },
-        { ac:25, constName:"Mylapore", dmk:"T. Velu B.A., L.L.B.", aiadmk:"", tvk:"P. Venkataramanan", ntk:"Arun" },
-        { ac:26, constName:"Velachery", dmk:"", aiadmk:"Mr. M.K. Ashok, M.A.", tvk:"R. Baskar", ntk:"Keerthana" },
-        { ac:27, constName:"Sholinganallur", dmk:"", aiadmk:"Mr. K.P. Kandan", tvk:"T. Kuppusamy", ntk:"jayalakshmi Raman" },
-        { ac:28, constName:"Alandur", dmk:"", aiadmk:"Mr. S. Saravanan, B.A.", tvk:"S. Srinivasan", ntk:"Mahalakshmi" },
-        { ac:29, constName:"Sriperumbudur", dmk:"", aiadmk:"K. Pazhani", tvk:"L. Perumal", ntk:"Sindhu" },
-        { ac:30, constName:"Pallavaram", dmk:"", aiadmk:"", tvk:"I. Kaleeswaran", ntk:"Karthikeyan" },
-        { ac:31, constName:"Tambaram", dmk:"", aiadmk:"", tvk:"A. Senthilkumar", ntk:"Tamilselvi" },
-        { ac:32, constName:"Chengalpattu", dmk:"", aiadmk:"M. Raja (alias) K. Rajendran", tvk:"S. Mathivanan", ntk:"Amutha Nambiyar" },
-        { ac:33, constName:"Thiruporur", dmk:"", aiadmk:"", tvk:"S. Ganeshkumar", ntk:"Ambethrajan" },
-        { ac:34, constName:"Cheyyur", dmk:"", aiadmk:"E. Rajasekar", tvk:"S. Tamilmani", ntk:"Swathi Lakshmi" },
-        { ac:35, constName:"Madurantakam", dmk:"", aiadmk:"Maragatham Kumaravel", tvk:"S. Chandran", ntk:"Janaki Raman" },
-        { ac:36, constName:"Uthiramerur", dmk:"", aiadmk:"", tvk:"K. Pugazhenthi", ntk:"Maram maasilamani" },
-        { ac:37, constName:"Kancheepuram", dmk:"Nithya Sugumar", aiadmk:"V. Somnath", tvk:"M.S.M. Meeran Syed Ibrahim", ntk:"Vetriselvi" },
-        { ac:38, constName:"Arakkonam", dmk:"", aiadmk:"S. Ravi", tvk:"D. Rajendran", ntk:"Raj Kumar" },
-        { ac:39, constName:"Sholinghur", dmk:"", aiadmk:"", tvk:"G. Chandirasekar", ntk:"Ashok Kumar" },
-        { ac:40, constName:"Katpadi", dmk:"", aiadmk:"V. Ramu", tvk:"T. Arunkumar", ntk:"Thirukumaran" },
-        { ac:41, constName:"Ranipet", dmk:"Vinoth Gandhi", aiadmk:"", tvk:"G. Mageshwaran", ntk:"Tharikka salman" },
-        { ac:42, constName:"Arcot", dmk:"", aiadmk:"S.M. Sugumar", tvk:"V. Paraman", ntk:"Archaha" },
-        { ac:43, constName:"Vellore", dmk:"", aiadmk:"S.R.K. Appu", tvk:"R. Marimuthu", ntk:"Soniya" },
-        { ac:44, constName:"Anaikattu", dmk:"A.P. Nandakumar M.A.", aiadmk:"D. Velazhagan", tvk:"R. Jeganathan", ntk:"Ravi Kumar" },
-        { ac:45, constName:"Kilvaithinankuppam", dmk:"", aiadmk:"", tvk:"T.S. Sathiyaseelan", ntk:"Kalaiyendri" },
-        { ac:46, constName:"Gudiyattam", dmk:"", aiadmk:"G. Parisa Purushothaman", tvk:"S. Shivaprakash", ntk:"Imalan" },
-        { ac:47, constName:"Vaniyambadi", dmk:"", aiadmk:"G. Sendhil Kumar", tvk:"Isha S. Navajudeen", ntk:"Murugesan" },
-        { ac:48, constName:"Ambur", dmk:"", aiadmk:"R. Venkatesan", tvk:"N.M. Navajudeen Basha", ntk:"Afsia Thoufic Bikrid" },
-        { ac:49, constName:"Jolarpet", dmk:"", aiadmk:"K.C. Veeramani", tvk:"M. Muthukumar", ntk:"Sasi Rekha" },
-        { ac:50, constName:"Tirupattur", dmk:"", aiadmk:"", tvk:"N. Srinivasan", ntk:"Aarumugam" },
-        { ac:51, constName:"Uthangarai", dmk:"", aiadmk:"T.M. Tamilselvam", tvk:"P. Kumaravel", ntk:"Megala" },
-        { ac:52, constName:"Bargur", dmk:"", aiadmk:"E.C. Govindarasu", tvk:"A. Kolanjiappan", ntk:"Kavin" },
-        { ac:53, constName:"Krishnagiri", dmk:"", aiadmk:"K. Ashok Kumar", tvk:"S. Naveen Kumar", ntk:"Suganthi Parthiban" },
-        { ac:54, constName:"Veppanahalli", dmk:"", aiadmk:"K.P. Munusamy", tvk:"G. Madan", ntk:"Nagaraj" },
-        { ac:55, constName:"Hosur", dmk:"", aiadmk:"P. Balakrishna Reddy", tvk:"Dr. A. Rajesh", ntk:"Stalin" },
-        { ac:56, constName:"Thalli", dmk:"", aiadmk:"", tvk:"J. Gnanavel", ntk:"Narasimman" },
-        { ac:57, constName:"Palacode", dmk:"", aiadmk:"K.P. Anbazhagan", tvk:"M. Dhinesh Kumar", ntk:"Boopathy" },
-        { ac:58, constName:"Pennagaram", dmk:"", aiadmk:"", tvk:"S. Rajkumar", ntk:"Palaniyammal" },
-        { ac:59, constName:"Dharmapuri", dmk:"", aiadmk:"S. Ramachandran", tvk:"Dr. P. Senthil Kumar", ntk:"Santha Lakshmi" },
-        { ac:60, constName:"Pappireddippatti", dmk:"", aiadmk:"", tvk:"M. Govindasamy", ntk:"Archana Tamil Aruvi" },
-        { ac:61, constName:"Harur", dmk:"", aiadmk:"V. Sampathkumar", tvk:"M.M. Kanagaraj", ntk:"Anitha Annadurai" },
-        { ac:62, constName:"Chengam", dmk:"", aiadmk:"T.S. Velu", tvk:"R. Nagarajan", ntk:"J Shobha" },
-        { ac:63, constName:"Tiruvannamalai", dmk:"", aiadmk:"", tvk:"M. Ramesh", ntk:"Vignesh" },
-        { ac:64, constName:"Kilpennathur", dmk:"", aiadmk:"S. Ramachandran", tvk:"M. Shanmugam", ntk:"V. Loganathan" },
-        { ac:65, constName:"Kalasapakkam", dmk:"", aiadmk:"V. Karunanithi", tvk:"K. Murugan", ntk:"Seetha" },
-        { ac:66, constName:"Polur", dmk:"", aiadmk:"", tvk:"K. Ravichandran", ntk:"umadevi prakash" },
-        { ac:67, constName:"Arani", dmk:"", aiadmk:"L. Jayasudha", tvk:"S. Gnanasekar", ntk:"Thavamani Ramesh" },
-        { ac:68, constName:"Cheyyar", dmk:"", aiadmk:"Mukkur N. Subramanian", tvk:"S. Harichandran", ntk:"Tamil Selvan" },
-        { ac:69, constName:"Vandavasi", dmk:"", aiadmk:"P. Rani", tvk:"P. Jeevadharanam", ntk:"Ganesh" },
-        { ac:70, constName:"Gingee", dmk:"", aiadmk:"", tvk:"G. Saravanan", ntk:"Krishnan" },
-        { ac:71, constName:"Mailam", dmk:"", aiadmk:"C.Ve. Shanmugam", tvk:"V. Anandkumar", ntk:"Vijay Vikram" },
-        { ac:72, constName:"Tindivanam", dmk:"", aiadmk:"P. Arjunan", tvk:"K.M. Babu", ntk:"Petchimuthu" },
-        { ac:73, constName:"Vanur", dmk:"", aiadmk:"P. Murugan", tvk:"T. Dharmadurai", ntk:"Karikazhan" },
-        { ac:74, constName:"Villupuram", dmk:"", aiadmk:"", tvk:"P. Ragavaperumal", ntk:"Abhinaya Ponnivalavan" },
-        { ac:75, constName:"Vikravandi", dmk:"", aiadmk:"K. Vijaya", tvk:"P. Chandrasekaran", ntk:"Suba chandrasekaran" },
-        { ac:76, constName:"Tirukkoyilur", dmk:"", aiadmk:"S. Pazhanisamy", tvk:"K. Manikandan", ntk:"Hemarajan" },
-        { ac:77, constName:"Ulundurpettai", dmk:"G.R. Vasanthavel B.E.", aiadmk:"R. Kumaraguru", tvk:"G. Ayyanar", ntk:"Logeshwari" },
-        { ac:78, constName:"Rishivandiyam", dmk:"", aiadmk:"", tvk:"N. Saravanan", ntk:"Radhika" },
-        { ac:79, constName:"Sankarapuram", dmk:"", aiadmk:"R. Madhavan", tvk:"S. Dhandapani", ntk:"Ramesh" },
-        { ac:80, constName:"Kallakurichi", dmk:"", aiadmk:"S. Rajendran", tvk:"P. Gopinath", ntk:"Nagammal" },
-        { ac:81, constName:"Gangavalli", dmk:"", aiadmk:"A. Nallathambi", tvk:"K. Palanisamy", ntk:"Abirami Neduncheralathan" },
-        { ac:82, constName:"Attur", dmk:"", aiadmk:"A.P. Jayasankaran", tvk:"C. Suresh", ntk:"Monisha chinnadurai" },
-        { ac:83, constName:"Yercaud", dmk:"", aiadmk:"P. Usha Rani", tvk:"S. Murugan", ntk:"Palanisamy" },
-        { ac:84, constName:"Omalur", dmk:"", aiadmk:"R. Mani", tvk:"V. Palani", ntk:"Siva Sakthi" },
-        { ac:85, constName:"Mettur", dmk:"", aiadmk:"G. Venkatachalam", tvk:"S. Sendhilkumar", ntk:"Vidhya Veerapan" },
-        { ac:86, constName:"Edappadi", dmk:"", aiadmk:"K. Palaniswami", tvk:"I.S.R. Selvam", ntk:"Priyadharshini" },
-        { ac:87, constName:"Sankari", dmk:"", aiadmk:"S. Vetrivel", tvk:"S. Vetrimaran", ntk:"Nithya Arul" },
-        { ac:88, constName:"Salem (West)", dmk:"", aiadmk:"", tvk:"S.G. Ravi", ntk:"Suresh Kumar" },
-        { ac:89, constName:"Salem (North)", dmk:"", aiadmk:"", tvk:"P.K. Kalaichelvan", ntk:"Gunaseela" },
-        { ac:90, constName:"Salem (South)", dmk:"", aiadmk:"J. Robert", tvk:"K. Saravanan", ntk:"Sophiya" },
-        { ac:91, constName:"Veerapandi", dmk:"", aiadmk:"P. Senthil Kumar", tvk:"N. Gopinath", ntk:"Rajesh Kumar" },
-        { ac:92, constName:"Rasipuram", dmk:"", aiadmk:"", tvk:"N. Arun Kumar", ntk:"Sasikala" },
-        { ac:93, constName:"Senthamangalam", dmk:"P. Poomalar", aiadmk:"C. Chandrasekaran", tvk:"S. Mathivanan", ntk:"Ponnumani" },
-        { ac:94, constName:"Namakkal", dmk:"", aiadmk:"P.S. Madhavi", tvk:"M. Balamurugan", ntk:"Praveen" },
-        { ac:95, constName:"Paramathi-Velur", dmk:"K.S. Moorthy B.Sc.", aiadmk:"S. Sekar", tvk:"V.A. Panneerselvam", ntk:"Aravindh" },
-        { ac:96, constName:"Tiruchengodu", dmk:"", aiadmk:"R. Chandrasekar", tvk:"Dr. K.G. Arunkumar", ntk:"Revathi" },
-        { ac:97, constName:"Kumarapalayam", dmk:"S. Balu", aiadmk:"P. Thangamani", tvk:"C. Vijayalakshmi", ntk:"Yuvarani" },
-        { ac:98, constName:"Erode (East)", dmk:"", aiadmk:"R. Manoharan", tvk:"V. Manikandan", ntk:"Thandava Moorthy" },
-        { ac:99, constName:"Erode (West)", dmk:"", aiadmk:"", tvk:"R. Murugan", ntk:"Vijay" },
-        { ac:100, constName:"Modakkurichi", dmk:"", aiadmk:"", tvk:"M. Muthukumar", ntk:"Arun" },
-        { ac:101, constName:"Dharapuram", dmk:"", aiadmk:"P. Sathiyabama", tvk:"V. Palani", ntk:"divya" },
-        { ac:102, constName:"Kangayam", dmk:"", aiadmk:"N.S.N. Nataraj", tvk:"M.R. Vijayabhaskar", ntk:"Karmegan" },
-        { ac:103, constName:"Perundurai", dmk:"", aiadmk:"S. Jayakumar", tvk:"A. Muthusamy", ntk:"Logu" },
-        { ac:104, constName:"Bhavani", dmk:"", aiadmk:"K.C. Karuppannan", tvk:"M. Senthilkumar", ntk:"Menaka Devi" },
-        { ac:105, constName:"Anthiyur", dmk:"", aiadmk:"P. Haribhaskar", tvk:"Dr. T.R. Anbukkarasan", ntk:"Anandhi" },
-        { ac:106, constName:"Gobichettipalayam", dmk:"", aiadmk:"V.B. Babu", tvk:"K.A. Sengottaiyan", ntk:"Seetha Lakshmi" },
-        { ac:107, constName:"Bhavanisagar", dmk:"", aiadmk:"A. Bannari", tvk:"R. Elango", ntk:"Soundarya" },
-        { ac:108, constName:"Udhagamandalam", dmk:"", aiadmk:"", tvk:"S. Murugesan", ntk:"Ragupathu Deepan" },
-        { ac:109, constName:"Gudalur", dmk:"", aiadmk:"Pon. Jayaseelan", tvk:"C.K. Santhosh Kumar", ntk:"Karthik Ramakrishnan" },
-        { ac:110, constName:"Coonoor", dmk:"", aiadmk:"A. Ramu", tvk:"R.S.F. Solomon Kennedy", ntk:"dheenu" },
-        { ac:111, constName:"Mettupalayam", dmk:"", aiadmk:"O.K. Chinnaraj", tvk:"S.D. Pandeeswaran", ntk:"Gopalakrishnan" },
-        { ac:112, constName:"Avanashi", dmk:"Dr. Kokila Mani M.B.B.S.", aiadmk:"", tvk:"R. Ramasamy", ntk:"Menaga" },
-        { ac:113, constName:"Tiruppur (North)", dmk:"", aiadmk:"M.S.M. Anandan", tvk:"V. Sathyabama", ntk:"Abhinaya" },
-        { ac:114, constName:"Tiruppur (South)", dmk:"", aiadmk:"", tvk:"A. Rajeshkumar", ntk:"Perarivalan" },
-        { ac:115, constName:"Palladam", dmk:"", aiadmk:"K.P. Paramasivam", tvk:"M. Kalyanasundaram", ntk:"Thamizhinian" },
-        { ac:116, constName:"Sulur", dmk:"", aiadmk:"V.P. Kandhasamy", tvk:"S. Paramasivam", ntk:"Rajasekhar" },
-        { ac:117, constName:"Kavundampalayam", dmk:"", aiadmk:"P.R.G. Arunkumar", tvk:"G. Madheswaran", ntk:"Kalamani" },
-        { ac:118, constName:"Coimbatore (North)", dmk:"", aiadmk:"", tvk:"K. Sivakumar", ntk:"Narmatha" },
-        { ac:119, constName:"Thondamuthur", dmk:"", aiadmk:"S.P. Velumani", tvk:"R. Ravikumar", ntk:"Rajabunisha" },
-        { ac:120, constName:"Coimbatore (South)", dmk:"Senthil Balaji B.E., M.B.A.", aiadmk:"Amman K. Arjunan", tvk:"R. Arunraaj", ntk:"Perarivalan" },
-        { ac:121, constName:"Singanallur", dmk:"", aiadmk:"K.R. Jayaram", tvk:"D. Narmadha", ntk:"Nehruji" },
-        { ac:122, constName:"Kinathukadavu", dmk:"", aiadmk:"Se. Damodaran", tvk:"R. Ananthapadmanabhan", ntk:"Banupriya senthil kumar" },
-        { ac:123, constName:"Pollachi", dmk:"", aiadmk:"Pollachi V. Jayaraman", tvk:"D. Seetharaman", ntk:"Senthil" },
-        { ac:124, constName:"Valparai", dmk:"", aiadmk:"D. Lakshmanan", tvk:"Dr. A. Sridharan", ntk:"Uma Devi" },
-        { ac:125, constName:"Udumalaipettai", dmk:"K. Radhakrishnan B.Sc., M.A.", aiadmk:"Udumalai K. Radhakrishnan", tvk:"S. Pandian", ntk:"Ram Kumar" },
-        { ac:126, constName:"Madathukulam", dmk:"", aiadmk:"", tvk:"M. Suresh", ntk:"Radhamani" },
-        { ac:127, constName:"Palani", dmk:"", aiadmk:"K. Ravi Manoharan", tvk:"J. Arumugam", ntk:"Murugeshwari" },
-        { ac:128, constName:"Oddanchatram", dmk:"", aiadmk:"A. Viswanathan", tvk:"R. Haridoss", ntk:"Ragupathi" },
-        { ac:129, constName:"Athoor", dmk:"", aiadmk:"", tvk:"P.S. Sathish Kumar", ntk:"Simon Justin" },
-        { ac:130, constName:"Nilakkottai", dmk:"Nagajothi B.Com.", aiadmk:"S. Thenmozhi", tvk:"P. Vijaya", ntk:"Kailai Rajan" },
-        { ac:131, constName:"Natham", dmk:"", aiadmk:"Natham R. Viswanathan", tvk:"D. Senthilkumar", ntk:"Alagammal" },
-        { ac:132, constName:"Dindigul", dmk:"I. Senthilkumar", aiadmk:"C. Srinivasan", tvk:"L. Arunkumar", ntk:"Mutharasi" },
-        { ac:133, constName:"Vedasandur", dmk:"", aiadmk:"V.P.B. Paramasivam", tvk:"T. Ramasamy", ntk:"Hussain" },
-        { ac:134, constName:"Aravakurichi", dmk:"S. Manikandan B.Com., C.A.", aiadmk:"K. Selvakumar", tvk:"S. Priya", ntk:"Narain" },
-        { ac:135, constName:"Karur", dmk:"Senthil Balaji B.E.", aiadmk:"M.R. Vijayabhaskar", tvk:"V.K.T. Balan", ntk:"Karuppaiah" },
-        { ac:136, constName:"Krishnarayapuram", dmk:"", aiadmk:"S. Divya", tvk:"G. Sivachandran", ntk:"Sathya" },
-        { ac:137, constName:"Kulithalai", dmk:"N. Kayalvizhi M.Sc., M.Phil., B.Ed.", aiadmk:"S. Kandhasamy", tvk:"A. Palaniswami", ntk:"Nanmaran" },
-        { ac:138, constName:"Manapparai", dmk:"", aiadmk:"P.L. Vijayakumar", tvk:"V. Vignesh", ntk:"Arunagiri" },
-        { ac:139, constName:"Srirangam", dmk:"", aiadmk:"R. Manoharan", tvk:"S. Nagaraj", ntk:"Dharmaraj" },
-        { ac:140, constName:"Tiruchirappalli (West)", dmk:"K.N. Nehru", aiadmk:"P. Kumar", tvk:"S. Prem Kumar", ntk:"Bhuvaneshwari" },
-        { ac:141, constName:"Tiruchirappalli (East)", dmk:"Dr. Inigo Irudayaraj M.S.W., Ph.D.", aiadmk:"K. Rajasekaran", tvk:"C. Joseph Vijay", ntk:"Krishnasamy" },
-        { ac:142, constName:"Thiruverumbur", dmk:"", aiadmk:"M. Leela Rajesh", tvk:"M. Pradeep", ntk:"Jallikattu Rajesh" },
-        { ac:143, constName:"Lalgudi", dmk:"", aiadmk:"", tvk:"Ku. Pa. Krishnan", ntk:"Madhan" },
-        { ac:144, constName:"Manachanallur", dmk:"", aiadmk:"", tvk:"S.P. Rajeshkumar", ntk:"Thenmozhi" },
-        { ac:145, constName:"Musiri", dmk:"", aiadmk:"N. Yogalingam", tvk:"K. Nallasamy", ntk:"Bakya Lakshmi" },
-        { ac:146, constName:"Thuraiyur", dmk:"", aiadmk:"I. Saroja", tvk:"R. Rajmohan", ntk:"Gowsalya Suresh" },
-        { ac:147, constName:"Perambalur", dmk:"", aiadmk:"R. Tamilselvan", tvk:"N. Rameshkumar", ntk:"Johnsy Rani" },
-        { ac:148, constName:"Kunnam", dmk:"", aiadmk:"", tvk:"R. Jeeva", ntk:"Keerthi vasan" },
-        { ac:149, constName:"Ariyalur", dmk:"", aiadmk:"S. Rajendran", tvk:"K.R. Selva", ntk:"Pugalendhi" },
-        { ac:150, constName:"Jayankondam", dmk:"", aiadmk:"", tvk:"M. Mariselvan", ntk:"Revathi Kalaimani" },
-        { ac:151, constName:"Tittakudi", dmk:"", aiadmk:"", tvk:"A. Rajasekar", ntk:"Mahalakshmi" },
-        { ac:152, constName:"Vridhachalam", dmk:"", aiadmk:"", tvk:"M.K. Arjunan", ntk:"Amudha nambi" },
-        { ac:153, constName:"Neyveli", dmk:"", aiadmk:"Sorathur R. Rajendran", tvk:"V. Gopinath", ntk:"Veeramani" },
-        { ac:154, constName:"Panruti", dmk:"", aiadmk:"K. Mohan", tvk:"M. Govindarasu", ntk:"Banu Priya" },
-        { ac:155, constName:"Cuddalore", dmk:"", aiadmk:"M.C. Sampath", tvk:"A. Ezhilarasan", ntk:"sarasu" },
-        { ac:156, constName:"Kurinjipadi", dmk:"", aiadmk:"A. Bhuvanendran", tvk:"K. Sridhar", ntk:"Sengolan" },
-        { ac:157, constName:"Bhuvanagiri", dmk:"", aiadmk:"A. Arunmozhithevan", tvk:"R. Priyambigai", ntk:"Sumathi Srinivasan" },
-        { ac:158, constName:"Chidambaram", dmk:"S. Lakshmanan B.Sc., M.A.", aiadmk:"K.A. Pandiyan", tvk:"C. Arunkumar", ntk:"Tamil" },
-        { ac:159, constName:"Kattumannarkoil", dmk:"", aiadmk:"", tvk:"K. Kathiresan", ntk:"Sivajothi" },
-        { ac:160, constName:"Sirkazhi", dmk:"", aiadmk:"M. Sakthi", tvk:"C. Sivasankar", ntk:"Subash" },
-        { ac:161, constName:"Mayiladuthurai", dmk:"R. Thamaraikannan B.E.", aiadmk:"", tvk:"A. Thiyagarajan", ntk:"Kasiraman" },
-        { ac:162, constName:"Poompuhar", dmk:"", aiadmk:"S. Pavunraj", tvk:"Ku. Ranganathan", ntk:"Ilaiya Nagulan" },
-        { ac:163, constName:"Nagapattinam", dmk:"", aiadmk:"Thanga. Kathiravan", tvk:"M.N. Chandra", ntk:"Fathima Farhana" },
-        { ac:164, constName:"Kilvelur", dmk:"", aiadmk:"", tvk:"R. Vasanthagopal", ntk:"Karthiga" },
-        { ac:165, constName:"Vedaranyam", dmk:"", aiadmk:"O.S. Manian", tvk:"M. Jawahar", ntk:"Idumbavanam Karthik" },
-        { ac:166, constName:"Thiruthuraipoondi", dmk:"", aiadmk:"U. Baladandayutham", tvk:"S. Sathishkumar", ntk:"Vinothini" },
-        { ac:167, constName:"Mannargudi", dmk:"T.K.S. Elangovan B.Sc.", aiadmk:"", tvk:"K. Arunachalam", ntk:"Bharathi Selvan" },
-        { ac:168, constName:"Thiruvarur", dmk:"Poondi K. Kalaivanan", aiadmk:"", tvk:"D. Tamilarasan", ntk:"Ashwini" },
-        { ac:169, constName:"Nannilam", dmk:"", aiadmk:"R. Kamaraj", tvk:"M. Kalyanasundaram", ntk:"Theanmozhi Dileep Kumar" },
-        { ac:170, constName:"Thiruvidaimarudur", dmk:"", aiadmk:"Ilamathi Subramanian", tvk:"S. Karthikeyan", ntk:"Divya Bharathi" },
-        { ac:171, constName:"Kumbakonam", dmk:"R. Rajakumar B.Sc.", aiadmk:"", tvk:"A. Mohanraj", ntk:"Ananth" },
-        { ac:172, constName:"Papanasam", dmk:"", aiadmk:"D. Shanmugaprabu", tvk:"P. Karunanidhi", ntk:"Aneesh Fathima" },
-        { ac:173, constName:"Thiruvaiyaru", dmk:"", aiadmk:"", tvk:"M. Manikandan", ntk:"Senthilnathan" },
-        { ac:174, constName:"Thanjavur", dmk:"Dr. S.T.K. Jakkaiyan M.S.", aiadmk:"", tvk:"Ma. Sethuraman", ntk:"Krishna Kumar" },
-        { ac:175, constName:"Orathanadu", dmk:"", aiadmk:"M. Sekar", tvk:"R. Govindaraj", ntk:"Thirumurugan" },
-        { ac:176, constName:"Pattukkottai", dmk:"", aiadmk:"C.V. Sekar", tvk:"P.R. Mohanraj", ntk:"Kannan" },
-        { ac:177, constName:"Peravurani", dmk:"", aiadmk:"Kovi. Ilango", tvk:"S. Kuberan", ntk:"Rajaram" },
-        { ac:178, constName:"Gandharvakottai", dmk:"", aiadmk:"", tvk:"V. Sridhar", ntk:"Nadiya Tamilselvan" },
-        { ac:179, constName:"Viralimalai", dmk:"", aiadmk:"Dr. C. Vijayabaskar", tvk:"V. Varatharajan", ntk:"Sathya Laxshmi" },
-        { ac:180, constName:"Pudukkottai", dmk:"", aiadmk:"", tvk:"R. Viswanathan", ntk:"Ezhilarasi" }
+        {ac:1,constName:"Gummidipoondi",dmk:"T.J. Govindarajan",aiadmk:"V. Sathan",tvk:"S. Vijayakumar",ntk:"Sridhar"},
+        {ac:2,constName:"Ponneri",dmk:"",aiadmk:"P. Balaraman",tvk:"Dr. M.S. Ravi",ntk:"Rajathi"},
+        {ac:3,constName:"Tiruttani",dmk:"",aiadmk:"K. Thiruthani",tvk:"Dr. M. Sathiyakumar",ntk:"Chandran"},
+        {ac:4,constName:"Thiruvallur",dmk:"V.G. Rajendran B.E.",aiadmk:"B.V. Ramana",tvk:"M. Thangavel",ntk:"Senthil Kumar"},
+        {ac:5,constName:"Poonamallee",dmk:"A. Krishnaswamy B.A., B.L.",aiadmk:"",tvk:"S.K. Sathya",ntk:"Mehala"},
+        {ac:6,constName:"Avadi",dmk:"S.M. Nasar",aiadmk:"",tvk:"S. Gopalakrishnan",ntk:"Punitha"},
+        {ac:7,constName:"Maduravoyal",dmk:"Karambakkam Ganapathy",aiadmk:"",tvk:"P. Thirupathi",ntk:"Revathi"},
+        {ac:8,constName:"Ambattur",dmk:"Dr. A.P. Poornima M.B.B.S., M.D.",aiadmk:"",tvk:"V. Karthiga Kanmani",ntk:"Aadhithan"},
+        {ac:9,constName:"Madhavaram",dmk:"S. Sudharsanam M.A., B.L.",aiadmk:"V. Moorthy",tvk:"S. Ragavendran",ntk:"Kruthika Elumalai"},
+        {ac:10,constName:"Thiruvottiyur",dmk:"",aiadmk:"K. Kuppan",tvk:"K. Elango",ntk:"Sathya Baskar"},
+        {ac:11,constName:"Dr. Radhakrishnan Nagar",dmk:"J.J. Ebenezer M.Com., B.L.",aiadmk:"Mr. R.S. Rajesh, D.M.E.",tvk:"A. Varadhan",ntk:"Vennila Thayumanavan"},
+        {ac:12,constName:"Perambur",dmk:"R.D. Sekar B.Com., B.L.",aiadmk:"",tvk:"C. Joseph Vijay",ntk:"Vetrithamizhan"},
+        {ac:13,constName:"Kolathur",dmk:"Muthuvel Karunanidhi Stalin B.A.",aiadmk:"Mr. P. Santhanakrishnan, ITI",tvk:"V.S. Babu",ntk:"Soundrapandian"},
+        {ac:14,constName:"Villivakkam",dmk:"Karthikeyan B.E., M.S.",aiadmk:"Mr. S.R. Vijayakumar, B.A., B.L.",tvk:"Adhav Arjuna",ntk:"Roshini"},
+        {ac:15,constName:"Thiru.Vi.Ka. Nagar",dmk:"",aiadmk:"Mrs. A. Porkodi, B.A., B.L.",tvk:"M. Kamaraj",ntk:"Jegadeesh Chander"},
+        {ac:16,constName:"Egmore",dmk:"Tamilan Prasanna B.A., B.L.",aiadmk:"Mr. Abhishek Rangasamy, B.Tech., B.L.",tvk:"A. Rajmohan",ntk:"Saranya"},
+        {ac:17,constName:"Royapuram",dmk:"",aiadmk:"D. Jayakumar",tvk:"E. Nithish Karthik",ntk:"Babumailan"},
+        {ac:18,constName:"Harbour",dmk:"P.K. Sekar Babu",aiadmk:"Mr. Royapuram R. Mano",tvk:"I. Suresh Babu",ntk:"Rufhkhan Sheriff"},
+        {ac:19,constName:"Chepauk-Thiruvallikeni",dmk:"Udhayanidhi Stalin B.Com.",aiadmk:"Mr. Adhirajaram, B.A., B.L.",tvk:"D. Selvam",ntk:"Ayisha Beham"},
+        {ac:20,constName:"Thousand Lights",dmk:"Dr. Ezhilan Naganathan M.B.B.S., M.D.",aiadmk:"Mrs. B. Valarmathi",tvk:"N. Anand",ntk:"Kalanjiyam"},
+        {ac:21,constName:"Anna Nagar",dmk:"M.K. Mohan",aiadmk:"Mrs. S. Gokula Indira, M.A., B.L.",tvk:"",ntk:"C. Shankar"},
+        {ac:22,constName:"Virugambakkam",dmk:"Prabhakar Raja M.Tech., M.B.A.",aiadmk:"Mr. Virugai V.N. Ravi, B.A.",tvk:"",ntk:"Santhosh"},
+        {ac:23,constName:"Saidapet",dmk:"",aiadmk:"",tvk:"M. Arul Prakasam",ntk:"Srividhya"},
+        {ac:24,constName:"T. Nagar",dmk:"",aiadmk:"",tvk:"N. Anand Ex. MLA",ntk:"Anusha Vijayakumar"},
+        {ac:25,constName:"Mylapore",dmk:"T. Velu B.A., L.L.B.",aiadmk:"",tvk:"P. Venkataramanan",ntk:"Arun"},
+        {ac:26,constName:"Velachery",dmk:"",aiadmk:"Mr. M.K. Ashok, M.A.",tvk:"R. Baskar",ntk:"Keerthana"},
+        {ac:27,constName:"Sholinganallur",dmk:"",aiadmk:"Mr. K.P. Kandan",tvk:"T. Kuppusamy",ntk:"jayalakshmi Raman"},
+        {ac:28,constName:"Alandur",dmk:"",aiadmk:"Mr. S. Saravanan, B.A.",tvk:"S. Srinivasan",ntk:"Mahalakshmi"},
+        {ac:29,constName:"Sriperumbudur",dmk:"",aiadmk:"K. Pazhani",tvk:"L. Perumal",ntk:"Sindhu"},
+        {ac:30,constName:"Pallavaram",dmk:"",aiadmk:"",tvk:"I. Kaleeswaran",ntk:"Karthikeyan"},
+        {ac:31,constName:"Tambaram",dmk:"",aiadmk:"",tvk:"A. Senthilkumar",ntk:"Tamilselvi"},
+        {ac:32,constName:"Chengalpattu",dmk:"",aiadmk:"M. Raja (alias) K. Rajendran",tvk:"S. Mathivanan",ntk:"Amutha Nambiyar"},
+        {ac:33,constName:"Thiruporur",dmk:"",aiadmk:"",tvk:"S. Ganeshkumar",ntk:"Ambethrajan"},
+        {ac:34,constName:"Cheyyur",dmk:"",aiadmk:"E. Rajasekar",tvk:"S. Tamilmani",ntk:"Swathi Lakshmi"},
+        {ac:35,constName:"Madurantakam",dmk:"",aiadmk:"Maragatham Kumaravel",tvk:"S. Chandran",ntk:"Janaki Raman"},
+        {ac:36,constName:"Uthiramerur",dmk:"",aiadmk:"",tvk:"K. Pugazhenthi",ntk:"Maram maasilamani"},
+        {ac:37,constName:"Kancheepuram",dmk:"Nithya Sugumar",aiadmk:"V. Somnath",tvk:"M.S.M. Meeran Syed Ibrahim",ntk:"Vetriselvi"},
+        {ac:38,constName:"Arakkonam",dmk:"",aiadmk:"S. Ravi",tvk:"D. Rajendran",ntk:"Raj Kumar"},
+        {ac:39,constName:"Sholinghur",dmk:"",aiadmk:"",tvk:"G. Chandirasekar",ntk:"Ashok Kumar"},
+        {ac:40,constName:"Katpadi",dmk:"",aiadmk:"V. Ramu",tvk:"T. Arunkumar",ntk:"Thirukumaran"},
+        {ac:41,constName:"Ranipet",dmk:"Vinoth Gandhi",aiadmk:"",tvk:"G. Mageshwaran",ntk:"Tharikka salman"},
+        {ac:42,constName:"Arcot",dmk:"",aiadmk:"S.M. Sugumar",tvk:"V. Paraman",ntk:"Archaha"},
+        {ac:43,constName:"Vellore",dmk:"",aiadmk:"S.R.K. Appu",tvk:"R. Marimuthu",ntk:"Soniya"},
+        {ac:44,constName:"Anaikattu",dmk:"A.P. Nandakumar M.A.",aiadmk:"D. Velazhagan",tvk:"R. Jeganathan",ntk:"Ravi Kumar"},
+        {ac:45,constName:"Kilvaithinankuppam",dmk:"",aiadmk:"",tvk:"T.S. Sathiyaseelan",ntk:"Kalaiyendri"},
+        {ac:46,constName:"Gudiyattam",dmk:"",aiadmk:"G. Parisa Purushothaman",tvk:"S. Shivaprakash",ntk:"Imalan"},
+        {ac:47,constName:"Vaniyambadi",dmk:"",aiadmk:"G. Sendhil Kumar",tvk:"Isha S. Navajudeen",ntk:"Murugesan"},
+        {ac:48,constName:"Ambur",dmk:"",aiadmk:"R. Venkatesan",tvk:"N.M. Navajudeen Basha",ntk:"Afsia Thoufic Bikrid"},
+        {ac:49,constName:"Jolarpet",dmk:"",aiadmk:"K.C. Veeramani",tvk:"M. Muthukumar",ntk:"Sasi Rekha"},
+        {ac:50,constName:"Tirupattur",dmk:"",aiadmk:"",tvk:"N. Srinivasan",ntk:"Aarumugam"},
+        {ac:51,constName:"Uthangarai",dmk:"",aiadmk:"T.M. Tamilselvam",tvk:"P. Kumaravel",ntk:"Megala"},
+        {ac:52,constName:"Bargur",dmk:"",aiadmk:"E.C. Govindarasu",tvk:"A. Kolanjiappan",ntk:"Kavin"},
+        {ac:53,constName:"Krishnagiri",dmk:"",aiadmk:"K. Ashok Kumar",tvk:"S. Naveen Kumar",ntk:"Suganthi Parthiban"},
+        {ac:54,constName:"Veppanahalli",dmk:"",aiadmk:"K.P. Munusamy",tvk:"G. Madan",ntk:"Nagaraj"},
+        {ac:55,constName:"Hosur",dmk:"",aiadmk:"P. Balakrishna Reddy",tvk:"Dr. A. Rajesh",ntk:"Stalin"},
+        {ac:56,constName:"Thalli",dmk:"",aiadmk:"",tvk:"J. Gnanavel",ntk:"Narasimman"},
+        {ac:57,constName:"Palacode",dmk:"",aiadmk:"K.P. Anbazhagan",tvk:"M. Dhinesh Kumar",ntk:"Boopathy"},
+        {ac:58,constName:"Pennagaram",dmk:"",aiadmk:"",tvk:"S. Rajkumar",ntk:"Palaniyammal"},
+        {ac:59,constName:"Dharmapuri",dmk:"",aiadmk:"S. Ramachandran",tvk:"Dr. P. Senthil Kumar",ntk:"Santha Lakshmi"},
+        {ac:60,constName:"Pappireddippatti",dmk:"",aiadmk:"",tvk:"M. Govindasamy",ntk:"Archana Tamil Aruvi"},
+        {ac:61,constName:"Harur",dmk:"",aiadmk:"V. Sampathkumar",tvk:"M.M. Kanagaraj",ntk:"Anitha Annadurai"},
+        {ac:62,constName:"Chengam",dmk:"",aiadmk:"T.S. Velu",tvk:"R. Nagarajan",ntk:"J Shobha"},
+        {ac:63,constName:"Tiruvannamalai",dmk:"",aiadmk:"",tvk:"M. Ramesh",ntk:"Vignesh"},
+        {ac:64,constName:"Kilpennathur",dmk:"",aiadmk:"S. Ramachandran",tvk:"M. Shanmugam",ntk:"V. Loganathan"},
+        {ac:65,constName:"Kalasapakkam",dmk:"",aiadmk:"V. Karunanithi",tvk:"K. Murugan",ntk:"Seetha"},
+        {ac:66,constName:"Polur",dmk:"",aiadmk:"",tvk:"K. Ravichandran",ntk:"umadevi prakash"},
+        {ac:67,constName:"Arani",dmk:"",aiadmk:"L. Jayasudha",tvk:"S. Gnanasekar",ntk:"Thavamani Ramesh"},
+        {ac:68,constName:"Cheyyar",dmk:"",aiadmk:"Mukkur N. Subramanian",tvk:"S. Harichandran",ntk:"Tamil Selvan"},
+        {ac:69,constName:"Vandavasi",dmk:"",aiadmk:"P. Rani",tvk:"P. Jeevadharanam",ntk:"Ganesh"},
+        {ac:70,constName:"Gingee",dmk:"",aiadmk:"",tvk:"G. Saravanan",ntk:"Krishnan"},
+        {ac:71,constName:"Mailam",dmk:"",aiadmk:"C.Ve. Shanmugam",tvk:"V. Anandkumar",ntk:"Vijay Vikram"},
+        {ac:72,constName:"Tindivanam",dmk:"",aiadmk:"P. Arjunan",tvk:"K.M. Babu",ntk:"Petchimuthu"},
+        {ac:73,constName:"Vanur",dmk:"",aiadmk:"P. Murugan",tvk:"T. Dharmadurai",ntk:"Karikazhan"},
+        {ac:74,constName:"Villupuram",dmk:"",aiadmk:"",tvk:"P. Ragavaperumal",ntk:"Abhinaya Ponnivalavan"},
+        {ac:75,constName:"Vikravandi",dmk:"",aiadmk:"K. Vijaya",tvk:"P. Chandrasekaran",ntk:"Suba chandrasekaran"},
+        {ac:76,constName:"Tirukkoyilur",dmk:"",aiadmk:"S. Pazhanisamy",tvk:"K. Manikandan",ntk:"Hemarajan"},
+        {ac:77,constName:"Ulundurpettai",dmk:"G.R. Vasanthavel B.E.",aiadmk:"R. Kumaraguru",tvk:"G. Ayyanar",ntk:"Logeshwari"},
+        {ac:78,constName:"Rishivandiyam",dmk:"",aiadmk:"",tvk:"N. Saravanan",ntk:"Radhika"},
+        {ac:79,constName:"Sankarapuram",dmk:"",aiadmk:"R. Madhavan",tvk:"S. Dhandapani",ntk:"Ramesh"},
+        {ac:80,constName:"Kallakurichi",dmk:"",aiadmk:"S. Rajendran",tvk:"P. Gopinath",ntk:"Nagammal"},
+        {ac:81,constName:"Gangavalli",dmk:"",aiadmk:"A. Nallathambi",tvk:"K. Palanisamy",ntk:"Abirami Neduncheralathan"},
+        {ac:82,constName:"Attur",dmk:"",aiadmk:"A.P. Jayasankaran",tvk:"C. Suresh",ntk:"Monisha chinnadurai"},
+        {ac:83,constName:"Yercaud",dmk:"",aiadmk:"P. Usha Rani",tvk:"S. Murugan",ntk:"Palanisamy"},
+        {ac:84,constName:"Omalur",dmk:"",aiadmk:"R. Mani",tvk:"V. Palani",ntk:"Siva Sakthi"},
+        {ac:85,constName:"Mettur",dmk:"",aiadmk:"G. Venkatachalam",tvk:"S. Sendhilkumar",ntk:"Vidhya Veerapan"},
+        {ac:86,constName:"Edappadi",dmk:"",aiadmk:"K. Palaniswami",tvk:"I.S.R. Selvam",ntk:"Priyadharshini"},
+        {ac:87,constName:"Sankari",dmk:"",aiadmk:"S. Vetrivel",tvk:"S. Vetrimaran",ntk:"Nithya Arul"},
+        {ac:88,constName:"Salem (West)",dmk:"",aiadmk:"",tvk:"S.G. Ravi",ntk:"Suresh Kumar"},
+        {ac:89,constName:"Salem (North)",dmk:"",aiadmk:"",tvk:"P.K. Kalaichelvan",ntk:"Gunaseela"},
+        {ac:90,constName:"Salem (South)",dmk:"",aiadmk:"J. Robert",tvk:"K. Saravanan",ntk:"Sophiya"},
+        {ac:91,constName:"Veerapandi",dmk:"",aiadmk:"P. Senthil Kumar",tvk:"N. Gopinath",ntk:"Rajesh Kumar"},
+        {ac:92,constName:"Rasipuram",dmk:"",aiadmk:"",tvk:"N. Arun Kumar",ntk:"Sasikala"},
+        {ac:93,constName:"Senthamangalam",dmk:"P. Poomalar",aiadmk:"C. Chandrasekaran",tvk:"S. Mathivanan",ntk:"Ponnumani"},
+        {ac:94,constName:"Namakkal",dmk:"",aiadmk:"P.S. Madhavi",tvk:"M. Balamurugan",ntk:"Praveen"},
+        {ac:95,constName:"Paramathi-Velur",dmk:"K.S. Moorthy B.Sc.",aiadmk:"S. Sekar",tvk:"V.A. Panneerselvam",ntk:"Aravindh"},
+        {ac:96,constName:"Tiruchengodu",dmk:"",aiadmk:"R. Chandrasekar",tvk:"Dr. K.G. Arunkumar",ntk:"Revathi"},
+        {ac:97,constName:"Kumarapalayam",dmk:"S. Balu",aiadmk:"P. Thangamani",tvk:"C. Vijayalakshmi",ntk:"Yuvarani"},
+        {ac:98,constName:"Erode (East)",dmk:"",aiadmk:"R. Manoharan",tvk:"V. Manikandan",ntk:"Thandava Moorthy"},
+        {ac:99,constName:"Erode (West)",dmk:"",aiadmk:"",tvk:"R. Murugan",ntk:"Vijay"},
+        {ac:100,constName:"Modakkurichi",dmk:"",aiadmk:"",tvk:"M. Muthukumar",ntk:"Arun"},
+        {ac:101,constName:"Dharapuram",dmk:"",aiadmk:"P. Sathiyabama",tvk:"V. Palani",ntk:"divya"},
+        {ac:102,constName:"Kangayam",dmk:"",aiadmk:"N.S.N. Nataraj",tvk:"M.R. Vijayabhaskar",ntk:"Karmegan"},
+        {ac:103,constName:"Perundurai",dmk:"",aiadmk:"S. Jayakumar",tvk:"A. Muthusamy",ntk:"Logu"},
+        {ac:104,constName:"Bhavani",dmk:"",aiadmk:"K.C. Karuppannan",tvk:"M. Senthilkumar",ntk:"Menaka Devi"},
+        {ac:105,constName:"Anthiyur",dmk:"",aiadmk:"P. Haribhaskar",tvk:"Dr. T.R. Anbukkarasan",ntk:"Anandhi"},
+        {ac:106,constName:"Gobichettipalayam",dmk:"",aiadmk:"V.B. Babu",tvk:"K.A. Sengottaiyan",ntk:"Seetha Lakshmi"},
+        {ac:107,constName:"Bhavanisagar",dmk:"",aiadmk:"A. Bannari",tvk:"R. Elango",ntk:"Soundarya"},
+        {ac:108,constName:"Udhagamandalam",dmk:"",aiadmk:"",tvk:"S. Murugesan",ntk:"Ragupathu Deepan"},
+        {ac:109,constName:"Gudalur",dmk:"",aiadmk:"Pon. Jayaseelan",tvk:"C.K. Santhosh Kumar",ntk:"Karthik Ramakrishnan"},
+        {ac:110,constName:"Coonoor",dmk:"",aiadmk:"A. Ramu",tvk:"R.S.F. Solomon Kennedy",ntk:"dheenu"},
+        {ac:111,constName:"Mettupalayam",dmk:"",aiadmk:"O.K. Chinnaraj",tvk:"S.D. Pandeeswaran",ntk:"Gopalakrishnan"},
+        {ac:112,constName:"Avanashi",dmk:"Dr. Kokila Mani M.B.B.S.",aiadmk:"",tvk:"R. Ramasamy",ntk:"Menaga"},
+        {ac:113,constName:"Tiruppur (North)",dmk:"",aiadmk:"M.S.M. Anandan",tvk:"V. Sathyabama",ntk:"Abhinaya"},
+        {ac:114,constName:"Tiruppur (South)",dmk:"",aiadmk:"",tvk:"A. Rajeshkumar",ntk:"Perarivalan"},
+        {ac:115,constName:"Palladam",dmk:"",aiadmk:"K.P. Paramasivam",tvk:"M. Kalyanasundaram",ntk:"Thamizhinian"},
+        {ac:116,constName:"Sulur",dmk:"",aiadmk:"V.P. Kandhasamy",tvk:"S. Paramasivam",ntk:"Rajasekhar"},
+        {ac:117,constName:"Kavundampalayam",dmk:"",aiadmk:"P.R.G. Arunkumar",tvk:"G. Madheswaran",ntk:"Kalamani"},
+        {ac:118,constName:"Coimbatore (North)",dmk:"",aiadmk:"",tvk:"K. Sivakumar",ntk:"Narmatha"},
+        {ac:119,constName:"Thondamuthur",dmk:"",aiadmk:"S.P. Velumani",tvk:"R. Ravikumar",ntk:"Rajabunisha"},
+        {ac:120,constName:"Coimbatore (South)",dmk:"Senthil Balaji B.E., M.B.A.",aiadmk:"Amman K. Arjunan",tvk:"R. Arunraaj",ntk:"Perarivalan"},
+        {ac:121,constName:"Singanallur",dmk:"",aiadmk:"K.R. Jayaram",tvk:"D. Narmadha",ntk:"Nehruji"},
+        {ac:122,constName:"Kinathukadavu",dmk:"",aiadmk:"Se. Damodaran",tvk:"R. Ananthapadmanabhan",ntk:"Banupriya senthil kumar"},
+        {ac:123,constName:"Pollachi",dmk:"",aiadmk:"Pollachi V. Jayaraman",tvk:"D. Seetharaman",ntk:"Senthil"},
+        {ac:124,constName:"Valparai",dmk:"",aiadmk:"D. Lakshmanan",tvk:"Dr. A. Sridharan",ntk:"Uma Devi"},
+        {ac:125,constName:"Udumalaipettai",dmk:"K. Radhakrishnan B.Sc., M.A.",aiadmk:"Udumalai K. Radhakrishnan",tvk:"S. Pandian",ntk:"Ram Kumar"},
+        {ac:126,constName:"Madathukulam",dmk:"",aiadmk:"",tvk:"M. Suresh",ntk:"Radhamani"},
+        {ac:127,constName:"Palani",dmk:"",aiadmk:"K. Ravi Manoharan",tvk:"J. Arumugam",ntk:"Murugeshwari"},
+        {ac:128,constName:"Oddanchatram",dmk:"",aiadmk:"A. Viswanathan",tvk:"R. Haridoss",ntk:"Ragupathi"},
+        {ac:129,constName:"Athoor",dmk:"",aiadmk:"",tvk:"P.S. Sathish Kumar",ntk:"Simon Justin"},
+        {ac:130,constName:"Nilakkottai",dmk:"Nagajothi B.Com.",aiadmk:"S. Thenmozhi",tvk:"P. Vijaya",ntk:"Kailai Rajan"},
+        {ac:131,constName:"Natham",dmk:"",aiadmk:"Natham R. Viswanathan",tvk:"D. Senthilkumar",ntk:"Alagammal"},
+        {ac:132,constName:"Dindigul",dmk:"I. Senthilkumar",aiadmk:"C. Srinivasan",tvk:"L. Arunkumar",ntk:"Mutharasi"},
+        {ac:133,constName:"Vedasandur",dmk:"",aiadmk:"V.P.B. Paramasivam",tvk:"T. Ramasamy",ntk:"Hussain"},
+        {ac:134,constName:"Aravakurichi",dmk:"S. Manikandan B.Com., C.A.",aiadmk:"K. Selvakumar",tvk:"S. Priya",ntk:"Narain"},
+        {ac:135,constName:"Karur",dmk:"Senthil Balaji B.E.",aiadmk:"M.R. Vijayabhaskar",tvk:"V.K.T. Balan",ntk:"Karuppaiah"},
+        {ac:136,constName:"Krishnarayapuram",dmk:"",aiadmk:"S. Divya",tvk:"G. Sivachandran",ntk:"Sathya"},
+        {ac:137,constName:"Kulithalai",dmk:"N. Kayalvizhi M.Sc., M.Phil., B.Ed.",aiadmk:"S. Kandhasamy",tvk:"A. Palaniswami",ntk:"Nanmaran"},
+        {ac:138,constName:"Manapparai",dmk:"",aiadmk:"P.L. Vijayakumar",tvk:"V. Vignesh",ntk:"Arunagiri"},
+        {ac:139,constName:"Srirangam",dmk:"",aiadmk:"R. Manoharan",tvk:"S. Nagaraj",ntk:"Dharmaraj"},
+        {ac:140,constName:"Tiruchirappalli (West)",dmk:"K.N. Nehru",aiadmk:"P. Kumar",tvk:"S. Prem Kumar",ntk:"Bhuvaneshwari"},
+        {ac:141,constName:"Tiruchirappalli (East)",dmk:"Dr. Inigo Irudayaraj M.S.W., Ph.D.",aiadmk:"K. Rajasekaran",tvk:"C. Joseph Vijay",ntk:"Krishnasamy"},
+        {ac:142,constName:"Thiruverumbur",dmk:"",aiadmk:"M. Leela Rajesh",tvk:"M. Pradeep",ntk:"Jallikattu Rajesh"},
+        {ac:143,constName:"Lalgudi",dmk:"",aiadmk:"",tvk:"Ku. Pa. Krishnan",ntk:"Madhan"},
+        {ac:144,constName:"Manachanallur",dmk:"",aiadmk:"",tvk:"S.P. Rajeshkumar",ntk:"Thenmozhi"},
+        {ac:145,constName:"Musiri",dmk:"",aiadmk:"N. Yogalingam",tvk:"K. Nallasamy",ntk:"Bakya Lakshmi"},
+        {ac:146,constName:"Thuraiyur",dmk:"",aiadmk:"I. Saroja",tvk:"R. Rajmohan",ntk:"Gowsalya Suresh"},
+        {ac:147,constName:"Perambalur",dmk:"",aiadmk:"R. Tamilselvan",tvk:"N. Rameshkumar",ntk:"Johnsy Rani"},
+        {ac:148,constName:"Kunnam",dmk:"",aiadmk:"",tvk:"R. Jeeva",ntk:"Keerthi vasan"},
+        {ac:149,constName:"Ariyalur",dmk:"",aiadmk:"S. Rajendran",tvk:"K.R. Selva",ntk:"Pugalendhi"},
+        {ac:150,constName:"Jayankondam",dmk:"",aiadmk:"",tvk:"M. Mariselvan",ntk:"Revathi Kalaimani"},
+        {ac:151,constName:"Tittakudi",dmk:"",aiadmk:"",tvk:"A. Rajasekar",ntk:"Mahalakshmi"},
+        {ac:152,constName:"Vridhachalam",dmk:"",aiadmk:"",tvk:"M.K. Arjunan",ntk:"Amudha nambi"},
+        {ac:153,constName:"Neyveli",dmk:"",aiadmk:"Sorathur R. Rajendran",tvk:"V. Gopinath",ntk:"Veeramani"},
+        {ac:154,constName:"Panruti",dmk:"",aiadmk:"K. Mohan",tvk:"M. Govindarasu",ntk:"Banu Priya"},
+        {ac:155,constName:"Cuddalore",dmk:"",aiadmk:"M.C. Sampath",tvk:"A. Ezhilarasan",ntk:"sarasu"},
+        {ac:156,constName:"Kurinjipadi",dmk:"",aiadmk:"A. Bhuvanendran",tvk:"K. Sridhar",ntk:"Sengolan"},
+        {ac:157,constName:"Bhuvanagiri",dmk:"",aiadmk:"A. Arunmozhithevan",tvk:"R. Priyambigai",ntk:"Sumathi Srinivasan"},
+        {ac:158,constName:"Chidambaram",dmk:"S. Lakshmanan B.Sc., M.A.",aiadmk:"K.A. Pandiyan",tvk:"C. Arunkumar",ntk:"Tamil"},
+        {ac:159,constName:"Kattumannarkoil",dmk:"",aiadmk:"",tvk:"K. Kathiresan",ntk:"Sivajothi"},
+        {ac:160,constName:"Sirkazhi",dmk:"",aiadmk:"M. Sakthi",tvk:"C. Sivasankar",ntk:"Subash"},
+        {ac:161,constName:"Mayiladuthurai",dmk:"R. Thamaraikannan B.E.",aiadmk:"",tvk:"A. Thiyagarajan",ntk:"Kasiraman"},
+        {ac:162,constName:"Poompuhar",dmk:"",aiadmk:"S. Pavunraj",tvk:"Ku. Ranganathan",ntk:"Ilaiya Nagulan"},
+        {ac:163,constName:"Nagapattinam",dmk:"",aiadmk:"Thanga. Kathiravan",tvk:"M.N. Chandra",ntk:"Fathima Farhana"},
+        {ac:164,constName:"Kilvelur",dmk:"",aiadmk:"",tvk:"R. Vasanthagopal",ntk:"Karthiga"},
+        {ac:165,constName:"Vedaranyam",dmk:"",aiadmk:"O.S. Manian",tvk:"M. Jawahar",ntk:"Idumbavanam Karthik"},
+        {ac:166,constName:"Thiruthuraipoondi",dmk:"",aiadmk:"U. Baladandayutham",tvk:"S. Sathishkumar",ntk:"Vinothini"},
+        {ac:167,constName:"Mannargudi",dmk:"T.K.S. Elangovan B.Sc.",aiadmk:"",tvk:"K. Arunachalam",ntk:"Bharathi Selvan"},
+        {ac:168,constName:"Thiruvarur",dmk:"Poondi K. Kalaivanan",aiadmk:"",tvk:"D. Tamilarasan",ntk:"Ashwini"},
+        {ac:169,constName:"Nannilam",dmk:"",aiadmk:"R. Kamaraj",tvk:"M. Kalyanasundaram",ntk:"Theanmozhi Dileep Kumar"},
+        {ac:170,constName:"Thiruvidaimarudur",dmk:"",aiadmk:"Ilamathi Subramanian",tvk:"S. Karthikeyan",ntk:"Divya Bharathi"},
+        {ac:171,constName:"Kumbakonam",dmk:"R. Rajakumar B.Sc.",aiadmk:"",tvk:"A. Mohanraj",ntk:"Ananth"},
+        {ac:172,constName:"Papanasam",dmk:"",aiadmk:"D. Shanmugaprabu",tvk:"P. Karunanidhi",ntk:"Aneesh Fathima"},
+        {ac:173,constName:"Thiruvaiyaru",dmk:"",aiadmk:"",tvk:"M. Manikandan",ntk:"Senthilnathan"},
+        {ac:174,constName:"Thanjavur",dmk:"Dr. S.T.K. Jakkaiyan M.S.",aiadmk:"",tvk:"Ma. Sethuraman",ntk:"Krishna Kumar"},
+        {ac:175,constName:"Orathanadu",dmk:"",aiadmk:"M. Sekar",tvk:"R. Govindaraj",ntk:"Thirumurugan"},
+        {ac:176,constName:"Pattukkottai",dmk:"",aiadmk:"C.V. Sekar",tvk:"P.R. Mohanraj",ntk:"Kannan"},
+        {ac:177,constName:"Peravurani",dmk:"",aiadmk:"Kovi. Ilango",tvk:"S. Kuberan",ntk:"Rajaram"},
+        {ac:178,constName:"Gandharvakottai",dmk:"",aiadmk:"",tvk:"V. Sridhar",ntk:"Nadiya Tamilselvan"},
+        {ac:179,constName:"Viralimalai",dmk:"",aiadmk:"Dr. C. Vijayabaskar",tvk:"V. Varatharajan",ntk:"Sathya Laxshmi"},
+        {ac:180,constName:"Pudukkottai",dmk:"",aiadmk:"",tvk:"R. Viswanathan",ntk:"Ezhilarasi"}
     ];
 
-    // --------------------------------------------------------------
-    // 2. NEW DMK CANDIDATE LIST (full, overrides previous)
-    //    Mapping: English constituency name -> DMK candidate string
-    // --------------------------------------------------------------
     const newDmkMap = new Map([
-        ["Kanniyakumari", "ரெ.மகேஷ் பி.ஏ.,பி.எல்."],["Nagercoil","எஸ்.ஆஸ்டின் எம்.ஏ."],["Radhapuram","மு.அப்பாவு"],
+        ["Kanniyakumari","ரெ.மகேஷ் பி.ஏ.,பி.எல்."],["Nagercoil","எஸ்.ஆஸ்டின் எம்.ஏ."],["Radhapuram","மு.அப்பாவு"],
         ["Palayamkottai","மு.அப்துல் வஹாப் பி.காம்."],["Tirunelveli","சு.சுப்பிரமணியன் பி.இ.,.எம்.பி.ஏ.,"],["Alangulam","எம்ஏ எம்எல்.மிண்ட டட"],
         ["Tenkasi","டாக்டர் கலை கதிரவன் எம்.பி.பி.எஸ்.,"],["Vasudevanallur","ஈ..ராஜா பி.காம்.,எம்.எல்."],["Kovilpatti","கா.கருணாநிதி"],
         ["Ottapidaram","பி.எம்.ராமஜெயம் பி.எஸ்.சி."],["Tiruchendur","அனிதா ராதாகிருஷ்ணன்"],["Thoothukkudi","திருமதி கீதா ஜீவன் எம்.காம். பி.எட்."],
@@ -570,69 +692,70 @@
         ["Royapuram","டாக்டர்.சுபேர்கான் எம்.பி.பி.எஸ். டி.ஆர்த்தோ"],["Egmore","தமிழன் பிரசன்னா பி.எல்."],["Thiru-Vi-Ka-Nagar","கே.எஸ்.ரவிச்சந்திரன் பி.எஸ்.சி..பி.எல்."],
         ["Villivakkam","கார்த்திக் மோகன் பி.இ.எம்.எஸ்.,"],["Perambur","ஆர்.டி.சேகர் பி.காம்.,பி.எல்.,"],["Dr. Radhakrishnan Nagar","ஜே.ஜே.எபினேசர் எம்.காம். பி.எல்."],
         ["Madhavaram","எஸ்.சுதர்சனம் எம்.ஏ.பி.எல்."],["Ambattur","டாக்டர் அ.பு.பூர்ணிமா எம்.பி.பி.எஸ். எம்.டி."],["Maduravoyal","காரம்பாக்கம் கணபதி"],["Avadi","சா.மு.நாசர்"],
-        ["Poonamallee","ஆ.கிருஷ்ணசாமி பி.ஏ.பி.எல்."],["Thiruvallur","வி.ஜி.ராஜேந்திரன் பி.இ."],["Gummidipoondi","டி.ஜெ. கோவிந்தராஜன்"],["Kolathur","டாலின் துவேல் கருணாநிதி ஸ்ட முத்து பி.ஏ.,"]
+        ["Poonamallee","ஆ.கிருஷ்ணசாமி பி.ஏ.பி.எல்."],["Thiruvallur","வி.ஜி.ராஜேந்திரன் பி.இ."],["Gummidipoondi","டி.ஜெ. கோவிந்தராஜன்"],["Kolathur","டாலின் துவேல் கருணாநிதி ஸ்ட முத்து பி.ஏ.,"],
+        ["Usilampatti","எஸ்.ராஜேந்திரன் எம்.ஏ."],["Periyakulam","கா.க.செல்வம்"],["Sivakasi","எஸ்.ஜி.சுப்பிரமணியன் பி.எஸ்.சி.,பி.எல்.,"],["Virudhunagar","செ.கவின்மலர்"],
+        ["Srivilliputhur","அ.ஸ்டாலின் பி.டெக்."],["Sankarankovil","ச.முத்துராஜ் பி.எல்.,"],["Srivaikuntam","வி.ராஜேந்திரன் எம்.ஏ."],["Kadayanallur","ம.இலக்கியன்"],
+        ["Ambasamudram","அ.ஜெயேந்திரன் பி.எஸ்.சி."],["Nanguneri","ஹென்றி அருள் பி.எஸ்.சி."],["Colachel","ஜே.ஜோர்ஜ் பி.எஸ்.சி."],["Padmanabhapuram","ஆர்.கருணாநிதி பி.ஏ.பி.எல்."],
+        ["Vilavancode","எஸ்.விஜயகுமார் பி.ஏ.,பி.எல்."],["Killiyoor","ஜோன் ஆல்பர்ட் பி.ஏ."],["Sivaganga","கொலு.வீ.சிவராஜா"],["Karaikudi","இரா.ஜோதிமணி"],
+        ["Aranthangi","தா.காளிமுத்து"],["Melur","இரா.கதிர் ஆனந்த்"],["Madurai South","திருமதி.வி.ரமா"],["Tiruvadanai","நா.சாய்தான்யா பி.ஏ.,எம்.எல்."],
+        ["Salem (West)","எம்.கிருஷ்ணமூர்த்தி"],["Erode (East)","எஸ்.முத்துசாமி"],["Tiruppur (North)","எம்.சக்திவேல் பி.எஸ்.சி."],
+        ["Kavundampalayam","கே.கார்த்திகேயன் பி.ஏ."],["Singanallur","எஸ்.மணிகண்டன் பி.இ."],["Pollachi","ஆ.இளங்கோவன் பி.எல்."],
+        ["Udhagamandalam","ஆர்.விஜயலட்சுமி"],["Bhavanisagar","எ.ஸ்ரீநிவாசன் பி.இ."],["Tiruchengodu","பி.பழனிசாமி எம்.ஏ."],
+        ["Modakkurichi","ஆ.கலையரசன் பி.காம்."],["Chidambaram","எஸ்.லட்சுமணன் பி.எஸ்.சி.,எம்.ஏ."],
+        ["Nannilam","கே.ராஜலட்சுமி"],["Papanasam","என்.பாலசுப்ரமணியன்"],["Nagapattinam","ம.ஜவாஹருல்லா"],["Sirkazhi","எம்.கார்த்திகேயன்"],
+        ["Kattumannarkoil","ஆ.ராஜாகண்ணு"],["Mayiladuthurai","ஆர்.தமரைக்கண்ணன் பி.இ."],["Thuraiyur","ஆர்.ராஜா"],
+        ["Thiruthuraipoondi","ச.பத்மநாபன் பி.ஏ."],["Kilvelur","ம.செல்வம்"],["Sriperumbudur","ஆர்.கலைச்செல்வி"],
+        ["Pallavaram","வி.ஸ்ரீநிவாசன்"],["Sholinghur","த.தமிழரசன்"],["Thiruporur","க.ராஜு"],["Cheyyur","ச.மாணிக்கம்"],
+        ["Uthiramerur","க.சுந்தர் பி.எஸ்.சி."],["Arakkonam","கே.கலாநிதி"],["Ponneri","ப.செங்கோட்டையன்"],["Tiruttani","எஸ்.தமிழ்ச்செல்வன்"],
+        ["Gudiyatham","வ.அருள்முருகன்"],["Vaniyambadi","இரா.சுல்தான்"],["Ambur","அ.செ.வில்வநாதன்"],
+        ["Manapaarai","எம்.செல்வராஜ்"],["Kallakurichi","எம்.ஆர்.கே.பன்னீர்"],["Hosur","எஸ்.சுரேஷ்"],["Krishnagiri","ஆர்.கருணாகரன்"],
+        ["Uthangarai","சு.ஹரிஷ்குமார்"],["Thalli","வி.சுந்தரேஸ்"],["Pennagaram","ப.பாலகிருஷ்ணன்"],["Dharmapuri","இ.பெரியசாமி"],
+        ["Polur","எஸ்.ரவிக்குமார்"],["Mailam","ஆர்.அன்புச்செல்வி"],["Tindivanam","டி.சரவணன்"],["Vanur","கே.ரவிச்சந்திரன்"],
+        ["Velachery","ஜி.பிரகாஷ்"],["Panruti","வை.மோகன்"],["Cuddalore","எம்.கலையரசு"],
+        ["Gandharvakottai","ஆர்.நாகராஜன்"],["Natham","ஜெ.பிரேம்குமார்"],["Sivaganga","கொலு.வீ.சிவராஜா"],["Palani","டி.ரத்தினவேல்"]
     ]);
 
-    // --------------------------------------------------------------
-    // 3. ELECTORS DATA (full 234)
-    // --------------------------------------------------------------
-    const electorsData = [ /* full list as before, same as previous version */ 
+    const electorsData = [
         {ac:1,name:"Gummidipoondi",electors:251603},{ac:2,name:"Ponneri",electors:248917},{ac:3,name:"Tiruttani",electors:260084},{ac:4,name:"Thiruvallur",electors:248651},{ac:5,name:"Poonamallee",electors:363688},{ac:6,name:"Avadi",electors:428772},{ac:7,name:"Maduravoyal",electors:364031},{ac:8,name:"Ambattur",electors:330480},{ac:9,name:"Madhavaram",electors:420601},{ac:10,name:"Thiruvottiyur",electors:240586},{ac:11,name:"Dr. Radhakrishnan Nagar",electors:195856},{ac:12,name:"Perambur",electors:222792},{ac:13,name:"Kolathur",electors:207251},{ac:14,name:"Villivakkam",electors:159764},{ac:15,name:"Thiru-Vi-Ka-Nagar",electors:178793},{ac:16,name:"Egmore",electors:134879},{ac:17,name:"Royapuram",electors:156931},{ac:18,name:"Harbour",electors:116896},{ac:19,name:"Chepauk-Thiruvallikeni",electors:163866},{ac:20,name:"Thousand Lights",electors:153908},{ac:21,name:"Anna Nagar",electors:181402},{ac:22,name:"Virugambakkam",electors:196536},{ac:23,name:"Saidapet",electors:200697},{ac:24,name:"Thiyagarayanagar",electors:154943},{ac:25,name:"Mylapore",electors:194731},{ac:26,name:"Velachery",electors:211691},{ac:27,name:"Sholinganallur",electors:536991},{ac:28,name:"Alandur",electors:296052},{ac:29,name:"Sriperumbudur",electors:375921},{ac:30,name:"Pallavaram",electors:330217},{ac:31,name:"Tambaram",electors:323677},{ac:32,name:"Chengalpattu",electors:366400},{ac:33,name:"Thiruporur",electors:289401},{ac:34,name:"Cheyyur",electors:202055},{ac:35,name:"Madurantakam",electors:211295},{ac:36,name:"Uthiramerur",electors:243922},{ac:37,name:"Kancheepuram",electors:276299},{ac:38,name:"Arakkonam",electors:199165},{ac:39,name:"Sholingur",electors:256118},{ac:40,name:"Katpadi",electors:225809},{ac:41,name:"Ranipet",electors:245853},{ac:42,name:"Arcot",electors:243565},{ac:43,name:"Vellore",electors:211063},{ac:44,name:"Anaikattu",electors:234738},{ac:45,name:"Kilvaithinankuppam",electors:213451},{ac:46,name:"Gudiyatham",electors:248526},{ac:47,name:"Vaniyambadi",electors:240220},{ac:48,name:"Ambur",electors:212631},{ac:49,name:"Jolarpet",electors:233830},{ac:50,name:"Tirupattur",electors:224918},{ac:51,name:"Uthangarai",electors:233500},{ac:52,name:"Bargur",electors:237349},{ac:53,name:"Krishnagiri",electors:265037},{ac:54,name:"Veppanahalli",electors:243875},{ac:55,name:"Hosur",electors:338295},{ac:56,name:"Thalli",electors:235984},{ac:57,name:"Palacode",electors:237476},{ac:58,name:"Pennagaram",electors:246293},{ac:59,name:"Dharmapuri",electors:257939},{ac:60,name:"Pappireddippatti",electors:254658},{ac:61,name:"Harur",electors:243742},{ac:62,name:"Chengam",electors:266629},{ac:63,name:"Tiruvannamalai",electors:247309},{ac:64,name:"Kilpennathur",electors:238913},{ac:65,name:"Kalasapakkam",electors:230766},{ac:66,name:"Polur",electors:232426},{ac:67,name:"Arani",electors:253022},{ac:68,name:"Cheyyar",electors:238283},{ac:69,name:"Vandavasi",electors:211811},{ac:70,name:"Gingee",electors:240957},{ac:71,name:"Mailam",electors:207665},{ac:72,name:"Tindivanam",electors:217609},{ac:73,name:"Vanur",electors:207984},{ac:74,name:"Villupuram",electors:244080},{ac:75,name:"Vikravandi",electors:227355},{ac:76,name:"Tirukkoyilur",electors:241003},{ac:77,name:"Ulundurpettai",electors:297472},{ac:78,name:"Rishivandiyam",electors:270541},{ac:79,name:"Sankarapuram",electors:263136},{ac:80,name:"Kallakurichi",electors:278762},{ac:81,name:"Gangavalli",electors:216794},{ac:82,name:"Attur",electors:226481},{ac:83,name:"Yercaud",electors:270529},{ac:84,name:"Omalur",electors:291866},{ac:85,name:"Mettur",electors:253445},{ac:86,name:"Edappadi",electors:274054},{ac:87,name:"Sankari",electors:258678},{ac:88,name:"Salem (West)",electors:255320},{ac:89,name:"Salem (North)",electors:236088},{ac:90,name:"Salem (South)",electors:224097},{ac:91,name:"Veerapandi",electors:248478},{ac:92,name:"Rasipuram",electors:220554},{ac:93,name:"Senthamangalam",electors:227327},{ac:94,name:"Namakkal",electors:235351},{ac:95,name:"Paramathi Velur",electors:203567},{ac:96,name:"Tiruchengodu",electors:206928},{ac:97,name:"Kumarapalayam",electors:217224},{ac:98,name:"Erode (East)",electors:176228},{ac:99,name:"Erode (West)",electors:245493},{ac:100,name:"Modakkurichi",electors:206122},{ac:101,name:"Dharapuram",electors:220743},{ac:102,name:"Kangayam",electors:216646},{ac:103,name:"Perundurai",electors:212084},{ac:104,name:"Bhavani",electors:221393},{ac:105,name:"Anthiyur",electors:205737},{ac:106,name:"Gobichettipalayam",electors:237581},{ac:107,name:"Bhavanisagar",electors:235584},{ac:108,name:"Udhagamandalam",electors:187425},{ac:109,name:"Gudalur",electors:183888},{ac:110,name:"Coonoor",electors:175820},{ac:111,name:"Mettupalayam",electors:279438},{ac:112,name:"Avanashi",electors:250346},{ac:113,name:"Tiruppur (North)",electors:310138},{ac:114,name:"Tiruppur (South)",electors:193614},{ac:115,name:"Palladam",electors:322530},{ac:116,name:"Sulur",electors:303541},{ac:117,name:"Kavundampalayam",electors:407507},{ac:118,name:"Coimbatore (North)",electors:291533},{ac:119,name:"Thondamuthur",electors:287442},{ac:120,name:"Coimbatore (South)",electors:186509},{ac:121,name:"Singanallur",electors:266058},{ac:122,name:"Kinathukadavu",electors:300486},{ac:123,name:"Pollachi",electors:202015},{ac:124,name:"Valparai",electors:172284},{ac:125,name:"Udumalaipettai",electors:228524},{ac:126,name:"Madathukulam",electors:212742},{ac:127,name:"Palani",electors:237359},{ac:128,name:"Oddanchatram",electors:217698},{ac:129,name:"Athoor",electors:259846},{ac:130,name:"Nilakkottai",electors:219077},{ac:131,name:"Natham",electors:258603},{ac:132,name:"Dindigul",electors:237679},{ac:133,name:"Vedasandur",electors:241813},{ac:134,name:"Aravakurichi",electors:194505},{ac:135,name:"Karur",electors:226584},{ac:136,name:"Krishnarayapuram",electors:202087},{ac:137,name:"Kulithalai",electors:221988},{ac:138,name:"Manapaarai",electors:266019},{ac:139,name:"Srirangam",electors:283862},{ac:140,name:"Tiruchirappalli (West)",electors:235903},{ac:141,name:"Tiruchirappalli (East)",electors:217397},{ac:142,name:"Thiruverumbur",electors:256239},{ac:143,name:"Lalgudi",electors:211043},{ac:144,name:"Manachanallur",electors:234217},{ac:145,name:"Musiri",electors:212612},{ac:146,name:"Thuraiyur",electors:209011},{ac:147,name:"Perambalur",electors:288449},{ac:148,name:"Kunnam",electors:266682},{ac:149,name:"Ariyalur",electors:261161},{ac:150,name:"Jayankondam",electors:261793},{ac:151,name:"Tittakudi",electors:206770},{ac:152,name:"Virudhachalam",electors:237836},{ac:153,name:"Neyveli",electors:189024},{ac:154,name:"Panruti",electors:240048},{ac:155,name:"Cuddalore",electors:221152},{ac:156,name:"Kurinjipadi",electors:236297},{ac:157,name:"Bhuvanagiri",electors:230968},{ac:158,name:"Chidambaram",electors:229136},{ac:159,name:"Kattumannarkoil",electors:224565},{ac:160,name:"Sirkazhi",electors:239469},{ac:161,name:"Mayiladuthurai",electors:232618},{ac:162,name:"Poompuhar",electors:257129},{ac:163,name:"Nagapattinam",electors:172979},{ac:164,name:"Kilvelur",electors:168934},{ac:165,name:"Vedaranyam",electors:186034},{ac:166,name:"Thiruthuraipoondi",electors:225363},{ac:167,name:"Mannargudi",electors:231935},{ac:168,name:"Thiruvarur",electors:257892},{ac:169,name:"Nannilam",electors:264462},{ac:170,name:"Thiruvidaimarudur",electors:254453},{ac:171,name:"Kumbakonam",electors:251868},{ac:172,name:"Papanasam",electors:254652},{ac:173,name:"Thiruvaiyaru",electors:256377},{ac:174,name:"Thanjavur",electors:249064},{ac:175,name:"Orathanadu",electors:231251},{ac:176,name:"Pattukkottai",electors:240954},{ac:177,name:"Peravurani",electors:212826},{ac:178,name:"Gandarvakottai",electors:194732},{ac:179,name:"Viralimalai",electors:223084},{ac:180,name:"Pudukkottai",electors:223928},{ac:181,name:"Thirumayam",electors:219279},{ac:182,name:"Alangudi",electors:210296},{ac:183,name:"Aranthangi",electors:227588},{ac:184,name:"Karaikudi",electors:303371},{ac:185,name:"Tiruppattur",electors:273456},{ac:186,name:"Sivaganga",electors:276156},{ac:187,name:"Manamadurai",electors:257616},{ac:188,name:"Melur",electors:227789},{ac:189,name:"Madurai East",electors:330993},{ac:190,name:"Sholavandan",electors:212502},{ac:191,name:"Madurai North",electors:218719},{ac:192,name:"Madurai South",electors:177605},{ac:193,name:"Madurai Central",electors:196856},{ac:194,name:"Madurai West",electors:271341},{ac:195,name:"Thiruparankundram",electors:307783},{ac:196,name:"Thirumangalam",electors:259225},{ac:197,name:"Usilampatti",electors:264141},{ac:198,name:"Andipatti",electors:254549},{ac:199,name:"Periyakulam",electors:263547},{ac:200,name:"Bodinayakanur",electors:261631},{ac:201,name:"Cumbum",electors:253646},{ac:202,name:"Rajapalayam",electors:212220},{ac:203,name:"Srivilliputhur",electors:222367},{ac:204,name:"Sattur",electors:227963},{ac:205,name:"Sivakasi",electors:225461},{ac:206,name:"Virudhunagar",electors:198616},{ac:207,name:"Aruppukkottai",electors:206497},{ac:208,name:"Tiruchuli",electors:204293},{ac:209,name:"Paramakudi",electors:233433},{ac:210,name:"Tiruvadanai",electors:282121},{ac:211,name:"Ramanathapuram",electors:310165},{ac:212,name:"Mudhukulathur",electors:297310},{ac:213,name:"Vilathikulam",electors:203732},{ac:214,name:"Thoothukkudi",electors:248300},{ac:215,name:"Tiruchendur",electors:230702},{ac:216,name:"Srivaikuntam",electors:212885},{ac:217,name:"Ottapidaram",electors:240988},{ac:218,name:"Kovilpatti",electors:240017},{ac:219,name:"Sankarankovil",electors:236532},{ac:220,name:"Vasudevanallur",electors:227369},{ac:221,name:"Kadayanallur",electors:267517},{ac:222,name:"Tenkasi",electors:279585},{ac:223,name:"Alangulam",electors:253408},{ac:224,name:"Tirunelveli",electors:273520},{ac:225,name:"Ambasamudram",electors:225714},{ac:226,name:"Palayamkottai",electors:255130},{ac:227,name:"Nanguneri",electors:254420},{ac:228,name:"Radhapuram",electors:244480},{ac:229,name:"Kanniyakumari",electors:286968},{ac:230,name:"Nagercoil",electors:257022},{ac:231,name:"Colachel",electors:263448},{ac:232,name:"Padmanabhapuram",electors:234056},{ac:233,name:"Vilavancode",electors:225219},{ac:234,name:"Killiyoor",electors:243837}
     ];
 
-    // Build lookup for AIADMK/TVK/NTK from originalCandidates (by constituency name, normalized)
-    function normalizeName(s) { return s.toLowerCase().replace(/[.\- ]/g,'').replace(/vi\.?ka/,'vika').replace(/thiyagarayanagar/,'tnagar').replace(/manapaarai/,'manapparai').replace(/virudhachalam/,'vridhachalam'); }
-    const otherMap = new Map();
-    originalCandidates.forEach(c => {
-        let key = normalizeName(c.constName);
-        if(c.constName === "T. Nagar") key = normalizeName("Thiyagarayanagar");
-        if(c.constName === "Thiru.Vi.Ka. Nagar") key = normalizeName("Thiru-Vi-Ka-Nagar");
-        if(c.constName === "Gudiyattam") key = normalizeName("Gudiyatham");
-        if(c.constName === "Manapparai") key = normalizeName("Manapaarai");
-        if(c.constName === "Vridhachalam") key = normalizeName("Virudhachalam");
-        if(c.constName === "Paramathi-Velur") key = normalizeName("Paramathi Velur");
-        otherMap.set(key, {aiadmk:c.aiadmk, tvk:c.tvk, ntk:c.ntk});
+    function normalizeName(s){return s.toLowerCase().replace(/[.\- ]/g,'').replace(/vi\.?ka/,'vika').replace(/thiyagarayanagar/,'tnagar').replace(/manapaarai/,'manapparai').replace(/virudhachalam/,'vridhachalam')}
+    const otherMap=new Map();
+    originalCandidates.forEach(c=>{
+        let key=normalizeName(c.constName);
+        if(c.constName==="T. Nagar")key=normalizeName("Thiyagarayanagar");
+        if(c.constName==="Thiru.Vi.Ka. Nagar")key=normalizeName("Thiru-Vi-Ka-Nagar");
+        if(c.constName==="Gudiyattam")key=normalizeName("Gudiyatham");
+        if(c.constName==="Manapparai")key=normalizeName("Manapaarai");
+        if(c.constName==="Vridhachalam")key=normalizeName("Virudhachalam");
+        if(c.constName==="Paramathi-Velur")key=normalizeName("Paramathi Velur");
+        otherMap.set(key,{aiadmk:c.aiadmk,tvk:c.tvk,ntk:c.ntk});
     });
 
-    // Render all rows
-    const tbody = document.getElementById("tableBody");
-    let htmlRows = "";
-    electorsData.forEach(e => {
-        const acNo = e.ac;
-        const name = e.name;
-        const electorVal = e.electors.toLocaleString('en-IN');
-        // DMK: prefer newDmkMap, else fallback to original (but new covers all)
-        let dmkCandidate = newDmkMap.get(name) || "";
-        if(!dmkCandidate) {
-            // fallback: try normalized original
-            let key = normalizeName(name);
-            if(name === "Thiyagarayanagar") key = normalizeName("T. Nagar");
-            if(name === "Thiru-Vi-Ka-Nagar") key = normalizeName("Thiru.Vi.Ka. Nagar");
-            const orig = originalCandidates.find(c => normalizeName(c.constName) === key);
-            if(orig && orig.dmk) dmkCandidate = orig.dmk;
+    const tbody=document.getElementById("tableBody");
+    let htmlRows="";
+    electorsData.forEach(e=>{
+        const acNo=e.ac,name=e.name,electorVal=e.electors.toLocaleString('en-IN');
+        let dmkCandidate=newDmkMap.get(name)||"";
+        if(!dmkCandidate){
+            let key=normalizeName(name);
+            if(name==="Thiyagarayanagar")key=normalizeName("T. Nagar");
+            if(name==="Thiru-Vi-Ka-Nagar")key=normalizeName("Thiru.Vi.Ka. Nagar");
+            const orig=originalCandidates.find(c=>normalizeName(c.constName)===key);
+            if(orig&&orig.dmk)dmkCandidate=orig.dmk;
         }
-        // AIADMK/TVK/NTK from otherMap
-        let nkey = normalizeName(name);
-        if(name === "Thiyagarayanagar") nkey = normalizeName("T. Nagar");
-        if(name === "Thiru-Vi-Ka-Nagar") nkey = normalizeName("Thiru.Vi.Ka. Nagar");
-        if(name === "Gudiyatham") nkey = normalizeName("Gudiyattam");
-        if(name === "Manapaarai") nkey = normalizeName("Manapparai");
-        if(name === "Virudhachalam") nkey = normalizeName("Vridhachalam");
-        const other = otherMap.get(nkey) || {aiadmk:"", tvk:"", ntk:""};
-        const emptySpan = (v) => (v && v.trim()) ? v : "<span class='empty-cell'>—</span>";
-        htmlRows += `<tr>
-            <td>${acNo}</td>
-            <td><strong>${name}</strong></td>
-            <td style="text-align:right">${electorVal}</td>
-            <td>${emptySpan(dmkCandidate)}</td>
-            <td>${emptySpan(other.aiadmk)}</td>
-            <td>${emptySpan(other.tvk)}</td>
-            <td>${emptySpan(other.ntk)}</td>
-        </tr>`;
+        let nkey=normalizeName(name);
+        if(name==="Thiyagarayanagar")nkey=normalizeName("T. Nagar");
+        if(name==="Thiru-Vi-Ka-Nagar")nkey=normalizeName("Thiru.Vi.Ka. Nagar");
+        if(name==="Gudiyatham")nkey=normalizeName("Gudiyattam");
+        if(name==="Manapaarai")nkey=normalizeName("Manapparai");
+        if(name==="Virudhachalam")nkey=normalizeName("Vridhachalam");
+        const other=otherMap.get(nkey)||{aiadmk:"",tvk:"",ntk:""};
+        const emptySpan=v=>(v&&v.trim())?v:"<span class='empty-cell'>—</span>";
+        htmlRows+=`<tr><td>${acNo}</td><td><strong>${name}</strong></td><td style="text-align:right">${electorVal}</td><td>${emptySpan(dmkCandidate)}</td><td>${emptySpan(other.aiadmk)}</td><td>${emptySpan(other.tvk)}</td><td>${emptySpan(other.ntk)}</td></tr>`;
     });
-    tbody.innerHTML = htmlRows;
-    document.getElementById("totalSeatsCount").innerText = electorsData.length;
+    tbody.innerHTML=htmlRows;
+    document.getElementById("totalSeatsCount").innerText=electorsData.length;
 </script>
-
 </body>
 </html>
