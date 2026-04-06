@@ -73,15 +73,25 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1 pb-2 px-2 overflow-x-auto">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.path}
-              className="px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.path.endsWith('.html') ? (
+              <a
+                key={item.label}
+                href={item.path}
+                className="px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.path}
+                className="px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap"
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Search bar */}
@@ -117,16 +127,27 @@ export default function Header() {
             className="lg:hidden overflow-hidden bg-card border-t border-border"
           >
             <nav className="flex flex-col p-4 gap-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  onClick={() => setMobileOpen(false)}
-                  className="px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) =>
+                item.path.endsWith('.html') ? (
+                  <a
+                    key={item.label}
+                    href={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className="px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className="px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
               <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border">
                 <button
                   onClick={toggleDark}
