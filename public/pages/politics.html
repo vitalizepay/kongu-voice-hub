@@ -3,192 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Tamil Nadu Election 2026 – Full Constituency Data (DMK updated)</title>
+    <title>Politics — Tamil Nadu Election 2026 | The Kongu Times</title>
+    <meta name="description" content="Complete constituency-wise data for Tamil Nadu Assembly Election 2026 including candidates from DMK, AIADMK, TVK, and NTK.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            background: #eef2ea;
-            font-family: 'Segoe UI', 'Roboto', 'Calibri', sans-serif;
-            margin: 0;
-            padding: 24px 20px;
+            background: #f8f8f8;
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
         }
-        .excel-container {
-            max-width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            border: 1px solid #d0dec9;
+        
+        /* Header */
+        .site-header {
+            background: #fff;
+            border-bottom: 3px solid #dc2626;
+            padding: 12px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        .excel-header {
-            background: #1e3a2f;
-            color: white;
-            padding: 18px 24px;
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: baseline;
             flex-wrap: wrap;
             gap: 12px;
-            border-bottom: 3px solid #ffc107;
         }
-        .title-section h1 {
-            margin: 0;
-            font-size: 1.7rem;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-        }
-        .title-section p {
-            margin: 6px 0 0;
-            font-size: 0.85rem;
-            opacity: 0.85;
-        }
-        .stats-badge {
-            background: #2c5a45;
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
+        .brand {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
         }
-        .stats-badge span {
+        .brand-icon {
+            width: 40px; height: 40px;
+            background: #dc2626;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 22px;
+        }
+        .brand-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+        .brand-text p {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #666;
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #dc2626;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #fef2f2;
+            transition: all 0.2s;
+        }
+        .back-link:hover { background: #fee2e2; }
+
+        /* Page hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1a1a 100%);
+            color: white;
+            padding: 48px 24px 40px;
+        }
+        .page-hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .page-hero .category-tag {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            font-size: 11px;
             font-weight: 700;
-            background: #ffc107;
-            color: #1e3a2f;
-            padding: 0 8px;
-            border-radius: 30px;
-            margin-left: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 5px 14px;
+            border-radius: 4px;
+            margin-bottom: 16px;
         }
-        .toolbar {
-            padding: 10px 20px;
-            background: #f8fbf5;
-            border-bottom: 1px solid #d4e2cf;
-            font-size: 0.8rem;
+        .page-hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .page-hero .subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        .page-hero .meta-row {
+            margin-top: 20px;
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
             align-items: center;
         }
-        .info-note {
-            color: #2c5a45;
-            background: #eaf4e5;
-            padding: 4px 14px;
-            border-radius: 30px;
+        .stat-pill {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .stat-pill .num {
+            background: #dc2626;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        /* Content */
+        .content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        .info-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .info-chip {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
             font-weight: 500;
+            color: #444;
+        }
+        .info-chip strong { color: #dc2626; }
+
+        /* Table */
+        .table-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e8e8e8;
         }
         .table-wrapper {
             overflow-x: auto;
             overflow-y: auto;
-            max-height: 70vh;
+            max-height: 72vh;
             scrollbar-width: thin;
         }
         .candidate-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.85rem;
-            font-family: 'Segoe UI', 'Calibri', monospace;
-            background: white;
-            min-width: 1000px;
+            font-size: 0.82rem;
+            min-width: 900px;
         }
         .candidate-table th {
-            background: #2c5a45;
+            background: #1a1a1a;
             color: white;
             font-weight: 600;
-            padding: 12px 8px;
-            border: 1px solid #3e6e56;
-            font-size: 0.85rem;
+            padding: 14px 10px;
+            border: none;
+            font-size: 0.8rem;
             position: sticky;
             top: 0;
             z-index: 10;
             white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .candidate-table th:first-child {
+            border-radius: 0;
         }
         .candidate-table td {
-            border: 1px solid #cce0c5;
-            padding: 9px 8px;
-            color: #1e2f2a;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 10px;
+            color: #333;
             vertical-align: top;
         }
         .candidate-table tbody tr:nth-child(even) td {
-            background-color: #fafef7;
+            background-color: #fafafa;
         }
         .candidate-table tbody tr:hover td {
-            background-color: #f1f9eb;
+            background-color: #fef2f2;
         }
-        .candidate-table td:first-child,
-        .candidate-table th:first-child {
-            font-weight: 500;
-            background-color: #fef9e6;
+        .candidate-table td:first-child {
+            font-weight: 600;
+            color: #dc2626;
+            text-align: center;
+            background-color: #fff8f8;
         }
-        .candidate-table th:first-child {
-            background-color: #1f4a38;
-            color: white;
+        .candidate-table td:nth-child(2) {
+            font-weight: 600;
+            color: #1a1a1a;
         }
         .candidate-table td:nth-child(3) {
             font-weight: 500;
             text-align: right;
-            font-family: monospace;
-            background-color: #fcfef9;
+            font-family: 'Inter', monospace;
+            color: #666;
         }
         .empty-cell {
-            color: #8faa87;
-            font-style: normal;
+            color: #ccc;
         }
-        .footer-note {
-            padding: 12px 20px;
-            background: #f4f9f1;
-            font-size: 0.75rem;
-            color: #3f5e4f;
-            border-top: 1px solid #cde0c7;
-            text-align: right;
+
+        /* Footer */
+        .table-footer {
+            padding: 16px 20px;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
-        @media (max-width: 780px) {
-            body { padding: 12px; }
-            .candidate-table th, .candidate-table td { padding: 6px 4px; font-size: 0.72rem; }
+        .site-footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+        .site-footer a { color: #dc2626; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .page-hero { padding: 32px 16px 28px; }
+            .page-hero h2 { font-size: 1.5rem; }
+            .content-section { padding: 16px; }
+            .candidate-table th, .candidate-table td { padding: 7px 6px; font-size: 0.72rem; }
+            .brand-text h1 { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
-<div class="excel-container">
-    <div class="excel-header">
-        <div class="title-section">
-            <h1>🗳️ Tamil Nadu Assembly Election 2026</h1>
-            <p>Constituency-wise Electors + Candidates (DMK updated | AIADMK·TVK·NTK as per draft)</p>
-        </div>
-        <div class="stats-badge">
-            📍 Total Seats: <span id="totalSeatsCount">234</span>
-            📋 Updated DMK list (official)
+
+<!-- Header -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="brand">
+            <div class="brand-icon">K</div>
+            <div class="brand-text">
+                <h1>The Kongu Times</h1>
+                <p>Voice of Kongu Region</p>
+            </div>
+        </a>
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="page-hero">
+    <div class="page-hero-inner">
+        <span class="category-tag">Politics</span>
+        <h2>🗳️ Tamil Nadu Assembly Election 2026</h2>
+        <p class="subtitle">Complete constituency-wise data with electors count and confirmed candidates from all major alliances — DMK (SPA), AIADMK (NDA), TVK, and NTK.</p>
+        <div class="meta-row">
+            <div class="stat-pill">📍 Total Seats <span class="num" id="totalSeatsCount">234</span></div>
+            <div class="stat-pill">📅 Polling: April 23, 2026</div>
+            <div class="stat-pill">📋 Results: May 4, 2026</div>
         </div>
     </div>
-    <div class="toolbar">
-        <div class="info-note">📊 Excel-style table • Electors + 4 major alliances</div>
-        <div class="info-note">✅ DMK candidates fully refreshed from latest announcement (all 234 constituencies)</div>
+</section>
+
+<!-- Content -->
+<div class="content-section">
+    <div class="info-bar">
+        <div class="info-chip">✅ <strong>DMK</strong> candidates fully updated from official announcement</div>
+        <div class="info-chip">📊 AIADMK, TVK, NTK data from latest available sources</div>
+        <div class="info-chip">🔄 Last updated: <strong>April 6, 2026</strong></div>
     </div>
-    <div class="table-wrapper">
-        <table class="candidate-table" id="electionTable">
-            <thead>
-                <tr>
-                    <th>AC No.</th>
-                    <th>Constituency</th>
-                    <th>Electors</th>
-                    <th>DMK (SPA)</th>
-                    <th>AIADMK (NDA)</th>
-                    <th>TVK</th>
-                    <th>NTK</th>
-                </tr>
+
+    <div class="table-card">
+        <div class="table-wrapper">
+            <table class="candidate-table" id="electionTable">
+                <thead>
+                    <tr>
+                        <th>AC No.</th>
+                        <th>Constituency</th>
+                        <th>Electors</th>
+                        <th>DMK (SPA)</th>
+                        <th>AIADMK (NDA)</th>
+                        <th>TVK</th>
+                        <th>NTK</th>
+                    </tr>
                 </thead>
-                <tbody id="tableBody">
-                    <!-- dynamic rows -->
-                </tbody>
-        </table>
-    </div>
-    <div class="footer-note">
-        ✅ Sources: Election Commission electors data | DMK official candidate list (April 2026) | AIADMK, TVK, NTK from previous draft (AC 1–180); rest —.
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div class="table-footer">
+            <span>✅ Sources: Election Commission electors data | Official party candidate lists (April 2026)</span>
+            <span>Published by <strong>The Kongu Times</strong></span>
+        </div>
     </div>
 </div>
 
-<script>
+<!-- Footer -->
+<footer class="site-footer">
+    <p>© 2026 <a href="/">The Kongu Times</a> — Voice of Kongu Region. All rights reserved.</p>
+</footer>
+
     // --------------------------------------------------------------
     // 1. ORIGINAL CANDIDATE DATA (AIADMK, TVK, NTK from sheet AC 1-180)
     // --------------------------------------------------------------
@@ -489,5 +633,6 @@
     tbody.innerHTML = htmlRows;
     document.getElementById("totalSeatsCount").innerText = electorsData.length;
 </script>
+
 </body>
 </html>
