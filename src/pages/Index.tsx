@@ -32,7 +32,7 @@ export default function Index() {
             <TopStoriesGrid />
 
             {/* Category sections */}
-            {["Politics", "Business", "Agriculture"].map(cat => {
+            {["Politics", "Business", "Agriculture", "Technology"].map(cat => {
               const articles = sampleArticles.filter(a => a.category === cat).slice(0, 4);
               if (articles.length === 0) return null;
               return (
