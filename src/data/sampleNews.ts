@@ -36,21 +36,21 @@ export const districts = [
 ];
 
 export const breakingNews = [
-  "Tamil Nadu Assembly Election 2026 scheduled for April 23 — all 234 constituencies gear up",
-  "Kongu region emerges as key battleground with 29 seats attracting fierce multi-party contest",
-  "Coimbatore Smart City project Phase 2 inaugurated with ₹500 crore investment",
-  "Tiruppur garment exports cross ₹40,000 crore mark this fiscal year",
-  "Election Commission deploys over 1.5 lakh polling personnel across Tamil Nadu",
-  "New IT corridor announced for Salem — 5,000 jobs expected",
-  "Erode turmeric market registers record trading volume",
+  "Tamil Nadu Assembly Election 2026 scheduled for April 23 — all 234 constituencies to vote",
+  "Kongu belt emerges as key battleground: 29 seats drawing intense multi-party campaigns",
+  "DMK releases full manifesto promising ₹8,000 household coupons and free laptops for college students",
+  "Tiruppur garment exports cross ₹40,000 crore — industry sets new record this fiscal year",
+  "AIADMK launches statewide campaign under 'Makkalai Kaappom, Thamizhagathai Meetpom' slogan",
+  "New IT corridor announced for Salem district — over 5,000 jobs expected in three years",
+  "Election Commission deploys 1.5 lakh polling staff across Tamil Nadu's 68,000+ booths",
 ];
 
 export const sampleArticles: Article[] = [
   {
     id: "1",
-    title: "Tamil Nadu Assembly Election 2026: All 234 Constituencies Gear Up for April 23 Polls",
-    summary: "The Election Commission has finalized preparations for the Tamil Nadu Legislative Assembly elections, with voting scheduled for April 23 and results on May 4, 2026.",
-    content: "Tamil Nadu is set for a high-stakes electoral battle as all 234 assembly constituencies prepare for polling on April 23, 2026. The Election Commission has completed extensive preparations including deployment of over 1.5 lakh polling personnel, installation of EVMs and VVPATs at 68,000+ polling stations, and robust security arrangements.\n\nThe contest is primarily between the ruling DMK-led Secular Progressive Alliance (SPA) and the opposition AIADMK-led NDA front, with Tamilaga Vetri Kazhagam (TVK) and Naam Tamilar Katchi (NTK) also fielding candidates across all seats.\n\nKey issues dominating the campaign include state autonomy, Hindi imposition concerns, infrastructure development, employment generation, and agricultural welfare. The Kongu region with its 29 assembly segments has emerged as a critical battleground where all major parties are investing significant campaign resources.\n\nVoter registration has crossed 6.2 crore, marking a significant increase from 2021. The Election Commission has set up special facilities for senior citizens, differently-abled voters, and first-time voters across the state.",
+    title: "Tamil Nadu Gears Up for April 23 Assembly Polls — All 234 Seats in Play",
+    summary: "Voting for the Tamil Nadu Legislative Assembly is set for April 23, 2026, with results expected on May 4. The Election Commission has completed preparations across 68,000 polling stations statewide.",
+    content: "Tamil Nadu enters the final phase of election preparedness as polling day — April 23, 2026 — draws near. The Election Commission has finalised deployment of over 1.5 lakh polling personnel, installed EVMs with VVPAT units at more than 68,000 stations, and put in place extensive security arrangements.\n\nThe primary contest is between the ruling DMK-led Secular Progressive Alliance (SPA) and the AIADMK-led opposition front, with Tamilaga Vetri Kazhagam (TVK) and Naam Tamilar Katchi (NTK) also fielding candidates across all 234 seats.\n\nAmong the key issues driving voter sentiment are state autonomy, concerns over the National Education Policy's language provisions, infrastructure development, employment, and welfare for farming communities. The Kongu region — covering 29 assembly segments — has emerged as one of the most fiercely contested battlegrounds, with all major parties committing significant campaign resources.\n\nVoter enrolment has reached 6.2 crore, a notable rise from the previous election. The Commission has also ensured dedicated facilities for senior citizens, differently-abled voters, and first-time voters at all booths.",
     category: "Politics",
     district: "Coimbatore",
     image: imgElectionRally,
@@ -62,79 +62,65 @@ export const sampleArticles: Article[] = [
   },
   {
     id: "2",
-    title: "Kongu Region Emerges as Decisive Battleground in 2026 Tamil Nadu Elections",
-    summary: "With 29 assembly seats, the Kongu belt including Coimbatore, Erode, Tiruppur, and Salem has become the most fiercely contested region in the state elections.",
-    content: "The Kongu region, comprising 29 assembly constituencies across Coimbatore, Erode, Tiruppur, Salem, Namakkal, Karur, and Nilgiris districts, has emerged as the most critical battleground in the 2026 Tamil Nadu elections.\n\nAll major political fronts have intensified their campaigns in the region. The ruling DMK is aiming to break its historical underperformance in the Kongu belt, with senior leaders declaring the region will become 'DMK's fort' this election. The AIADMK, which traditionally dominates the region, faces stiff competition from both the DMK and newcomer TVK.\n\nTVK's leadership has expressed confidence of sweeping all 29 Kongu seats, while the AIADMK has been consolidating support from regional parties. Key constituencies to watch include Coimbatore South, Erode East, Salem North, and Pollachi.\n\nLocal issues such as water management, textile industry welfare, agricultural prices, and IT sector development are dominating the discourse in the region.",
-    category: "Politics",
-    district: "Coimbatore",
-    image: imgKonguDev,
-    author: "The Kongu Times Editorial",
-    date: "2026-04-05T16:30:00",
-    views: 22100,
-    trending: true,
-    tags: ["kongu region", "election", "battleground", "coimbatore"]
-  },
-  {
-    id: "3",
-    title: "State Autonomy and Anti-Hindi Stance Dominate TN Election Campaign Rhetoric",
-    summary: "Leading political figures emphasize Tamil Nadu's stance against Hindi imposition and the importance of protecting state autonomy in the upcoming assembly elections.",
-    content: "The 2026 Tamil Nadu election campaign has seen state autonomy and opposition to Hindi imposition emerge as dominant themes across party lines. Senior leaders have been vocal about protecting Tamil Nadu's linguistic and cultural identity.\n\nCampaign speeches across the Kongu region have highlighted the state's opposition to the National Education Policy's three-language formula, centralization of power, and perceived threats to state rights. The issue has resonated strongly with voters, particularly among youth and educated demographics.\n\nPolitical analysts note that the state autonomy narrative has become a unifying theme that transcends traditional party loyalties in Tamil Nadu, making it a decisive factor in voter preference this election cycle.\n\nIn the Kongu belt, this issue intersects with local concerns about central government policies affecting the textile, agriculture, and small-scale manufacturing sectors.",
+    title: "DMK Manifesto 2026: Key Promises Across Welfare, Infrastructure and Agriculture",
+    summary: "The ruling DMK has released its election manifesto pledging ₹8,000 household coupons, free laptops for college students, enhanced women's monthly entitlement, and major agricultural support.",
+    content: "The Secular Progressive Alliance, led by the DMK, released its election manifesto on March 29, 2026, laying out a comprehensive set of commitments for voters across Tamil Nadu.\n\nAmong the headline promises: ₹8,000 coupons for homemakers not covered under income tax to purchase household appliances; extension of the Chief Minister's Breakfast Scheme in government schools through Class 8; free laptops for all government college students; and raising the monthly entitlement for women to ₹2,000.\n\nThe manifesto also commits to increasing old-age pension from ₹1,200 to ₹2,000 per month, and providing ₹2,500 monthly assistance for people with disabilities. Under infrastructure, the party proposes procuring 10,000 new buses, expanding Coimbatore International Airport, and establishing a cargo terminal at Thoothukudi Airport.\n\nFor the farming sector, the manifesto includes distributing free pump sets to 20 lakh farmers, desilting 15,500 km of irrigation canals, and raising milk procurement prices. The party has also committed to interest-free loans of up to ₹5 lakh for self-help groups.\n\nIn the Kongu region, candidates have highlighted the agriculture and textile-related commitments as particularly relevant to local constituents.",
     category: "Politics",
     district: "Coimbatore",
     image: imgAssembly,
     author: "The Kongu Times Editorial",
-    date: "2026-04-06T06:00:00",
+    date: "2026-04-05T10:00:00",
+    views: 22100,
+    trending: true,
+    tags: ["DMK manifesto", "election 2026", "welfare", "agriculture"]
+  },
+  {
+    id: "3",
+    title: "AIADMK Campaign Focuses on Governance Failures and People's Rights",
+    summary: "AIADMK General Secretary Edappadi K. Palaniswami leads the opposition campaign under the slogan 'Makkalai Kaappom, Thamizhagathai Meetpom', targeting the ruling party's record on law and order and economic management.",
+    content: "The AIADMK-led alliance has intensified its statewide campaign ahead of the April 23 polls, with General Secretary Edappadi K. Palaniswami fronting rallies across Tamil Nadu under the campaign theme 'Makkalai Kaappom, Thamizhagathai Meetpom' (Protect the People, Reclaim Tamil Nadu).\n\nThe campaign, launched in July 2025, focuses on what the opposition describes as failures in law and order, rising prices, and governance shortfalls under the current administration. Palaniswami is himself contesting from the Edappadi constituency in Salem district.\n\nIn the Kongu region, the AIADMK is leaning on its traditional stronghold status and has fielded experienced candidates across Coimbatore, Salem, and Erode constituencies. The party is also banking on allied parties — including the BJP and PMK — to consolidate votes in specific segments.\n\nKey battlegrounds where the AIADMK is mounting strong challenges include Coimbatore North, Salem West, and Erode East, where the opposition is positioning itself as a credible alternative on issues of inflation and small business welfare.",
+    category: "Politics",
+    district: "Salem",
+    image: imgKonguDev,
+    author: "The Kongu Times Staff",
+    date: "2026-04-05T16:30:00",
     views: 18700,
     trending: true,
-    tags: ["state autonomy", "hindi imposition", "election campaign", "tamil nadu"]
+    tags: ["AIADMK", "election campaign", "Palaniswami", "opposition"]
   },
   {
     id: "4",
-    title: "Women Candidates See Record Representation in 2026 Tamil Nadu Elections",
-    summary: "All major parties have increased women's representation in their candidate lists, with the Kongu region seeing a notable rise in women contestants.",
-    content: "The 2026 Tamil Nadu Assembly elections mark a significant milestone for women's political participation, with all major parties fielding a record number of women candidates across the state's 234 constituencies.\n\nIn the Kongu region, several key constituencies including Avanashi, Tiruppur South, and Namakkal have women candidates from major parties. The trend reflects growing emphasis on gender diversity in political representation.\n\nWomen voters also constitute a significant portion of the electorate in the Kongu belt, with districts like Coimbatore and Tiruppur showing near-equal gender ratios in voter registration. Political parties have tailored their manifestos to address women-centric issues including safety, economic empowerment, and health services.\n\nThe Election Commission has also ensured women-managed polling booths in every constituency, along with crèche facilities for voters with young children.",
+    title: "Kongu Belt: 29 Seats, Three Major Fronts — Here's What's at Stake",
+    summary: "Coimbatore, Erode, Tiruppur, Salem, Namakkal, Karur and Nilgiris districts form the Kongu belt — a 29-seat region that no major party can afford to lose in 2026.",
+    content: "The Kongu region, spanning 29 assembly constituencies across seven districts — Coimbatore, Erode, Tiruppur, Salem, Namakkal, Karur, and Nilgiris — has historically played a decisive role in Tamil Nadu's electoral outcomes, and 2026 is no different.\n\nThe DMK is pursuing an aggressive campaign to improve on its 2021 performance in the region, with senior ministers holding multiple rallies and promising targeted development for the Kongu belt. The AIADMK, which traditionally holds the region, is defending key seats while contending with a resurgent DMK and a competitive TVK.\n\nTamilaga Vetri Kazhagam (TVK), contesting its first assembly election, has projected ambitions of making inroads across the Kongu constituencies, particularly among younger voters and first-time electors.\n\nLocal concerns driving voter sentiment include water resource management, equitable distribution of industrial benefits from the textile sector, agriculture pricing policies, and infrastructure connectivity. Political analysts note that while no single party has a guaranteed edge, the region's diverse voter base — spanning farmers, factory workers, traders, and IT professionals — makes it genuinely competitive.\n\nKey watch seats include Coimbatore South, Erode East, Namakkal, Tiruchengodu, and Pollachi.",
     category: "Politics",
-    district: "Tiruppur",
+    district: "Coimbatore",
     image: imgWomenPolitics,
-    author: "The Kongu Times Staff",
-    date: "2026-04-05T12:00:00",
+    author: "The Kongu Times Editorial",
+    date: "2026-04-06T06:00:00",
     views: 14200,
     trending: true,
-    tags: ["women candidates", "election", "representation", "kongu"]
+    tags: ["kongu region", "election battleground", "29 seats", "coimbatore"]
   },
   {
     id: "5",
-    title: "Election Commission Sets Up 68,000 Polling Stations Across Tamil Nadu",
-    summary: "Comprehensive polling infrastructure deployed statewide with special focus on accessibility and technology-enabled transparent voting.",
-    content: "The Election Commission of India has set up over 68,000 polling stations across Tamil Nadu for the April 23 assembly elections, ensuring every voter has a booth within 2 km of their residence.\n\nIn the Kongu region, approximately 8,500 polling stations have been established across the 29 constituencies. Each station is equipped with Electronic Voting Machines (EVMs) with Voter Verifiable Paper Audit Trail (VVPAT) units.\n\nSpecial measures include webcam-enabled monitoring at sensitive booths, deployment of Central Armed Police Forces, and helicopter surveillance in vulnerable areas. The commission has also set up voter facilitation centers in all taluks.\n\nFor the first time, all polling stations will have basic amenities including drinking water, shade, and seating arrangements for voters waiting in queues. Mobile app-based voter verification will also be available at select stations.",
+    title: "Record Women Candidates in 2026 TN Polls — Kongu Districts Lead",
+    summary: "Political parties have fielded significantly more women candidates this election cycle, with constituencies in Tiruppur, Coimbatore, and Salem seeing notable increases in women contestants.",
+    content: "The 2026 Tamil Nadu Assembly elections mark a meaningful step forward in women's political representation, with all major parties having fielded a higher proportion of women candidates compared to previous cycles.\n\nIn the Kongu region, constituencies such as Avanashi, Tiruppur North, Dharapuram, and Namakkal have women candidates from at least two major fronts each. Nationally prominent faces like Vanathi Srinivasan (Coimbatore North, BJP) and Gokilamani (Avanashi, DMK) are among the prominent women in the region's contest.\n\nWomen voters also form a near-equal share of the registered electorate in districts like Coimbatore and Tiruppur, and parties have customised their outreach accordingly — focusing on safety, economic empowerment, health access, and welfare scheme delivery.\n\nThe Election Commission has mandated women-managed polling booths in at least one location per constituency, and crèche facilities are being provided at select stations for voters with young children.",
     category: "Politics",
-    district: "Salem",
+    district: "Tiruppur",
     image: imgVoting,
     author: "The Kongu Times Staff",
     date: "2026-04-04T18:00:00",
     views: 11800,
     trending: true,
-    tags: ["polling stations", "election commission", "voting", "tamil nadu"]
+    tags: ["women candidates", "election 2026", "representation", "kongu"]
   },
   {
     id: "6",
-    title: "Coimbatore Smart City Project Phase 2 Launched with Major Infrastructure Upgrades",
-    summary: "The second phase of the Smart City initiative brings advanced traffic management systems, improved water supply networks, and digital governance platforms to Coimbatore.",
-    content: "In a significant milestone for urban development in the Kongu region, the Coimbatore Smart City project has entered its ambitious second phase. The initiative, backed by a ₹500 crore investment, focuses on transforming the city's infrastructure through cutting-edge technology and sustainable practices.\n\nKey highlights include an AI-powered traffic management system that will cover 120 major intersections, a revamped water supply network using IoT sensors for leak detection, and a comprehensive digital governance platform enabling citizens to access 150+ government services online.\n\nThe project also includes the development of 15 km of dedicated cycling lanes, 50 acres of new green spaces, and the installation of 10,000 smart LED streetlights across the city. Solar panels on government buildings are expected to generate 5 MW of clean energy.",
-    category: "Politics",
-    district: "Coimbatore",
-    image: imgCoimbatore,
-    author: "The Kongu Times Editorial",
-    date: "2026-04-05T08:30:00",
-    views: 12500,
-    trending: true,
-    tags: ["smart city", "infrastructure", "coimbatore"]
-  },
-  {
-    id: "7",
-    title: "Tiruppur Textile Industry Sets New Export Record at ₹40,000 Crore",
-    summary: "The knitwear capital of India achieves unprecedented export figures, driven by sustainable manufacturing practices and new international partnerships.",
-    content: "Tiruppur's textile and garment industry has achieved a landmark milestone, with exports crossing the ₹40,000 crore mark for the first time in a fiscal year. The achievement underscores the region's dominance in India's knitwear sector.\n\nIndustry leaders attribute the growth to the adoption of sustainable manufacturing practices, including zero liquid discharge plants and organic cotton sourcing. New partnerships with European and American fashion brands have also contributed significantly.\n\nThe Tiruppur Exporters' Association announced plans to invest ₹2,000 crore in modernizing production facilities and establishing a dedicated fashion design institute to nurture local talent.",
+    title: "Tiruppur Garment Exports Surpass ₹40,000 Crore — A New Milestone",
+    summary: "Tiruppur's knitwear industry has crossed the ₹40,000 crore export mark for the first time in a single fiscal year, driven by sustainability practices and new global partnerships.",
+    content: "Tiruppur's textile and garment sector has reached a landmark, with exports crossing the ₹40,000 crore mark for the first fiscal year on record. The achievement cements the city's position as the country's premier knitwear hub.\n\nIndustry leaders credit the growth to adoption of sustainable manufacturing practices including zero liquid discharge compliance, organic cotton sourcing, and improved supply chain transparency — all increasingly demanded by European and American fashion brands.\n\nThe Tiruppur Exporters' Association has announced a ₹2,000 crore investment plan to modernise production infrastructure and establish a dedicated fashion design institute to build local talent pipelines.\n\nThe milestone has also drawn political attention, with candidates across parties invoking the industry's success — and the welfare of its lakhs of workers — in their campaign messaging ahead of the assembly polls.",
     category: "Business",
     district: "Tiruppur",
     image: imgTiruppur,
@@ -142,13 +128,27 @@ export const sampleArticles: Article[] = [
     date: "2026-04-04T14:15:00",
     views: 9800,
     trending: true,
-    tags: ["textile", "exports", "tiruppur"]
+    tags: ["textile", "exports", "tiruppur", "knitwear"]
+  },
+  {
+    id: "7",
+    title: "Coimbatore Smart City Phase 2 Rolls Out with ₹500 Crore in New Infrastructure",
+    summary: "The second phase of Coimbatore's Smart City project targets AI-powered traffic management, IoT-enabled water networks, and expanded digital access to government services.",
+    content: "Coimbatore's Smart City initiative has entered its second phase, backed by a ₹500 crore outlay aimed at upgrading the city's core infrastructure through technology-led solutions.\n\nThe phase includes an AI-based traffic management system covering 120 major intersections, an IoT-enabled water supply network capable of detecting pipe leaks in real time, and a digital governance portal giving citizens access to over 150 government services from a single platform.\n\nThe project also earmarks 15 km of dedicated cycling lanes, 50 acres of new public green space, and 10,000 smart LED streetlights. Solar installations on government-owned rooftops are projected to generate 5 MW of renewable energy.\n\nUrban planners and civic groups have broadly welcomed the initiatives, though some residents have flagged the need for stronger community consultation on road-level changes.",
+    category: "Local Issues",
+    district: "Coimbatore",
+    image: imgCoimbatore,
+    author: "The Kongu Times Editorial",
+    date: "2026-04-05T08:30:00",
+    views: 12500,
+    trending: true,
+    tags: ["smart city", "infrastructure", "coimbatore", "urban development"]
   },
   {
     id: "8",
-    title: "Erode Turmeric Market Witnesses Historic Price Surge Amid Global Demand",
-    summary: "Erode's renowned turmeric market sees prices soar to record levels as international demand for curcumin-based health products continues to grow.",
-    content: "The Erode turmeric market, one of Asia's largest, has witnessed an extraordinary price surge with premium varieties fetching over ₹18,000 per quintal. The increase is attributed to growing global demand for curcumin, the active compound in turmeric, used extensively in pharmaceutical and nutraceutical industries.",
+    title: "Erode Turmeric Market Sees Price Surge on Back of Global Curcumin Demand",
+    summary: "Premium turmeric varieties at Erode's markets are fetching over ₹18,000 per quintal, driven by sustained international demand from the pharmaceutical and health products sectors.",
+    content: "Erode's turmeric market, one of Asia's largest, is experiencing a significant price upswing with premium grades crossing ₹18,000 per quintal. Traders and farmers attribute the rise to growing global demand for curcumin — the bioactive compound in turmeric widely used in pharmaceutical, nutraceutical, and functional food segments.\n\nFarmer groups in the region have expressed cautious optimism, noting that while better prices are welcome, volatility remains a concern. Agricultural bodies are urging the state government to set up price stabilisation funds ahead of the next harvest cycle.\n\nThe surge comes at an important moment ahead of the assembly elections, with farming community welfare featuring prominently in manifestos across all major fronts.",
     category: "Agriculture",
     district: "Erode",
     image: imgErode,
@@ -156,13 +156,13 @@ export const sampleArticles: Article[] = [
     date: "2026-04-04T10:00:00",
     views: 7200,
     trending: true,
-    tags: ["turmeric", "agriculture", "erode"]
+    tags: ["turmeric", "agriculture", "erode", "curcumin"]
   },
   {
     id: "9",
-    title: "Salem Gets New IT Corridor: 5,000 Jobs on the Horizon",
-    summary: "A major IT corridor project in Salem promises to transform the district into a technology hub with 5,000 new employment opportunities.",
-    content: "Salem is set to emerge as a major IT destination in Tamil Nadu with the announcement of a new technology corridor spanning 200 acres. The project, approved by the state government, is expected to attract major IT companies and create over 5,000 jobs in the next three years.",
+    title: "Salem IT Corridor Approved — 5,000 Jobs Expected in Three Years",
+    summary: "A 200-acre technology corridor in Salem has received state government approval, positioning the district as Tamil Nadu's next major IT destination.",
+    content: "Salem is on course to become a significant technology hub in Tamil Nadu following state government approval of a 200-acre IT corridor project. The development is projected to attract established IT companies and create over 5,000 direct jobs within three years of completion.\n\nThe corridor will be developed in phases, with the first phase focusing on basic infrastructure — roads, power, data connectivity — followed by the leasing of plots to technology and business process outsourcing firms.\n\nLocal educational institutions are expected to benefit from proximity to the corridor, with industry-academic partnerships being explored to align curriculum with employer requirements. The announcement has been welcomed by youth groups in Salem who have long sought private sector employment alternatives within the district.",
     category: "Jobs",
     district: "Salem",
     image: imgSalem,
@@ -170,13 +170,13 @@ export const sampleArticles: Article[] = [
     date: "2026-04-03T16:45:00",
     views: 15300,
     trending: true,
-    tags: ["IT", "jobs", "salem"]
+    tags: ["IT corridor", "jobs", "salem", "technology"]
   },
   {
     id: "10",
-    title: "Nilgiris Tea Estates Embrace Organic Farming with Government Support",
-    summary: "Tea plantations across the Nilgiris are transitioning to organic farming methods, backed by state subsidies and growing consumer preference for chemical-free products.",
-    content: "The Nilgiris, known worldwide for its premium tea, is undergoing a green revolution as tea estates embrace organic farming practices. Over 40 estates have already received organic certification, with another 100 in the pipeline.",
+    title: "Nilgiris Tea Estates Transition to Organic Farming with State Support",
+    summary: "Over 40 Nilgiris tea estates now hold organic certification, with another 100 in the pipeline, as growers respond to rising global demand for chemical-free produce.",
+    content: "Tea plantations across the Nilgiris are undergoing a significant shift toward organic cultivation practices, supported by state subsidies and driven by growing consumer preference for sustainably produced beverages.\n\nMore than 40 estates have received full organic certification, and growers report price premiums of 20–30% on certified produce in export markets. A further 100 estates are in various stages of the three-year conversion process required for certification.\n\nThe Nilgiris district administration has set up a support cell to assist small and medium growers navigate certification procedures and access state subsidy schemes. Challenges remain, including higher input costs during the transition period and the need to manage pest control without synthetic chemicals.\n\nThe trend is also drawing attention from tourism stakeholders, who see organic tea estates as an additional attraction for the district's growing agri-tourism segment.",
     category: "Agriculture",
     district: "Nilgiris",
     image: imgNilgiris,
@@ -184,13 +184,13 @@ export const sampleArticles: Article[] = [
     date: "2026-04-03T09:30:00",
     views: 5600,
     trending: false,
-    tags: ["tea", "organic", "nilgiris"]
+    tags: ["tea", "organic farming", "nilgiris", "agri-tourism"]
   },
   {
     id: "11",
-    title: "Namakkal Poultry Sector Adopts AI-Driven Farm Management Systems",
-    summary: "Namakkal's poultry industry, India's largest egg producer, integrates artificial intelligence for improved productivity and animal welfare.",
-    content: "Namakkal district, contributing nearly 80% of Tamil Nadu's egg production, is leveraging artificial intelligence to revolutionize poultry farming. Smart farm management systems now monitor bird health, feed optimization, and environmental conditions in real-time.",
+    title: "Namakkal Poultry Farms Deploy AI Monitoring — Productivity Gains Reported",
+    summary: "AI-driven farm management tools are being adopted across Namakkal's poultry sector, India's largest egg-producing district, with early results showing measurable gains in yield and bird health.",
+    content: "Namakkal district, responsible for approximately 80% of Tamil Nadu's egg production, is embracing artificial intelligence to improve farm efficiency and animal welfare standards.\n\nSmart monitoring platforms are being installed across farms of various scales, providing real-time data on bird health indicators, feed conversion rates, temperature regulation, and mortality patterns. Early adopters report reductions in feed wastage and faster identification of health issues.\n\nThe shift is being supported by the state animal husbandry department through a pilot subsidy scheme, with 120 farms enrolled in the first phase. Equipment suppliers from Coimbatore and Chennai have partnered with district-level farmer associations to provide training and technical support.\n\nPoultry farmers note that while upfront costs are a barrier for smaller operations, the medium-term savings on veterinary expenses and feed losses make adoption worthwhile.",
     category: "Technology",
     district: "Namakkal",
     image: imgNamakkal,
@@ -198,13 +198,13 @@ export const sampleArticles: Article[] = [
     date: "2026-04-02T11:20:00",
     views: 4300,
     trending: false,
-    tags: ["poultry", "AI", "namakkal"]
+    tags: ["poultry", "AI", "namakkal", "farm technology"]
   },
   {
     id: "12",
-    title: "Karur Textile Cluster Receives ₹200 Crore Modernization Fund",
-    summary: "The central government approves a major modernization fund for Karur's home textile cluster to boost competitiveness in global markets.",
-    content: "Karur's home textile industry has received a significant boost with the approval of a ₹200 crore modernization fund from the central government. The fund will be used to upgrade weaving machinery, establish quality testing laboratories, and develop design innovation centers.",
+    title: "Karur Home Textile Cluster Receives ₹200 Crore Central Modernisation Fund",
+    summary: "The central government has approved a ₹200 crore package to modernise Karur's home textile manufacturing cluster, with investments targeting machinery upgrades and design innovation.",
+    content: "Karur's home textile industry — one of the country's largest producers of bed linen, towels, and kitchen textiles — is set to receive a significant boost through a ₹200 crore modernisation package approved by the central government.\n\nThe funds are earmarked for upgrading weaving and finishing machinery, establishing quality testing laboratories that meet international standards, and setting up design innovation centres to enable producers to move up the value chain beyond commodity products.\n\nIndustry associations in Karur have welcomed the announcement, noting that global buyers increasingly expect suppliers to demonstrate both product quality and sustainable production practices. The investment is also expected to help smaller units consolidate and compete more effectively against cheaper imports.\n\nA portion of the funds will go toward skill development programmes for workers transitioning to newer machinery formats.",
     category: "Business",
     district: "Karur",
     image: imgKarur,
@@ -212,13 +212,13 @@ export const sampleArticles: Article[] = [
     date: "2026-04-02T08:00:00",
     views: 3800,
     trending: false,
-    tags: ["textile", "modernization", "karur"]
+    tags: ["textile", "Karur", "modernisation", "home textile"]
   },
   {
     id: "13",
-    title: "Coimbatore Hosts International Conference on Sustainable Agriculture",
-    summary: "Leading agricultural scientists and farmers gather in Coimbatore to discuss innovative sustainable farming practices for the Kongu region.",
-    content: "Coimbatore's agricultural university played host to an international conference on sustainable agriculture, drawing over 500 participants from 15 countries. The conference focused on water conservation techniques, precision farming, and climate-resilient crop varieties suited to the Kongu region.",
+    title: "Coimbatore Hosts International Sustainable Agriculture Forum",
+    summary: "Researchers and farmers from 15 countries gathered in Coimbatore to examine water conservation, precision farming, and climate-adaptive crop varieties suited to the Kongu region.",
+    content: "Coimbatore's agricultural university played host to a three-day international forum on sustainable agriculture, drawing over 500 delegates from 15 countries. The event focused on innovations directly applicable to the Kongu region's farming conditions — notably water-scarce, red-soil landscapes.\n\nSessions covered precision irrigation technology, drip-and-mulch combinations that reduce water use by up to 40%, soil carbon enhancement techniques, and new variety development for crops like groundnut, maize, and millets that are regionally significant.\n\nFarmer panels featuring participants from Erode, Namakkal, and Coimbatore districts were particularly well-attended, with producers sharing ground-level experiences of adopting new practices and the institutional support they need. The forum concluded with a joint declaration calling for stronger links between research institutions and agricultural extension services at the taluk level.",
     category: "Education",
     district: "Coimbatore",
     image: imgConference,
@@ -226,6 +226,6 @@ export const sampleArticles: Article[] = [
     date: "2026-04-01T13:00:00",
     views: 6100,
     trending: false,
-    tags: ["agriculture", "conference", "coimbatore"]
+    tags: ["agriculture", "sustainable farming", "coimbatore", "international forum"]
   },
 ];
