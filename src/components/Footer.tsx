@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-black text-xl">K</span>
-              </div>
+              <img src="/images/kongu-times-logo.png" alt="The Kongu Times" className="w-10 h-10 rounded-lg object-cover" />
               <div>
                 <h3 className="text-lg font-display font-black">The Kongu Times</h3>
                 <p className="text-[10px] uppercase tracking-[0.2em] opacity-60">Voice of Kongu Region</p>
