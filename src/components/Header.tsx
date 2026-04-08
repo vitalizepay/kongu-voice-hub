@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { label: "Home", path: "/" },
+  { label: "Elections 2026", path: "/elections-2026" },
   { label: "Latest News", path: "/latest" },
   { label: "District News", path: "/districts" },
   { label: "Politics", path: "/pages/politics.html" },
@@ -32,9 +33,7 @@ export default function Header() {
         {/* Top bar */}
         <div className="flex items-center justify-between py-3 px-2">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-black text-xl">K</span>
-            </div>
+            <img src="/images/kongu-times-logo.png" alt="The Kongu Times" className="w-10 h-10 rounded-lg object-cover" />
             <div>
               <h1 className="text-xl font-display font-black text-foreground leading-tight">
                 The Kongu Times
