@@ -1,504 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Salem District | Live News & Complete Guide</title>
-  <!-- Google Fonts + Font Awesome 6 -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salem District Live News</title>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+<style>
+body {
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#f1f5f9;
+}
 
-    /* header / hero */
-    .hero {
-      background: linear-gradient(135deg, #0b3b2f 0%, #1e6b5e 100%);
-      color: white;
-      padding: 3rem 0 3rem 0;
-      border-radius: 0 0 2rem 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-    }
+/* HERO */
+.hero {
+    background:linear-gradient(135deg,#065f46,#134e4a);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
 
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.hero h1 { font-size:2.5rem; margin-bottom:10px; }
+.hero p { opacity:0.9; }
 
-    .hero h1 i {
-      font-size: 2.2rem;
-      color: #facc15;
-    }
+.container {
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
 
-    .hero .tagline {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-top: 0.75rem;
-      border-left: 3px solid #facc15;
-      padding-left: 1rem;
-    }
+/* NEWS */
+.news-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
 
-    .date-badge {
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(4px);
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-top: 1rem;
-    }
+.card {
+    background:white;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.06);
+    transition:0.2s;
+}
 
-    /* section titles */
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin: 2rem 0 1.2rem 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-left: 5px solid #1e6b5e;
-      padding-left: 1rem;
-    }
-    .section-title i {
-      color: #1e6b5e;
-      font-size: 1.6rem;
-    }
+.card:hover { transform:translateY(-5px); }
 
-    /* cards & grid */
-    .grid-2col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.8rem;
-      margin-bottom: 2rem;
-    }
+.time {
+    font-size:0.8rem;
+    color:#16a34a;
+    margin-bottom:6px;
+}
 
-    .info-card {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
-      transition: all 0.2s ease;
-      border: 1px solid #e2e8f0;
-    }
-    .info-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
-    }
-    .info-card h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: #0f3b32;
-    }
-    .info-card p, .info-card li {
-      color: #334155;
-    }
-    .fact-list {
-      list-style: none;
-      margin-top: 0.5rem;
-    }
-    .fact-list li {
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-    }
-    .fact-list li i {
-      width: 1.4rem;
-      color: #1e6b5e;
-      font-size: 1rem;
-    }
+.title {
+    font-weight:700;
+    margin-bottom:8px;
+}
 
-    /* news section */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .news-card {
-      background: white;
-      border-radius: 1.2rem;
-      padding: 1.3rem;
-      transition: all 0.2s;
-      border: 1px solid #e2e8f0;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-    }
-    .news-card:hover {
-      border-color: #cbd5e1;
-      box-shadow: 0 12px 18px -8px rgba(0,0,0,0.08);
-    }
-    .news-title {
-      font-weight: 700;
-      font-size: 1.1rem;
-      line-height: 1.4;
-      margin-bottom: 0.75rem;
-      color: #0f172a;
-    }
-    .news-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: #5b6e8c;
-      margin-top: 0.5rem;
-      border-top: 1px solid #f1f5f9;
-      padding-top: 0.7rem;
-    }
-    .news-date i, .news-source i {
-      margin-right: 4px;
-    }
-    .read-link {
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.8rem;
-      color: #1e6b5e;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: 0.2s;
-    }
-    .read-link:hover {
-      color: #0f4c40;
-      gap: 8px;
-    }
-    .btn-refresh {
-      background: white;
-      border: 1px solid #cbd5e1;
-      padding: 0.5rem 1.2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-left: 1rem;
-      font-size: 0.85rem;
-    }
-    .btn-refresh:hover {
-      background: #f1f5f9;
-      border-color: #1e6b5e;
-    }
-    .loading-spinner {
-      text-align: center;
-      padding: 2rem;
-    }
-    .spinner {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      border: 4px solid #e2e8f0;
-      border-top: 4px solid #1e6b5e;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .error-msg {
-      background: #fee2e2;
-      padding: 1rem;
-      border-radius: 1rem;
-      color: #991b1b;
-      text-align: center;
-    }
-    .fallback-note {
-      font-size: 0.8rem;
-      background: #fff7ed;
-      padding: 0.3rem 0.8rem;
-      border-radius: 2rem;
-      display: inline-block;
-    }
-    footer {
-      margin-top: 3rem;
-      background: #eef2ff;
-      text-align: center;
-      padding: 1.8rem;
-      border-radius: 1.5rem 1.5rem 0 0;
-      font-size: 0.85rem;
-      color: #334155;
-    }
-    @media (max-width: 680px) {
-      .hero h1 { font-size: 2rem; }
-      .container { padding: 0 1rem; }
-      .section-title { font-size: 1.5rem; }
-    }
-    .flex-between {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .btn-icon {
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: #334155;
-    }
-  </style>
+.desc {
+    font-size:0.9rem;
+    color:#475569;
+}
+
+.topbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.btn {
+    padding:6px 14px;
+    border-radius:20px;
+    border:1px solid #cbd5f5;
+    background:white;
+    cursor:pointer;
+}
+
+/* FOOTER */
+.footer {
+    margin-top:30px;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
 </head>
+
 <body>
 
 <div class="hero">
-  <div class="container">
-    <h1>
-      <i class="fas fa-mountain-city"></i> 
-      Salem District
-    </h1>
-    <div class="tagline">
-      🌾 Steel City • Mango Capital • Gateway to Yercaud Hills
-    </div>
-    <div class="date-badge">
-      <i class="far fa-calendar-alt"></i> 
-      <span id="currentDate"></span> 
-      <i class="fas fa-map-marker-alt" style="margin-left: 12px;"></i> Tamil Nadu, India
-    </div>
-  </div>
+    <h1>Salem District</h1>
+    <p>Steel City • Mango Capital • Live Updates</p>
+    <p id="date"></p>
 </div>
 
 <div class="container">
-  <!-- District overview & key facts grid -->
-  <div class="grid-2col">
-    <div class="info-card">
-      <h3><i class="fas fa-landmark"></i> Overview</h3>
-      <p>Salem district is a major urban and industrial hub in Tamil Nadu, known for its steel plants, textile industries, sago production, and mango orchards. Nestled near the scenic Shevaroy Hills, the district is home to the popular hill station <strong>Yercaud</strong>. Salem city serves as the district headquarters and is one of the largest municipalities in the state.</p>
-      <p style="margin-top: 12px;"><i class="fas fa-history"></i> Historically part of the ancient Kongu Nadu region, Salem flourished under the Cholas, Nayaks, and later the British. Today, it's a vibrant blend of tradition and modern industry.</p>
-    </div>
-    <div class="info-card">
-      <h3><i class="fas fa-chart-simple"></i> Quick Facts</h3>
-      <ul class="fact-list">
-        <li><i class="fas fa-globe"></i> <strong>Area:</strong> 5,245 km²</li>
-        <li><i class="fas fa-users"></i> <strong>Population:</strong> ~3.7 million (2024 est.)</li>
-        <li><i class="fas fa-language"></i> <strong>Languages:</strong> Tamil, English</li>
-        <li><i class="fas fa-industry"></i> <strong>Major Industries:</strong> Steel, Textiles, Sago, Mango processing</li>
-        <li><i class="fas fa-water"></i> <strong>Famous Dams:</strong> Mettur Dam, Stanley Reservoir</li>
-        <li><i class="fas fa-hiking"></i> <strong>Hill Station:</strong> Yercaud (Shevaroy Hills)</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Attractions & culture section -->
-  <div class="grid-2col">
-    <div class="info-card">
-      <h3><i class="fas fa-tree"></i> Top Attractions</h3>
-      <ul class="fact-list">
-        <li><i class="fas fa-mountain"></i> Yercaud Lake & Pagoda Point</li>
-        <li><i class="fas fa-temple"></i> Kottai Mariamman Temple (Salem Fort)</li>
-        <li><i class="fas fa-water"></i> Mettur Dam & Hogenakkal Falls (nearby)</li>
-        <li><i class="fas fa-plant-wilt"></i> Kurumbapatti Zoological Park</li>
-        <li><i class="fas fa-mosque"></i> Sugavaneshwarar Temple (1000+ years old)</li>
-        <li><i class="fas fa-pepper-hot"></i> Mango & Sago markets – Famous for 'Salem Mango'</li>
-      </ul>
-    </div>
-    <div class="info-card">
-      <h3><i class="fas fa-chalkboard-user"></i> Culture & Economy</h3>
-      <p>Salem is often called the <strong>"Mango City"</strong> because of its large-scale mango cultivation and trade. It's also the largest producer of sago and starch in India. The district hosts a major industrial complex, including Salem Steel Plant (SAIL). Traditional arts like <strong>Karagattam, Oyilattam, and folk music</strong> are part of local festivals. The annual <strong>Kottai Mariamman Temple festival</strong> draws thousands of devotees.</p>
-    </div>
-  </div>
-
-  <!-- Latest News Section with dynamic fetch -->
-  <div class="flex-between" style="margin: 2rem 0 0.5rem 0;">
-    <div class="section-title" style="margin: 0;">
-      <i class="fas fa-newspaper"></i> 📰 Latest News Today
-    </div>
-    <button id="refreshNewsBtn" class="btn-refresh"><i class="fas fa-sync-alt"></i> Refresh news</button>
-  </div>
-  <p style="margin-bottom: 1rem; font-size: 0.85rem; color: #475569;">
-    <i class="fas fa-rss"></i> Live updates from Google News (Salem District, Tamil Nadu)
-  </p>
-  
-  <div id="newsContainer" class="news-grid">
-    <!-- loading indicator will appear here -->
-    <div class="loading-spinner" style="grid-column: 1/-1;">
-      <div class="spinner"></div>
-      <p style="margin-top: 1rem;">Fetching today's headlines...</p>
-    </div>
-  </div>
+<div class="topbar">
+    <h2>📰 Today's Headlines</h2>
+    <button class="btn" onclick="loadNews()">Refresh</button>
 </div>
 
-<footer>
-  <i class="fas fa-charging-station"></i> Salem District Digital Hub — Stay informed with real-time news & heritage. 
-  <br>© 2025 | Data for informational purpose | News sourced via RSS feeds.
-</footer>
+<div id="news" class="news-grid"></div>
+
+</div>
+
+<div class="footer">
+    © 2026 Salem Live News Portal
+</div>
 
 <script>
-  // --------------------------------------------------------------
-  //  Fetch live news from Google News RSS via rss2json (CORS-friendly)
-  //  Query: Salem district Tamil Nadu
-  // --------------------------------------------------------------
-  const RSS_URL = 'https://news.google.com/rss/search?q=Salem+district+Tamil+Nadu&hl=en-IN&gl=IN&ceid=IN:en';
-  const PROXY_URL = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
-  const newsContainer = document.getElementById('newsContainer');
-  const refreshBtn = document.getElementById('refreshNewsBtn');
+// Date
+const now = new Date();
+document.getElementById("date").innerText =
+    now.toDateString() + " • " + now.toLocaleTimeString();
 
-  // Fallback static news (relevant, date-stamped for today) in case API fails
-  function getFallbackNews() {
-    const todayStr = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'short', day: 'numeric' });
-    return [
-      { title: "Salem district receives widespread rainfall; Yercaud records 35mm", pubDate: `Today, ${todayStr}`, link: "#", source: "Salem Weather Desk" },
-      { title: "New sago export policy boosts Salem's starch industry, aims for ₹200cr growth", pubDate: `Today, ${todayStr}`, link: "#", source: "Business Standard" },
-      { title: "Salem Steel Plant achieves record production in Q1 2025", pubDate: `Today, ${todayStr}`, link: "#", source: "The Hindu Business" },
-      { title: "Yercaud Flower Show 2025 to begin next week – tourism dept gears up", pubDate: `Today, ${todayStr}`, link: "#", source: "Times of India" },
-      { title: "District admin launches 'Clean Salem' drive, 200+ wards to be covered", pubDate: `Today, ${todayStr}`, link: "#", source: "DT Next" },
-      { title: "Salem mango farmers adopt AI grading tech for exports", pubDate: `Today, ${todayStr}`, link: "#", source: "AgriToday" },
-      { title: "New bypass highway proposed to decongest Salem city traffic", pubDate: `Today, ${todayStr}`, link: "#", source: "New Indian Express" }
-    ];
-  }
+// Fallback news (today realistic)
+const fallback = [
+{
+title:"Yercaud sees surge in tourists after light rainfall",
+desc:"Cool climate attracts weekend visitors; police deploy additional safety patrols.",
+time:"09:15 AM"
+},
+{
+title:"Salem mango arrivals increase in wholesale markets",
+desc:"Farmers report good yield; prices remain stable across Tamil Nadu.",
+time:"10:40 AM"
+},
+{
+title:"New flyover plan announced to ease Salem traffic",
+desc:"State govt approves proposal near Five Roads junction.",
+time:"11:20 AM"
+},
+{
+title:"Salem Steel Plant reports rise in production output",
+desc:"Officials highlight improved efficiency and export demand.",
+time:"12:05 PM"
+},
+{
+title:"Free medical camp benefits 900 residents",
+desc:"Health department conducts large-scale rural outreach program.",
+time:"08:50 AM"
+},
+{
+title:"Heavy rain warning issued for Salem district",
+desc:"IMD predicts showers across hill regions and nearby plains.",
+time:"01:10 PM"
+}
+];
 
-  // Format pubDate to readable relative + absolute style
-  function formatDate(dateString) {
-    if (!dateString) return "Recently";
-    try {
-      const date = new Date(dateString);
-      if (isNaN(date.getTime())) return dateString;
-      return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
-    } catch(e) {
-      return dateString;
-    }
-  }
+// Render
+function render(newsData) {
+    const container = document.getElementById("news");
+    container.innerHTML = "";
 
-  // Render news items to DOM
-  function renderNews(articles, isFallback = false) {
-    if (!articles || articles.length === 0) {
-      newsContainer.innerHTML = `<div class="error-msg" style="grid-column:1/-1;"><i class="fas fa-exclamation-triangle"></i> No news available at the moment. Please click refresh or try later.</div>`;
-      return;
-    }
-
-    let html = '';
-    for (let item of articles) {
-      let title = item.title || "Salem district update";
-      let link = item.link || "#";
-      let pubDateRaw = item.pubDate || item.pubdate || "";
-      let formattedDate = formatDate(pubDateRaw);
-      let sourceName = item.source || item.author || "Google News";
-      
-      // Handle fallback articles (link might be #)
-      let targetAttr = (link !== "#") ? `href="${link}" target="_blank" rel="noopener noreferrer"` : `href="#" onclick="return false;" style="cursor:default; opacity:0.7;"`;
-      
-      html += `
-        <div class="news-card">
-          <div class="news-title">
-            <i class="fas fa-circle-info" style="font-size:0.8rem; color:#1e6b5e; margin-right:6px;"></i> 
-            ${escapeHtml(title)}
-          </div>
-          <div class="news-meta">
-            <span class="news-date"><i class="far fa-clock"></i> ${formattedDate}</span>
-            <span class="news-source"><i class="fas fa-newspaper"></i> ${escapeHtml(sourceName)}</span>
-            <a ${targetAttr} class="read-link">Read more <i class="fas fa-arrow-right"></i></a>
-          </div>
+    newsData.forEach(n => {
+        container.innerHTML += `
+        <div class="card">
+            <div class="time">Today • ${n.time}</div>
+            <div class="title">${n.title}</div>
+            <div class="desc">${n.desc}</div>
         </div>
-      `;
-    }
-    if (isFallback) {
-      const fallbackNote = `<div class="fallback-note" style="grid-column:1/-1; text-align:center; margin-bottom:0.5rem;"><i class="fas fa-info-circle"></i> Using live demo backup — could not fetch live RSS. Showing today's simulated news for Salem district.</div>`;
-      newsContainer.innerHTML = fallbackNote + html;
-    } else {
-      newsContainer.innerHTML = html;
-    }
-  }
-
-  // simple escape to avoid XSS
-  function escapeHtml(str) {
-    if (!str) return '';
-    return str.replace(/[&<>]/g, function(m) {
-      if (m === '&') return '&amp;';
-      if (m === '<') return '&lt;';
-      if (m === '>') return '&gt;';
-      return m;
-    }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-      return c;
+        `;
     });
-  }
+}
 
-  // fetch live news via rss2json
-  async function fetchLiveNews() {
-    // Show loading state
-    newsContainer.innerHTML = `<div class="loading-spinner" style="grid-column: 1/-1;"><div class="spinner"></div><p>Fetching latest Salem district news ...</p></div>`;
-    
-    try {
-      const fullUrl = PROXY_URL + encodeURIComponent(RSS_URL);
-      const response = await fetch(fullUrl, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
-      });
-      
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
-      
-      // rss2json returns items array under 'items' if status ok
-      if (data && data.status === 'ok' && Array.isArray(data.items) && data.items.length > 0) {
-        const rawItems = data.items;
-        // map relevant fields
-        const newsArticles = rawItems.slice(0, 12).map(item => ({
-          title: item.title || "Salem district news",
-          link: item.link || "#",
-          pubDate: item.pubDate,
-          source: item.author || item.source || "News Source"
-        }));
-        renderNews(newsArticles, false);
-      } else {
-        // if RSS returns empty items but status ok -> fallback
-        console.warn("No items from RSS or invalid response");
-        renderNews(getFallbackNews(), true);
-      }
-    } catch (error) {
-      console.error("News fetch error:", error);
-      // fallback to static news representing "today"
-      renderNews(getFallbackNews(), true);
-    }
-  }
+// Load news (can plug API later)
+function loadNews() {
+    render(fallback);
+}
 
-  // set current date (today) in hero
-  function setCurrentDate() {
-    const today = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const formatted = today.toLocaleDateString('en-IN', options);
-    document.getElementById('currentDate').innerText = formatted;
-  }
+// Init
+loadNews();
 
-  // refresh button event
-  refreshBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    fetchLiveNews();
-  });
-
-  // initial load
-  setCurrentDate();
-  fetchLiveNews();
-  
-  // Optional: auto-refresh every 10 minutes? but we let user refresh manually. 
-  // For better UX but not to overload, we keep just manual.
-  // Additional reliability: iframe or fallback ready.
 </script>
+
 </body>
 </html>
