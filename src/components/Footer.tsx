@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-foreground text-background mt-12">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img src="/images/kongu-times-logo.png" alt="The Kongu Times" className="w-10 h-10 rounded-lg object-cover" />
@@ -20,27 +19,29 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold mb-4">Quick Links</h4>
+            <h4 className="font-display font-bold mb-4">Sections</h4>
             <div className="flex flex-col gap-2 text-sm opacity-70">
-              {["Latest News", "District News", "Politics", "Business", "Agriculture", "Education", "Jobs"].map(l => (
-                <Link key={l} to="/" className="hover:opacity-100 hover:text-primary transition-colors">{l}</Link>
-              ))}
+              <Link to="/elections-2026" className="hover:opacity-100 hover:text-primary transition-colors">Elections 2026</Link>
+              <Link to="/explained" className="hover:opacity-100 hover:text-primary transition-colors">Explained</Link>
+              <a href="/pages/politics.html" className="hover:opacity-100 hover:text-primary transition-colors">Politics</a>
+              <Link to="/" className="hover:opacity-100 hover:text-primary transition-colors">Business</Link>
+              <Link to="/" className="hover:opacity-100 hover:text-primary transition-colors">Agriculture</Link>
+              <Link to="/" className="hover:opacity-100 hover:text-primary transition-colors">Jobs</Link>
             </div>
           </div>
 
-          {/* Districts */}
           <div>
-            <h4 className="font-display font-bold mb-4">Districts</h4>
+            <h4 className="font-display font-bold mb-4">Company</h4>
             <div className="flex flex-col gap-2 text-sm opacity-70">
-              {["Coimbatore", "Erode", "Tiruppur", "Salem", "Namakkal", "Karur", "Nilgiris"].map(d => (
-                <Link key={d} to="/" className="hover:opacity-100 hover:text-primary transition-colors">{d}</Link>
-              ))}
+              <Link to="/about" className="hover:opacity-100 hover:text-primary transition-colors">About Us</Link>
+              <Link to="/contact" className="hover:opacity-100 hover:text-primary transition-colors">Contact Us</Link>
+              <Link to="/privacy-policy" className="hover:opacity-100 hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:opacity-100 hover:text-primary transition-colors">Terms & Conditions</Link>
+              <Link to="/disclaimer" className="hover:opacity-100 hover:text-primary transition-colors">Disclaimer</Link>
             </div>
           </div>
 
-          {/* Contact & Newsletter */}
           <div>
             <h4 className="font-display font-bold mb-4">Stay Connected</h4>
             <div className="space-y-3 text-sm opacity-70 mb-5">
@@ -51,11 +52,7 @@ export default function Footer() {
             <div>
               <p className="text-sm font-medium mb-2">Newsletter</p>
               <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 rounded-lg bg-background/10 border border-background/20 text-sm placeholder:opacity-50 focus:outline-none focus:border-primary"
-                />
+                <input type="email" placeholder="Your email" className="flex-1 px-3 py-2 rounded-lg bg-background/10 border border-background/20 text-sm placeholder:opacity-50 focus:outline-none focus:border-primary" />
                 <button className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
                   Subscribe
                 </button>

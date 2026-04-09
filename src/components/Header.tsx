@@ -6,14 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Elections 2026", path: "/elections-2026" },
-  { label: "Latest News", path: "/latest" },
-  { label: "District News", path: "/districts" },
+  { label: "Explained", path: "/explained" },
   { label: "Politics", path: "/pages/politics.html" },
   { label: "Business", path: "/category/business" },
   { label: "Agriculture", path: "/category/agriculture" },
   { label: "Education", path: "/category/education" },
   { label: "Jobs", path: "/category/jobs" },
-  { label: "Videos", path: "/videos" },
+  { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -27,10 +26,28 @@ export default function Header() {
     document.documentElement.classList.toggle("dark");
   };
 
+  const renderNavLink = (item: typeof navItems[0], mobile = false) => {
+    const cls = mobile
+      ? "px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+      : "px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap";
+
+    if (item.path.endsWith('.html')) {
+      return (
+        <a key={item.label} href={item.path} onClick={mobile ? () => setMobileOpen(false) : undefined} className={cls}>
+          {item.label}
+        </a>
+      );
+    }
+    return (
+      <Link key={item.label} to={item.path} onClick={mobile ? () => setMobileOpen(false) : undefined} className={cls}>
+        {item.label}
+      </Link>
+    );
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto">
-        {/* Top bar */}
         <div className="flex items-center justify-between py-3 px-2">
           <Link to="/" className="flex items-center gap-2">
             <img src="/images/kongu-times-logo.png" alt="The Kongu Times" className="w-10 h-10 rounded-lg object-cover" />
@@ -45,16 +62,10 @@ export default function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-2">
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground"
-            >
+            <button onClick={() => setSearchOpen(!searchOpen)} className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground">
               <Search size={18} />
             </button>
-            <button
-              onClick={toggleDark}
-              className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground"
-            >
+            <button onClick={toggleDark} className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground">
               {darkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <span className="text-xs font-medium text-muted-foreground border border-border rounded-full px-3 py-1 cursor-pointer hover:bg-secondary transition-colors">
@@ -62,101 +73,37 @@ export default function Header() {
             </span>
           </div>
 
-          <button
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors text-foreground"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+          <button className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
-        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1 pb-2 px-2 overflow-x-auto">
-          {navItems.map((item) =>
-            item.path.endsWith('.html') ? (
-              <a
-                key={item.label}
-                href={item.path}
-                className="px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap"
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link
-                key={item.label}
-                to={item.path}
-                className="px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap"
-              >
-                {item.label}
-              </Link>
-            )
-          )}
+          {navItems.map(item => renderNavLink(item))}
         </nav>
 
-        {/* Search bar */}
         <AnimatePresence>
           {searchOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden px-2 pb-3"
-            >
+            <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden px-2 pb-3">
               <div className="relative">
                 <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
-                <input
-                  type="text"
-                  placeholder="Search news, districts, topics..."
-                  className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-secondary text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
-                  autoFocus
-                />
+                <input type="text" placeholder="Search news, districts, topics..." className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-secondary text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20" autoFocus />
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
-      {/* Mobile nav */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden overflow-hidden bg-card border-t border-border"
-          >
+          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="lg:hidden overflow-hidden bg-card border-t border-border">
             <nav className="flex flex-col p-4 gap-1">
-              {navItems.map((item) =>
-                item.path.endsWith('.html') ? (
-                  <a
-                    key={item.label}
-                    href={item.path}
-                    onClick={() => setMobileOpen(false)}
-                    className="px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.label}
-                    to={item.path}
-                    onClick={() => setMobileOpen(false)}
-                    className="px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
+              {navItems.map(item => renderNavLink(item, true))}
               <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border">
-                <button
-                  onClick={toggleDark}
-                  className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground"
-                >
+                <button onClick={toggleDark} className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground">
                   {darkMode ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
-                <span className="text-xs font-medium text-muted-foreground border border-border rounded-full px-3 py-1">
-                  தமிழ் / EN
-                </span>
+                <span className="text-xs font-medium text-muted-foreground border border-border rounded-full px-3 py-1">தமிழ் / EN</span>
               </div>
             </nav>
           </motion.div>

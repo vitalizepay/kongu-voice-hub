@@ -7,6 +7,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import ArticlePage from "./pages/ArticlePage.tsx";
 import Elections2026 from "./pages/Elections2026.tsx";
+import ExplainedIndex from "./pages/ExplainedIndex.tsx";
+import ExplainedArticle from "./pages/ExplainedArticle.tsx";
+import AboutUs from "./pages/AboutUs.tsx";
+import ContactUs from "./pages/ContactUs.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import TermsConditions from "./pages/TermsConditions.tsx";
+import Disclaimer from "./pages/Disclaimer.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +29,13 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/article/:id" element={<ArticlePage />} />
             <Route path="/elections-2026" element={<Elections2026 />} />
+            <Route path="/explained" element={<ExplainedIndex />} />
+            <Route path="/explained/:slug" element={<ExplainedArticle />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsConditions />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
