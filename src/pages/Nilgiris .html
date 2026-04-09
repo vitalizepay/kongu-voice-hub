@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilgiris District | Queen of Hill Stations - Latest News & Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #1b3a1f;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1593697821028-7f6a5d27e8e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 75vh;
+            min-height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            font-size: 4.2rem;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            max-width: 700px;
+        }
+
+        .hero .date-badge {
+            background: rgba(46, 125, 50, 0.85);
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-top: 30px;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 25px 40px;
+        }
+
+        /* Grid Layout */
+        .grid-2col {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .main-news {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        /* Card styling */
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .news-item {
+            border-bottom: 1px solid #e0e7e0;
+            padding: 20px 0;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1b5e20;
+            margin-bottom: 8px;
+        }
+
+        .news-meta {
+            font-size: 0.85rem;
+            color: #558b2f;
+            display: flex;
+            gap: 18px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .news-summary {
+            color: #2d3e2a;
+            margin-bottom: 12px;
+        }
+
+        .read-more {
+            color: #2e7d32;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .read-more:hover {
+            color: #1b5e20;
+            text-decoration: underline;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            border-left: 6px solid #2e7d32;
+            padding-left: 18px;
+            margin-bottom: 25px;
+            color: #1b3a1f;
+        }
+
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .info-card {
+            background: #f1f8e9;
+            border-radius: 18px;
+            padding: 15px;
+            flex: 1 1 180px;
+            text-align: center;
+        }
+        .info-card h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .attraction-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .attraction-list li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+        .attraction-list li:before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+            color: #2e7d32;
+        }
+
+        footer {
+            background: #1a2e1a;
+            color: #cfe9cd;
+            padding: 25px;
+            text-align: center;
+            border-radius: 30px 30px 0 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 850px) {
+            .hero h1 { font-size: 2.6rem; }
+            .hero .tagline { font-size: 1rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>✨ Nilgiris District ✨</h1>
+        <div class="tagline">"Queen of Hill Stations · Land of Blue Mountains · Evergreen Paradise"</div>
+        <div class="date-badge">📅 Latest Updates: April 8, 2026</div>
+    </div>
+
+    <div class="container">
+        <!-- 2-Column Layout: Main News + Sidebar Info -->
+        <div class="grid-2col">
+            <!-- MAIN NEWS SECTION -->
+            <div class="main-news">
+                <div class="card">
+                    <h2 class="section-title" style="border-left-color: #ef6c00;">📰 Latest News & Headlines</h2>
+                    
+                    <!-- NEWS 1: Sustainable tourism initiative -->
+                    <div class="news-item">
+                        <div class="news-title">🌱 Nilgiris plans ‘alternative, sustainable’ tourism under Swadesh Darshan 2.0</div>
+                        <div class="news-meta">📆 April 3, 2026 | 🏛️ District Administration</div>
+                        <div class="news-summary">
+                            District Collector Lakshmi Bhavya Tanneeru convened a high-level meeting to identify traditional trekking routes, heritage bungalows, and promote rural tourism. 
+                            Discussions included cemetery walks, tea estate tourism, and horticultural trails — plus the unique Chinese Prison site at Naduvattam, where British forces held POWs during WWII.
+                            These initiatives aim to decongest Ooty while preserving the fragile ecosystem.
+                        </div>
+                        <a href="#" class="read-more" onclick="return false;">🔗 Sustainable tourism roadmap →</a>
+                    </div>
+
+                    <!-- NEWS 2: Madras High Court bans heli tourism -->
+                    <div class="news-item">
+                        <div class="news-title">🚁 Madras HC bans heli-tourism during Nilgiris Summer Festival</div>
+                        <div class="news-meta">📆 April 7, 2026 | ⚖️ Madras High Court</div>
+                        <div class="news-summary">
+                            In a landmark order, the Madras High Court restrained the State from permitting helicopter joyrides, stating: *“The fragile ecosystem and vulnerability of this biodiverse region cannot be the victim of crass commercialism.”* 
+                            The bench noted that forest and wildlife officials were completely sidelined. The judgment upholds environmental safeguards in the Nilgiri Biosphere Reserve.
+                        </div>
+                        <a href="#" class="read-more" onclick="return false;">🔗 Full court order →</a>
+                    </div>
+
+                    <!-- NEWS 3: Heavy rains disrupt life + school holiday -->
+                    <div class="news-item">
+                        <div class="news-title">⛈️ Incessant rains lash Nilgiris; schools closed in 4 taluks</div>
+                        <div class="news-meta">📆 April 8, 2026 | 🌧️ Weather Alert</div>
+                        <div class="news-summary">
+                            Heavy winds and torrential rain continued for the fourth consecutive day. An average of 43.6 mm rainfall was recorded, with Upper Bhavani, Avalanche and Gudalur receiving over 100 mm. 
+                            Uprooted trees blocked the Ooty–Avalanche and Ooty–Gudalur roads, and a car had to be rescued near Emerald. District authorities declared a holiday for schools in Udhagai, Kundha, Gudalur and Pandalur taluks.
+                            Nilgiri Mountain Railway services were temporarily suspended due to fallen trees near Lovedale.
+                        </div>
+                        <a href="#" class="read-more" onclick="return false;">🔗 Weather updates →</a>
+                    </div>
+
+                    <!-- NEWS 4: Tea plantation workers’ hunger strike -->
+                    <div class="news-item">
+                        <div class="news-title">🍃 Over 85,000 tea workers announce hunger strike for minimum wage</div>
+                        <div class="news-meta">📆 April 7, 2026 | 👩‍🌾 Labour unrest</div>
+                        <div class="news-summary">
+                            More than 85,000 tea estate workers across the Nilgiris have threatened an indefinite hunger strike, demanding a fixed minimum wage and better working conditions. 
+                            The region produces some of the world’s finest aromatic tea, but workers allege that decades-old wage structures have not kept pace with inflation. 
+                            Talks with the district administration are underway to avert a major crisis ahead of the tourist season.
+                        </div>
+                        <a href="#" class="read-more" onclick="return false;">🔗 Labour update →</a>
+                    </div>
+
+                    <!-- NEWS 5: Nilgiri Mountain Rail resumes services -->
+                    <div class="news-item">
+                        <div class="news-title">🚂 UNESCO heritage Nilgiri Mountain Railway back on track</div>
+                        <div class="news-meta">📆 April 6, 2026 | 🚞 Heritage news</div>
+                        <div class="news-summary">
+                            The iconic Nilgiri Mountain Railway (NMR) — a UNESCO World Heritage toy train — resumed full services after an eight-day suspension caused by rain-induced landslides and uprooted trees. 
+                            The charming steam loco chugs once again from Mettupalayam to Ooty, offering spectacular vistas of tea gardens and dense sholas. Tourists can once again experience this century-old engineering marvel.
+                        </div>
+                        <a href="#" class="read-more" onclick="return false;">🔗 Toy train schedule →</a>
+                    </div>
+
+                    <!-- NEWS 6: Drowning tragedy + ex gratia -->
+                    <div class="news-item">
+                        <div class="news-title">💧 Two youths drown in Ponnani River; MP, Minister hand over relief</div>
+                        <div class="news-meta">📆 April 5, 2026 | 🙏 Condolences</div>
+                        <div class="news-summary">
+                            In a tragic incident at Bitherkad, Gudalur, two youngsters – Gunasekaran and Kaviyarasan – were washed away while bathing in the Ponnani River amid heavy current. 
+                            Nilgiris MP A. Raja and Tourism Minister K. Ramachandran visited the bereaved families and handed over ₹3 lakh from the CM’s Relief Fund, plus ₹1 lakh each from the MP’s personal funds. 
+                            District Collector issued a public warning against venturing into water bodies during the rainy spell.
+                        </div>
+                        <a href="#" class="read-more" onclick="return false;">🔗 Safety advisory →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR: INFO & QUICK FACTS -->
+            <div class="sidebar">
+                <!-- About Nilgiris -->
+                <div class="card">
+                    <h2 class="section-title" style="border-left-color: #2c6e2c;">🏞️ About Nilgiris</h2>
+                    <p style="margin-bottom: 12px;">The <strong>Nilgiris district</strong> (Tamil Nadu) is a breathtaking mountain district nestled in the Western Ghats. Known as the <em>"Blue Mountains"</em> due to the Kurinji flower that blooms once in 12 years, it's a UNESCO World Heritage Biosphere Reserve.</p>
+                    <div class="info-grid">
+                        <div class="info-card"><h4>📌 Headquarters</h4><p>Udhagamandalam (Ooty)</p></div>
+                        <div class="info-card"><h4>🗺️ Area</h4><p>2,452.50 sq.km</p></div>
+                        <div class="info-card"><h4>👥 Population</h4><p>~7,35,394</p></div>
+                        <div class="info-card"><h4>🌄 Elevation</h4><p>Up to 2,789 m (Doddabetta)</p></div>
+                    </div>
+                    <p style="margin-top: 12px; font-size:0.9rem;">Established as a district in <strong>February 1882</strong>. The first Collector was Richard Wellesley Barlow. It is home to indigenous communities including <strong>Toda, Kota, Badaga, Irula, and Paniya</strong> tribes.</p>
+                </div>
+
+                <!-- Major Attractions -->
+                <div class="card">
+                    <h2 class="section-title" style="border-left-color: #2c6e2c;">🌸 Must-Visit Gems</h2>
+                    <ul class="attraction-list">
+                        <li><strong>Government Botanical Garden</strong> (Ooty) – 55 acres of exotic flora</li>
+                        <li><strong>Doddabetta Peak</strong> – Highest point in Nilgiris (2,637 m)</li>
+                        <li><strong>Ooty Lake & Boat House</strong> – Artificial lake from 1824</li>
+                        <li><strong>Pykara Waterfalls & Lake</strong> – Perfect picnic spot</li>
+                        <li><strong>Nilgiri Mountain Railway (Toy Train)</strong> – UNESCO Heritage</li>
+                        <li><strong>Avalanche & Emerald Lakes</strong> – Pristine trekking routes</li>
+                        <li><strong>Mudumalai Tiger Reserve</strong> – Rich wildlife & elephant sightings</li>
+                        <li><strong>Rose Garden (Centenary Rose Park)</strong> – 2,800+ rose varieties</li>
+                    </ul>
+                </div>
+
+                <!-- Eco & Wildlife Highlights -->
+                <div class="card">
+                    <h2 class="section-title" style="border-left-color: #2c6e2c;">🐘 Conservation & Wildlife</h2>
+                    <p>✔ Part of <strong>Nilgiri Biosphere Reserve</strong> – first Indian biosphere.</p>
+                    <p>✔ Home to endangered <strong>Nilgiri Tahr</strong> (state animal of Tamil Nadu). Eravikulam National Park recently reopened after calving season, recording nearly 100 new tahr births.</p>
+                    <p>✔ Forest department recently set up anti-flammable measures across 638 sq.km to prevent summer fires.</p>
+                    <p>✔ Tiger and elephant corridors link Mudumalai, Bandipur, and Wayanad reserves.</p>
+                    <p style="margin-top: 10px; background:#e9f5e8; padding: 10px; border-radius: 20px;">✨ <strong>Eco-alert:</strong> Rising human-wildlife conflicts have led to protests by tribal federations over safety from tigers and elephants. The district is working on mitigation strategies.</p>
+                </div>
+
+                <!-- Quick Facts + Weather -->
+                <div class="card">
+                    <h2 class="section-title" style="border-left-color: #2c6e2c;">☕ Nilgiris at a glance</h2>
+                    <p>🍃 <strong>Tea capital</strong> of South India – sprawling tea estates produce the famous <em>Nilgiri black tea</em> known for its fragrant aroma.</p>
+                    <p>📅 <strong>Summer festival</strong> (May) features flower shows, boat races, and cultural events — this year heli-tourism banned by HC to protect ecosystem.</p>
+                    <p>🚞 The <strong>Nilgiri Mountain Railway</strong> is one of the steepest rack railways in Asia, climbing from 325m to 2,203m.</p>
+                    <p>🎬 Bollywood & Tamil cinema have immortalized Ooty in dozens of films (“Chai Garam”, “Mouna Ragam”, etc.)</p>
+                    <hr style="margin: 15px 0;">
+                    <p style="display: flex; align-items: center; gap: 10px;">🌦️ <strong>Current weather (April 8):</strong> Heavy rain & gusty winds 🌧️ | Temperature: 10°C – 18°C | ⚠️ Landslide alert in ghat sections.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXTRA SECTION: Key Development & Environment Stories -->
+        <div class="card" style="margin-bottom: 20px;">
+            <h2 class="section-title" style="border-left-color: #2e7d32;">📌 Nilgiris in Focus – Environment & Elections</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: space-between;">
+                <div style="flex:1; min-width: 200px;">
+                    <h3>🗳️ Assembly polls 2026</h3>
+                    <p>Residents of Ajoor village (near Ooty) with ~800 voters have threatened to vote NOTA over a decade-long land dispute with the Forest Department. Meanwhile, the Nilgiris District Tribal Federation announced an election boycott citing fatal tiger attacks & crop destruction by wild elephants. The single-phase TN elections will be held on April 23.</p>
+                </div>
+                <div style="flex:1; min-width: 200px;">
+                    <h3>♻️ Environmental challenges</h3>
+                    <p>Over 570 kg of waste cleared from villages around Ooty in a recent clean-up drive. However, rising pesticide use, falling tea prices, and unchecked real estate threaten the fragile shola-grassland ecosystem. District Collector is spearheading sustainable tourism and anti-fire measures for summer.</p>
+                </div>
+                <div style="flex:1; min-width: 200px;">
+                    <h3>🦁 Eravikulam National Park opens</h3>
+                    <p>Just across the border (Kerala), Eravikulam National Park – prime habitat of Nilgiri Tahr – reopened on April 1 after calving season. New attractions: “Rainbow Point”, 3-tier photo point, and a medicinal garden with 200+ rare species. Great news for wildlife enthusiasts visiting Nilgiris.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 | Nilgiris District Information Portal — Queen of Hill Stations | Last updated: April 8, 2026</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Sources: Tamil Nadu Government Portal, The Hindu, Mathrubhumi, ANI, New Indian Express, District Administration reports.</p>
+            <p style="margin-top: 12px;">🌿 Discover the Nilgiris — where the mountains touch the clouds 🌿</p>
+        </footer>
+    </div>
+</body>
+</html>

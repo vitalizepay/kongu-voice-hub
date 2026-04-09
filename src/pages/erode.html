@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Erode District | Today's News & Key Facts</title>
+    <!-- Google Fonts + Font Awesome for clean icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #1e2a2f;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #2b5e2b 0%, #1d4a1d 100%);
+            color: white;
+            padding: 2rem 0 2.2rem 0;
+            border-radius: 0 0 2rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero h1 i {
+            background: #ffb347;
+            padding: 12px;
+            border-radius: 60px;
+            font-size: 1.8rem;
+            color: #2b5e2b;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #ffb347cc;
+            backdrop-filter: blur(2px);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 650px;
+            margin-top: 10px;
+        }
+
+        /* Date & quick stats row */
+        .info-strip {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.8rem;
+            margin-top: -1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #f0e2d0;
+        }
+
+        .live-date {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            background: #fef3e8;
+            padding: 8px 18px;
+            border-radius: 40px;
+        }
+
+        .live-date i {
+            color: #c23b22;
+            font-size: 1.1rem;
+        }
+
+        .quick-facts {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .quick-facts span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #3c5e2b;
+        }
+
+        .quick-facts i {
+            margin-right: 6px;
+            color: #ff8c42;
+        }
+
+        /* Two column layout */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 880px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* cards */
+        .card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+            border: 1px solid #f0e4d8;
+            transition: all 0.2s ease;
+        }
+
+        .card-header {
+            padding: 1.4rem 1.8rem;
+            border-bottom: 1px solid #f0e4d8;
+            background: #ffffff;
+        }
+
+        .card-header h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-header h2 i {
+            color: #d97706;
+            font-size: 1.5rem;
+        }
+
+        .card-content {
+            padding: 1.2rem 1.6rem 1.8rem;
+        }
+
+        /* news list */
+        .news-item {
+            border-bottom: 1px solid #f3ebe2;
+            padding: 1.2rem 0;
+            transition: 0.1s linear;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #2c3e2f;
+            margin-bottom: 8px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .news-title:hover {
+            color: #d97706;
+        }
+        .news-summary {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin: 8px 0 8px 0;
+            line-height: 1.45;
+        }
+        .news-meta {
+            display: flex;
+            gap: 18px;
+            font-size: 0.75rem;
+            color: #8b6b4d;
+            margin-top: 6px;
+            align-items: center;
+        }
+        .news-meta i {
+            font-size: 0.7rem;
+            margin-right: 4px;
+        }
+        .tag-election {
+            background: #fef3c7;
+            color: #b45309;
+            padding: 2px 8px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .tag-weather {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        /* about section */
+        .about-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .stat-block {
+            background: #fef9f0;
+            border-radius: 24px;
+            padding: 1rem 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 6px solid #eab308;
+        }
+        .stat-block i {
+            font-size: 2rem;
+            color: #e68a2e;
+        }
+        .stat-text strong {
+            font-size: 1.2rem;
+            display: block;
+            color: #2c5e2a;
+        }
+
+        /* footer */
+        .footer {
+            margin-top: 3rem;
+            background: #e7e2d9;
+            padding: 1.8rem;
+            border-radius: 28px 28px 0 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #4a4a4a;
+        }
+
+        .btn-source {
+            text-decoration: none;
+            font-size: 0.75rem;
+            background: #f0e2d2;
+            padding: 5px 12px;
+            border-radius: 50px;
+            color: #5b3e1c;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .card-header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>
+            <i class="fas fa-map-marked-alt"></i> 
+            Erode District
+        </h1>
+        <p>Textile capital & the "Turmeric City" of Tamil Nadu — latest updates, election buzz, and today's headlines.</p>
+        <div class="hero-badge">
+            <i class="fas fa-newspaper"></i> Latest news: April 8, 2026
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="info-strip">
+        <div class="live-date">
+            <i class="fas fa-calendar-alt"></i> 
+            <span id="currentDate"></span>
+        </div>
+        <div class="quick-facts">
+            <span><i class="fas fa-chalkboard-user"></i> 8 Assembly constituencies</span>
+            <span><i class="fas fa-chart-line"></i> 17.59 Lakh voters</span>
+            <span><i class="fas fa-thermometer-high"></i> 40.0°C peak temp</span>
+        </div>
+    </div>
+
+    <div class="grid-2col">
+        <!-- LEFT COLUMN: TODAY'S NEWS -->
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-bolt"></i> Today's Latest News</h2>
+            </div>
+            <div class="card-content">
+                <!-- News 1: Political rally / Stalin visit -->
+                <div class="news-item">
+                    <div><span class="tag-election"><i class="fas fa-vote-yea"></i> Election 2026</span></div>
+                    <a href="#" class="news-title">Tamil Nadu CM Stalin to hold election rallies in Karur & Erode today</a>
+                    <div class="news-summary">Chief Minister M.K. Stalin will address public meetings in Karur and Erode district today as part of the high-octane campaign for the April 23 Assembly elections. Rallies expected to draw thousands of cadre.</div>
+                    <div class="news-meta"><span><i class="far fa-clock"></i> April 8, 2026</span><span><i class="fas fa-newspaper"></i> Bhaskar English / PTI</span></div>
+                </div>
+
+                <!-- News 2: Weather record / heatwave -->
+                <div class="news-item">
+                    <div><span class="tag-election tag-weather"><i class="fas fa-sun"></i> Scorching Heat</span></div>
+                    <a href="#" class="news-title">Erode sizzles at 40.0°C, records state's highest temperature</a>
+                    <div class="news-summary">According to the latest IMD bulletin, Erode recorded the highest maximum temperature in Tamil Nadu at 40.0°C on Wednesday. Karur Paramathi followed closely at 39.5°C. Residents advised to stay hydrated and avoid peak-hour exposure.</div>
+                    <div class="news-meta"><span><i class="far fa-clock"></i> April 8, 2026</span><span><i class="fas fa-cloud-sun"></i> OneIndia / Weather dept</span></div>
+                </div>
+
+                <!-- News 3: DMK candidate blocked -->
+                <div class="news-item">
+                    <div><span class="tag-election"><i class="fas fa-hand-peace"></i> Protest</span></div>
+                    <a href="#" class="news-title">Residents block DMK candidate's entry into Kongarpalayam village</a>
+                    <div class="news-summary">Villagers near Gobichettipalayam refused to allow DMK candidate N. Nallasivam to enter, citing unresolved water extraction issues. The candidate was forced to leave after a tense standoff; banners declared "no political campaigns" in the area.</div>
+                    <div class="news-meta"><span><i class="far fa-clock"></i> April 7, 2026</span><span><i class="fas fa-newspaper"></i> The Hindu</span></div>
+                </div>
+
+                <!-- News 4: Over 17.59 lakh voters -->
+                <div class="news-item">
+                    <div><span class="tag-election"><i class="fas fa-chart-simple"></i> Voter Stats</span></div>
+                    <a href="#" class="news-title">Erode district crosses 17.59 lakh voters for April 23 polls</a>
+                    <div class="news-summary">District Election Officer S. Kandasamy confirmed that 8,47,197 male, 9,11,778 female, and 182 third-gender voters are registered. Booth Level Officers will distribute voter slips from April 10-17.</div>
+                    <div class="news-meta"><span><i class="far fa-clock"></i> April 7, 2026</span><span><i class="fas fa-check-circle"></i> Collector's office</span></div>
+                </div>
+
+                <!-- News 5: 131 nominations accepted -->
+                <div class="news-item">
+                    <div><span class="tag-election"><i class="fas fa-file-signature"></i> Nomination Scrutiny</span></div>
+                    <a href="#" class="news-title">131 nominations accepted, 71 rejected in Erode district</a>
+                    <div class="news-summary">Out of 202 nominations filed, scrutiny resulted in 131 accepted candidates across 8 constituencies. Erode (East) leads with 24 accepted nominations. Last date for withdrawal is April 9.</div>
+                    <div class="news-meta"><span><i class="far fa-clock"></i> April 7, 2026</span><span><i class="fas fa-landmark"></i> Election Commission</span></div>
+                </div>
+
+                <!-- News 6: Rare political cluster -->
+                <div class="news-item">
+                    <div><span class="tag-election"><i class="fas fa-people-arrows"></i> Unique contest</span></div>
+                    <a href="#" class="news-title">Three rivals from DMK, AIADMK, BJP live within 100m in Periyar Nagar</a>
+                    <div class="news-summary">In a rare twist, DMK Minister Muthusamy, AIADMK's R. Manoharan, and BJP's Kirthika reside on the same neighbourhood stretch in Erode city. Despite fierce campaigns, residents say the candidates maintain cordial ties.</div>
+                    <div class="news-meta"><span><i class="far fa-clock"></i> April 7, 2026</span><span><i class="fas fa-city"></i> The Hindu</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: DISTRICT ESSENTIALS + QUICK OVERVIEW -->
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-landmark"></i> District at a glance</h2>
+            </div>
+            <div class="card-content about-grid">
+                <div class="stat-block">
+                    <i class="fas fa-chart-pie"></i>
+                    <div class="stat-text">
+                        <strong>🏆 Top Turmeric Producer</strong>
+                        <span>Erode produces 43% of Tamil Nadu's turmeric, recognized with GI tag. Also major hub for plantain, coconut & white silk.</span>
+                    </div>
+                </div>
+                <div class="stat-block">
+                    <i class="fas fa-tshirt"></i>
+                    <div class="stat-text">
+                        <strong>🧵 Textile powerhouse</strong>
+                        <span>Over 23,000 small industries power handlooms & powerlooms — knitwear and home textiles exported worldwide.</span>
+                    </div>
+                </div>
+                <div class="stat-block">
+                    <i class="fas fa-water"></i>
+                    <div class="stat-text">
+                        <strong>🌾 Cauvery lifeline</strong>
+                        <span>Situated on western bank of river Kaveri, the district is known for Bhavani Sagar dam & fertile agriculture belt.</span>
+                    </div>
+                </div>
+                <div class="stat-block">
+                    <i class="fas fa-charging-station"></i>
+                    <div class="stat-text">
+                        <strong>🌡️ Today’s weather extreme</strong>
+                        <span>IMD reports 40.0°C peak in Erode city; dry and hot interior conditions expected for next 48 hours.</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 0.8rem; background: #faf2e8; border-radius: 20px; padding: 1rem;">
+                    <i class="fas fa-chart-line" style="color:#e68a2e;"></i> 
+                    <strong style="margin-left: 6px;">2026 Tamil Nadu Assembly Election Pulse</strong>
+                    <ul style="margin-top: 12px; margin-left: 20px; font-size: 0.85rem; color: #3f3a35;">
+                        <li>🗳️ Polling date: <strong>April 23, 2026</strong></li>
+                        <li>📊 Total electorate: 17,59,157</li>
+                        <li>🏛️ Key constituencies: Erode (East/West), Gobichettipalayam, Bhavani, Modakkurichi, Perundurai</li>
+                        <li>📜 Withdrawal deadline: April 9 → final contesters announced</li>
+                    </ul>
+                    <div style="margin-top: 12px; font-size:0.8rem; background: #fff1e0; border-radius: 14px; padding: 6px 12px;">
+                        <i class="fas fa-check-circle" style="color:#2c7a2e;"></i> Voter information slips distributed from April 10 to 17.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADDITIONAL NEWS ROW: MORE LOCAL UPDATES -->
+    <div class="card" style="margin-bottom: 2rem;">
+        <div class="card-header">
+            <h2><i class="fas fa-fire"></i> More Headlines & Erode Updates</h2>
+        </div>
+        <div class="card-content">
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
+                <div style="flex:1; min-width: 200px;">
+                    <div class="news-item" style="border-bottom: none; padding-top:0;">
+                        <span class="tag-election"><i class="fas fa-tint"></i> Flood preparedness</span>
+                        <div class="news-title" style="margin-top: 6px;">18 flood-prone villages identified along Cauvery</div>
+                        <div class="news-summary">Relief camps are kept ready in schools & marriage halls as Mettur dam discharge is monitored. Authorities are on high alert.</div>
+                        <div class="news-meta">District Revenue Dept</div>
+                    </div>
+                </div>
+                <div style="flex:1; min-width: 200px;">
+                    <div class="news-item" style="border-bottom: none; padding-top:0;">
+                        <span class="tag-election"><i class="fas fa-industry"></i> Environment</span>
+                        <div class="news-title" style="margin-top: 6px;">44.5 lakh kg waste salt removed from SIPCOT, Perundurai</div>
+                        <div class="news-summary">District admin confirms industrial salt waste treated & removed from March to June this year, improving local environmental conditions.</div>
+                        <div class="news-meta">Erode district press release</div>
+                    </div>
+                </div>
+                <div style="flex:1; min-width: 200px;">
+                    <div class="news-item" style="border-bottom: none; padding-top:0;">
+                        <span class="tag-election"><i class="fas fa-gavel"></i> Anti-corruption</span>
+                        <div class="news-title" style="margin-top: 6px;">Two DRDA officials arrested for accepting ₹3 lakh bribe</div>
+                        <div class="news-summary">Vigilance & Anti-Corruption Unit, Erode Detachment, caught officials red-handed while demanding bribe from a contractor.</div>
+                        <div class="news-meta">DVAC Erode</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER: Sources & Disclaimer -->
+    <div class="footer">
+        <p><i class="fas fa-dharmachakra"></i> Sources: The Hindu, OneIndia, Bhaskar English, IMD, District Election Office, DVAC reports. Updated for April 8, 2026. <br>
+        📍 Erode District | Textile & Turmeric hub of Tamil Nadu | For informational purposes only.</p>
+        <p style="margin-top: 10px;">📰 All news stories are curated based on latest ground reports and official releases.</p>
+    </div>
+</div>
+
+<script>
+    // Dynamic date display (UTC+5:30 IST formatting)
+    const options = { timeZone: "Asia/Kolkata", year: "numeric", month: "long", day: "numeric" };
+    const today = new Date().toLocaleDateString("en-IN", options);
+    document.getElementById("currentDate").innerHTML = today + " &nbsp;|&nbsp; <i class='fas fa-map-pin'></i> Erode, TN";
+</script>
+
+</body>
+</html>
