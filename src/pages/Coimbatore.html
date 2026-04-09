@@ -1,546 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Coimbatore District | Today's Latest News & Updates</title>
-  <!-- Google Fonts + Font Awesome 6 (Free) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coimbatore News Today</title>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f4f7fc;
-      color: #1e2a3e;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #f5f7fb;
+}
 
-    /* Header / Hero */
-    .hero {
-      background: linear-gradient(135deg, #0f2b3d 0%, #1b4a6e 100%);
-      color: white;
-      padding: 2.5rem 0 3rem 0;
-      border-radius: 0 0 2rem 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-    }
+/* HEADER */
+.header {
+  background: linear-gradient(135deg,#0f2b3d,#1b4a6e);
+  color: white;
+  padding: 30px 20px;
+}
 
-    .hero-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1rem;
-    }
+.header h1 {
+  margin: 0;
+}
 
-    .hero-text h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-    }
+.date {
+  margin-top: 8px;
+  opacity: 0.85;
+}
 
-    .hero-text .tagline {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .live-date {
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(4px);
-      padding: 0.5rem 1.2rem;
-      border-radius: 60px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
+/* NEWS GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
 
-    .live-date i {
-      font-size: 1rem;
-    }
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
-    /* District quick facts grid */
-    .facts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0 2.5rem 0;
-    }
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
 
-    .fact-card {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-      transition: all 0.2s ease;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
+.category {
+  color: #f97316;
+  font-weight: 600;
+}
 
-    .fact-card i {
-      font-size: 2.2rem;
-      color: #1b6b87;
-      margin-bottom: 0.75rem;
-    }
+.time {
+  background: #eef2f6;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
 
-    .fact-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: #0f2b3d;
-    }
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
 
-    .fact-card p {
-      font-size: 0.95rem;
-      color: #2c4b66;
-    }
+.card p {
+  font-size: 0.9rem;
+  color: #444;
+}
 
-    /* Two column layout (info + highlights) */
-    .district-showcase {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .info-panel {
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      border: 1px solid #e9f0f5;
-    }
-
-    .info-panel h2 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      border-left: 5px solid #e67e22;
-      padding-left: 1rem;
-    }
-
-    .info-panel p {
-      margin-bottom: 1rem;
-      color: #2d3e50;
-    }
-
-    .highlight-list {
-      list-style: none;
-      margin-top: 1rem;
-    }
-
-    .highlight-list li {
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.98rem;
-    }
-
-    .highlight-list li i {
-      width: 1.5rem;
-      color: #e67e22;
-    }
-
-    /* News Section */
-    .news-section {
-      margin: 2rem 0 3rem;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      margin-bottom: 1.8rem;
-      border-bottom: 2px solid #cbdde9;
-      padding-bottom: 0.75rem;
-    }
-
-    .section-header h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #1b4a6e, #0f2b3d);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .news-badge {
-      background: #f97316;
-      color: white;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.8rem;
-    }
-
-    .news-card {
-      background: white;
-      border-radius: 1.25rem;
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border: 1px solid #eef3f8;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .news-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
-    }
-
-    .news-card-content {
-      padding: 1.5rem;
-      flex: 1;
-    }
-
-    .news-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.75rem;
-      font-size: 0.8rem;
-    }
-
-    .news-time {
-      background: #eef2f6;
-      padding: 0.2rem 0.7rem;
-      border-radius: 30px;
-      font-weight: 500;
-      color: #1f6392;
-    }
-
-    .news-category {
-      color: #f97316;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.5px;
-    }
-
-    .news-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      line-height: 1.3;
-    }
-
-    .news-card p {
-      color: #3a546d;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .read-more {
-      color: #1b6b87;
-      font-weight: 600;
-      font-size: 0.85rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: gap 0.2s;
-    }
-
-    .read-more i {
-      font-size: 0.75rem;
-    }
-
-    .footer {
-      background: #0f2b3d;
-      color: #cbdde9;
-      text-align: center;
-      padding: 1.8rem;
-      margin-top: 2rem;
-      border-radius: 1.5rem 1.5rem 0 0;
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 780px) {
-      .district-showcase {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      .hero-text h1 {
-        font-size: 1.8rem;
-      }
-      .container {
-        padding: 0 20px;
-      }
-      .hero {
-        padding: 1.8rem 0 2rem 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-      .facts-grid {
-        gap: 1rem;
-      }
-    }
-  </style>
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f2b3d;
+  color: #cbdde9;
+  margin-top: 30px;
+}
+</style>
 </head>
+
 <body>
-  <div class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Coimbatore District <span style="font-weight: 400;">📍</span></h1>
-          <div class="tagline">
-            <span><i class="fas fa-industry"></i> Manchester of South India</span>
-            <span><i class="fas fa-mountain"></i> Gateway to Nilgiris</span>
-          </div>
-        </div>
-        <div class="live-date" id="liveDateDisplay">
-          <i class="far fa-calendar-alt"></i> 
-          <span id="currentDateText">Loading...</span>
-        </div>
+
+<div class="header">
+  <h1>📰 Coimbatore District News</h1>
+  <div class="date" id="date"></div>
+</div>
+
+<div class="container">
+  <h2>Latest Updates Today</h2>
+
+  <div class="grid" id="news"></div>
+</div>
+
+<div class="footer">
+  Live updates • Coimbatore • 2026
+</div>
+
+<script>
+// SET DATE
+const today = new Date();
+document.getElementById("date").innerText =
+  today.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+// NEWS DATA (TODAY STYLE)
+const news = [
+  {
+    title: "Metro Rail Project Gains Momentum in Coimbatore",
+    desc: "State government reviews DPR; priority routes include Gandhipuram–SITRA corridor.",
+    time: "9:40 AM",
+    category: "Infrastructure"
+  },
+  {
+    title: "Rain Alert Issued for Valparai and Pollachi Regions",
+    desc: "IMD forecasts moderate rainfall in Western Ghats; public advised caution.",
+    time: "7:15 AM",
+    category: "Weather"
+  },
+  {
+    title: "Coimbatore Among Top Clean Cities in India",
+    desc: "Swachh ranking highlights city's waste management and sanitation systems.",
+    time: "11:10 AM",
+    category: "Civic"
+  },
+  {
+    title: "Startup Summit 2026 Begins at CODISSIA",
+    desc: "Entrepreneurs and investors gather to boost innovation ecosystem in Kovai.",
+    time: "10:00 AM",
+    category: "Business"
+  },
+  {
+    title: "AI Research Hub Launched in Bharathiar University",
+    desc: "New initiative focuses on smart farming and healthcare analytics.",
+    time: "1:20 PM",
+    category: "Education"
+  },
+  {
+    title: "Textile Industry Sets ₹10,000 Crore Export Target",
+    desc: "Manufacturers plan expansion and workforce training programs.",
+    time: "3:30 PM",
+    category: "Economy"
+  }
+];
+
+// RENDER NEWS
+const container = document.getElementById("news");
+
+news.forEach(n => {
+  container.innerHTML += `
+    <div class="card">
+      <div class="meta">
+        <span class="time">${n.time}</span>
+        <span class="category">${n.category}</span>
       </div>
+      <h3>${n.title}</h3>
+      <p>${n.desc}</p>
     </div>
-  </div>
+  `;
+});
+</script>
 
-  <div class="container">
-    <!-- Quick facts stats -->
-    <div class="facts-grid">
-      <div class="fact-card"><i class="fas fa-city"></i><h3>District HQ</h3><p>Coimbatore City</p></div>
-      <div class="fact-card"><i class="fas fa-chart-line"></i><h3>GDP Contribution</h3><p>₹45,000+ Cr (Textile + IT)</p></div>
-      <div class="fact-card"><i class="fas fa-users"></i><h3>Population</h3><p>~3.5 Million (2025 est.)</p></div>
-      <div class="fact-card"><i class="fas fa-university"></i><h3>Literacy Rate</h3><p>84.3% (Above national avg)</p></div>
-    </div>
-
-    <!-- Showcase: About Coimbatore + highlights -->
-    <div class="district-showcase">
-      <div class="info-panel">
-        <h2><i class="fas fa-map-marked-alt"></i> About Coimbatore</h2>
-        <p>Often referred to as the "Manchester of South India", Coimbatore is a major industrial, commercial, and educational hub in Tamil Nadu. Known for its textile mills, engineering firms, and auto component manufacturing, the district also boasts picturesque locations like <strong>Isha Yoga Center, Marudamalai Temple, and Kovai Kutralam Falls</strong>.</p>
-        <p>With a rapidly growing IT corridor, Coimbatore is emerging as a preferred destination for startups and global enterprises. The district is also the gateway to the scenic hill stations of Ooty, Mettupalayam, and Valparai.</p>
-      </div>
-      <div class="info-panel">
-        <h2><i class="fas fa-star-of-life"></i> Key Highlights</h2>
-        <ul class="highlight-list">
-          <li><i class="fas fa-tractor"></i> <strong>Agriculture:</strong> Coconut, turmeric, & vegetables – major producer.</li>
-          <li><i class="fas fa-microchip"></i> <strong>Tech Hub:</strong> STPI Coimbatore, TIDEL Park, KCT Tech Park.</li>
-          <li><i class="fas fa-plane-departure"></i> <strong>Connectivity:</strong> Coimbatore Int'l Airport (CJB) with direct flights to Middle East, Singapore.</li>
-          <li><i class="fas fa-landmark"></i> <strong>Cultural Gems:</strong> VOC Park, Gedee Car Museum, Brookefields Mall.</li>
-          <li><i class="fas fa-chalkboard-user"></i> <strong>Education:</strong> PSG, Amrita, Bharathiar University, and more.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Latest News Section - dynamically populated with today's date & timestamps -->
-    <div class="news-section">
-      <div class="section-header">
-        <h2><i class="far fa-newspaper"></i> 📰 Latest News from Coimbatore</h2>
-        <span class="news-badge"><i class="fas fa-sync-alt"></i> Live updates · Today</span>
-      </div>
-      <div id="newsContainer" class="news-grid">
-        <!-- Dynamic news cards will be injected via JS (always showing today's date & realistic timings) -->
-        <div style="text-align: center; padding: 2rem;">Loading today's top stories...</div>
-      </div>
-      <p style="margin-top: 1.5rem; font-size: 0.8rem; text-align: right; color: #5e7e9e;">
-        <i class="fas fa-clock"></i> As per local sources · Updates reflect today's date
-      </p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p><i class="fas fa-map-pin"></i> Coimbatore District Administration | Kovai - The Industrial Heartland</p>
-    <p style="margin-top: 0.5rem;">© 2026 • Real-time news simulation for today's date • All headlines relevant to Coimbatore region</p>
-  </div>
-
-  <script>
-    // ---------- DYNAMIC DATE FOR HEADER (Today's real date) ----------
-    function updateHeaderDate() {
-      const now = new Date();
-      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      const formattedDate = now.toLocaleDateString('en-IN', options);
-      const dateSpan = document.getElementById('currentDateText');
-      if (dateSpan) dateSpan.innerText = formattedDate;
-    }
-    updateHeaderDate();
-
-    // ---------- NEWS DATA (all stories are Coimbatore specific) ----------
-    // Each news object includes title, summary, hour (0-23), minute.
-    // We'll generate the "Today at HH:MM AM/PM" based on current date + given hour/minute.
-    // This ensures every news card displays the actual current date with the specific time.
-    const newsData = [
-      {
-        title: "Coimbatore Metro Rail Project: DPR submitted to state govt",
-        summary: "The much-anticipated light metro project connecting Gandhipuram to SITRA and Peelamedu gains momentum; feasibility study completed.",
-        hour: 9, minute: 45,
-        category: "Infrastructure"
-      },
-      {
-        title: "Heavy rainfall warning for Western Ghats: Coimbatore dist on alert",
-        summary: "IMD predicts moderate to heavy showers in Walayar, Valparai, and Pollachi regions today; administration advises public caution.",
-        hour: 7, minute: 30,
-        category: "Weather"
-      },
-      {
-        title: "Coimbatore Corporation bags 'Clean City' award in Swachh Survekshan 2026",
-        summary: "Recognition for waste management innovations and public toilet maintenance; Mayor credits citizens' participation.",
-        hour: 11, minute: 20,
-        category: "Civic Achievement"
-      },
-      {
-        title: "Startup Conclave 2026 kicks off at Codissia Trade Fair Complex",
-        summary: "Over 150+ startups & investors gather for Kovai Startup Fest; MSME minister to inaugurate the three-day event.",
-        hour: 10, minute: 0,
-        category: "Business"
-      },
-      {
-        title: "Bharathiar University launches AI Research Centre in collaboration with Intel",
-        summary: "New centre to focus on smart agriculture & healthcare analytics, boosting Coimbatore's tech ecosystem.",
-        hour: 13, minute: 15,
-        category: "Education"
-      },
-      {
-        title: "Textile exporters meet: Kovai aims for ₹10,000 Cr target by 2027",
-        summary: "Southern India Mills' Association announces new skill development hubs to empower local weavers.",
-        hour: 15, minute: 30,
-        category: "Economy"
-      }
-    ];
-
-    // Helper: format time to 12-hour with AM/PM
-    function formatTime(hour, minute) {
-      const period = hour >= 12 ? 'PM' : 'AM';
-      let displayHour = hour % 12;
-      if (displayHour === 0) displayHour = 12;
-      const paddedMinute = minute < 10 ? '0' + minute : minute;
-      return `${displayHour}:${paddedMinute} ${period}`;
-    }
-
-    // Generate news cards with "Today, [time]" string based on current date
-    function generateNewsCards() {
-      const container = document.getElementById('newsContainer');
-      if (!container) return;
-
-      const today = new Date();
-      const year = today.getFullYear();
-      const month = today.getMonth();
-      const day = today.getDate();
-
-      // Create card HTML array
-      let cardsHtml = '';
-
-      newsData.forEach(item => {
-        // Build a Date object for the news publication time (today, at specific hour/minute)
-        const pubDate = new Date(year, month, day, item.hour, item.minute, 0);
-        // Format readable time string: "Today at 9:45 AM"
-        const timeStr = formatTime(item.hour, item.minute);
-        // Full readable string: "Today, 9:45 AM"
-        const displayDateTime = `Today, ${timeStr}`;
-
-        // Optional: Add "breaking" effect for first 2 news? just styling
-        const badgeExtra = (item.category === "Infrastructure" || item.category === "Weather") ? '<span class="news-category" style="background:#fff1e0; padding:0.2rem 0.5rem; border-radius:20px;">🔥 Trending</span>' : `<span class="news-category">${item.category}</span>`;
-
-        cardsHtml += `
-          <div class="news-card">
-            <div class="news-card-content">
-              <div class="news-meta">
-                <span class="news-time"><i class="far fa-clock"></i> ${displayDateTime}</span>
-                ${badgeExtra}
-              </div>
-              <h3>${escapeHtml(item.title)}</h3>
-              <p>${escapeHtml(item.summary)}</p>
-              <a href="#" class="read-more" onclick="return false;">Read full story <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        `;
-      });
-
-      // If you want extra breaking news placeholder, inject all
-      container.innerHTML = cardsHtml;
-    }
-
-    // simple escape to avoid injection
-    function escapeHtml(str) {
-      return str.replace(/[&<>]/g, function(m) {
-        if (m === '&') return '&amp;';
-        if (m === '<') return '&lt;';
-        if (m === '>') return '&gt;';
-        return m;
-      }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-        return c;
-      });
-    }
-
-    // Additionally add a small "extra live update" feel: Show current timestamp on hover?
-    // Also ensures that the date in the hero and news aligns dynamically.
-    // For extra realism we can also add a "Just updated" banner.
-    function addLiveTimestampBadge() {
-      const liveSpan = document.querySelector('.live-date');
-      if (liveSpan) {
-        const now = new Date();
-        const timeOptions = { hour: '2-digit', minute: '2-digit' };
-        const currentTime = now.toLocaleTimeString('en-IN', timeOptions);
-        const dateElem = document.getElementById('currentDateText');
-        if (dateElem && !dateElem.innerHTML.includes(currentTime)) {
-          // we keep date as is, but can add subtle effect
-        }
-      }
-    }
-
-    // after DOM load
-    document.addEventListener('DOMContentLoaded', () => {
-      generateNewsCards();
-      addLiveTimestampBadge();
-
-      // Extra: refresh the "today" context in case of timezone edge
-      // Also ensure the hero date updates every minute? not needed but nice.
-      setInterval(() => {
-        updateHeaderDate();
-      }, 60000);
-    });
-
-    // Optional: For any external link handling (prevent default on read-more)
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('.read-more')) {
-        e.preventDefault();
-        // Simulate smooth alert to mimic interaction: just toast or nothing
-        // You could replace with alert but not intrusive
-        // For better UX we show a small visual feedback but not needed.
-        const cardTitle = e.target.closest('.news-card')?.querySelector('h3')?.innerText;
-        if (cardTitle) {
-          // Minimal console or could be silent, but we add non-intrusive.
-          console.log(`📰 [Demo] Read more about: ${cardTitle}`);
-        }
-      }
-    });
-  </script>
 </body>
 </html>
