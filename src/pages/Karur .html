@@ -1,383 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Karur District | Today's News & Complete Guide</title>
-  <meta name="description" content="Latest updates, breaking news, and in-depth district profile of Karur, Tamil Nadu. Politics, infrastructure, weather, and essential local insights.">
-  <!-- Google Fonts & simple CSS reset -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karur District Live News</title>
 
-    body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
-      background-color: #fefaf5;
-      color: #1a2a2f;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* container */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 1.5rem 1.5rem 3rem;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f6f8fb;
+  color: #1e2a3e;
+}
 
-    /* header & hero */
-    .hero {
-      background: linear-gradient(135deg, #1f5e3a 0%, #2b7a4b 100%);
-      border-radius: 2rem;
-      padding: 2rem 2rem 2rem 2.5rem;
-      margin-bottom: 2.5rem;
-      color: white;
-      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.2);
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(4px);
-      padding: 0.3rem 0.9rem;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .hero-sub {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 75%;
-      font-weight: 400;
-      border-left: 3px solid #ffd966;
-      padding-left: 1rem;
-    }
-    @media (max-width: 700px) {
-      .hero { padding: 1.5rem; }
-      .hero h1 { font-size: 1.9rem; }
-      .hero-sub { max-width: 100%; font-size: 0.95rem; }
-      .container { padding: 1rem 1rem 2rem; }
-    }
+/* HEADER */
+.header {
+  background: linear-gradient(135deg,#1f5e3a,#2b7a4b);
+  color: white;
+  padding: 30px 20px;
+}
 
-    /* layout grid */
-    .two-columns {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-    }
-    @media (max-width: 900px) {
-      .two-columns { grid-template-columns: 1fr; gap: 2rem; }
-    }
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
 
-    /* cards */
-    .card {
-      background: white;
-      border-radius: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
-    }
-    .card-header {
-      background: #fbf7f0;
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid #e9e0d3;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .card-header h2 {
-      font-size: 1.45rem;
-      font-weight: 600;
-      color: #1f5e3a;
-    }
-    .card-header i {
-      font-size: 1.6rem;
-    }
-    .card-content {
-      padding: 1.5rem;
-    }
+.sub {
+  opacity: 0.9;
+  margin-top: 5px;
+}
 
-    /* district stats & quick facts */
-    .fact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-bottom: 1.8rem;
-    }
-    .fact-item {
-      background: #f9f4ec;
-      border-radius: 1.2rem;
-      padding: 0.8rem 1rem;
-    }
-    .fact-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      font-weight: 600;
-      color: #7d6b4e;
-    }
-    .fact-value {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #1e2a2e;
-      margin-top: 0.2rem;
-    }
-    .desc-text {
-      color: #2c3e2f;
-      margin: 1.2rem 0;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
+.date {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
 
-    /* news list */
-    .news-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.3rem;
-    }
-    .news-item {
-      border-bottom: 1px solid #ece2d4;
-      padding-bottom: 1rem;
-    }
-    .news-title {
-      font-weight: 700;
-      font-size: 1rem;
-      line-height: 1.4;
-      margin-bottom: 0.3rem;
-      color: #1f3b2c;
-    }
-    .news-meta {
-      display: flex;
-      gap: 0.8rem;
-      font-size: 0.7rem;
-      color: #b68b40;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-      margin-bottom: 0.4rem;
-    }
-    .news-snippet {
-      font-size: 0.85rem;
-      color: #2c3e2f;
-      margin-bottom: 0.3rem;
-    }
-    .read-more {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #2b7a4b;
-      text-decoration: none;
-    }
-    .read-more:hover { text-decoration: underline; }
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    /* weather & highlight */
-    .weather-card {
-      background: #eef3ea;
-      border-radius: 1.2rem;
-      padding: 1rem;
-      margin: 1rem 0 0.5rem;
-      border-left: 4px solid #f4a261;
-    }
-    .small-note {
-      font-size: 0.75rem;
-      color: #6f5b3e;
-      margin-top: 0.6rem;
-    }
-    hr {
-      margin: 1rem 0;
-      border: none;
-      border-top: 1px solid #e9e0d3;
-    }
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e0d3c2;
-      text-align: center;
-      font-size: 0.75rem;
-      color: #8b7a62;
-    }
-    .badge-date {
-      background: #fff1e0;
-      border-radius: 60px;
-      padding: 0.2rem 0.9rem;
-      font-size: 0.7rem;
-      font-weight: 500;
-      display: inline-block;
-    }
-    .icon-em {
-      font-size: 1.2rem;
-      vertical-align: middle;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .source-ref {
-      font-size: 0.7rem;
-      color: #a28c6f;
-    }
-  </style>
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.category {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.time {
+  background: #eef2f6;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* WEATHER */
+.weather {
+  margin-top: 25px;
+  padding: 15px;
+  background: #eef3ea;
+  border-left: 5px solid #f4a261;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #1f5e3a;
+  color: #cbdde9;
+  text-align: center;
+  font-size: 0.85rem;
+}
+</style>
 </head>
+
 <body>
-<div class="container">
-  <!-- hero section -->
-  <div class="hero">
-    <div class="hero-badge">📌 KONGU NADU · GATEWAY OF TEXTILES</div>
-    <h1>Karur District</h1>
-    <div class="hero-sub">Land of ancient rivers, home textile capital &amp; fast‑growing industrial hub — latest updates from April 8, 2026.</div>
-  </div>
 
-  <!-- 2-column layout: overview + today's news -->
-  <div class="two-columns">
-    
-    <!-- LEFT COLUMN: DISTRICT PROFILE -->
-    <div class="card">
-      <div class="card-header">
-        <span>🏛️</span>
-        <h2>About Karur District</h2>
-      </div>
-      <div class="card-content">
-        <div class="fact-grid">
-          <div class="fact-item"><div class="fact-label">📍 Headquarters</div><div class="fact-value">Karur City</div></div>
-          <div class="fact-item"><div class="fact-label">🌊 Major rivers</div><div class="fact-value">Amaravathi, Kaveri, Noyyal</div></div>
-          <div class="fact-item"><div class="fact-label">🏭 Famous for</div><div class="fact-value">Home textiles, bus body building</div></div>
-          <div class="fact-item"><div class="fact-label">🗣️ Language</div><div class="fact-value">Tamil (official)</div></div>
-          <div class="fact-item"><div class="fact-label">🧑‍🌾 Main crops</div><div class="fact-value">Paddy, sugarcane, banana, betel leaf</div></div>
-          <div class="fact-item"><div class="fact-label">📅 Formed</div><div class="fact-value">Oldest town in Tamil Nadu (Sangam era)</div></div>
-        </div>
-        <p class="desc-text">
-          Karur, situated on the banks of the Amaravathi and Kaveri rivers, is one of the oldest continuously inhabited towns in Tamil Nadu. Historically a thriving trading hub linked to the ancient Cheras, the district today is a powerhouse of export-oriented home textiles — bed linens, kitchen linens, and wall hangings — as well as a renowned center for bus building and cement manufacturing (Chettinad Cement, TNPL)[reference:0][reference:1]. The region is bounded by Namakkal, Dindigul, Tiruchirapalli, and Erode districts, and the city of Karur serves as the administrative headquarters and a fast-growing municipal corporation[reference:2].
-        </p>
-        <p class="desc-text">
-          With a vibrant cultural heritage, the district is home to ancient temples such as the Pasupatheeswarar Siva temple and Thiruvithuvakkodu Vishnu temple, alongside historic mosques and a strong agricultural economy. Karur has evolved into a major industrial city while preserving its deep-rooted traditions.
-        </p>
-        <div class="small-note" style="background:#F4F0E8; border-radius: 1rem; padding: 0.5rem 1rem;">
-          ⚡ Key industry: Over 70% of India’s home textile exports from the Kongu region pass through Karur’s value chain.
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN: TODAY'S NEWS (April 8, 2026) -->
-    <div class="card">
-      <div class="card-header">
-        <span>📰</span>
-        <h2>Today's Headlines</h2>
-        <span class="badge-date" style="margin-left: auto;">APRIL 8, 2026</span>
-      </div>
-      <div class="card-content">
-        <div class="news-list">
-          <!-- News 1: Senthil Balaji / DMK strongman -->
-          <div class="news-item">
-            <div class="news-meta"><span>🗳️ POLITICS</span> <span>🔹 2h ago</span></div>
-            <div class="news-title">DMK fields Karur strongman Senthil Balaji in Coimbatore South — high‑stakes battle in AIADMK bastion</div>
-            <div class="news-snippet">Former minister V. Senthil Balaji, a heavyweight from Karur, is contesting from Coimbatore South to expand DMK’s footprint. Political analysts call it a masterstroke to dent AIADMK's western stronghold, with 18 candidates from Karur district filing nominations as independents in the same constituency[reference:3][reference:4]. </div>
-            <a href="#" class="read-more" aria-label="Read more about Senthil Balaji move">Read full coverage →</a>
-          </div>
-
-          <!-- News 2: New bus stand cleared by High Court -->
-          <div class="news-item">
-            <div class="news-meta"><span>🚏 INFRASTRUCTURE</span> <span>🔹 1 day ago</span></div>
-            <div class="news-title">Madras High Court clears decks for integrated bus stand at Thirumanilaiyur, Karur</div>
-            <div class="news-snippet">The Madurai Bench gave the green light for construction, observing that 31% of the work was already completed. The court stressed that “logistics through public transport is essential for a fast‑growing corporation city” and refused to stall the project further[reference:5][reference:6].</div>
-            <a href="#" class="read-more">Learn more →</a>
-          </div>
-
-          <!-- News 3: Stampede tragedy aftermath (still dominating headlines) -->
-          <div class="news-item">
-            <div class="news-meta"><span>⚠️ TRAGEDY & RESPONSE</span> <span>🔹 3 days ago</span></div>
-            <div class="news-title">Karur rally stampede toll rises to 41; ex-gratia announced, high court seeks accountability</div>
-            <div class="news-snippet">A devastating crowd surge at a political rally in Karur claimed 41 lives (18 women, 13 men, 10 children). Prime Minister Modi expressed condolences and announced ₹2 lakh ex-gratia for families of the deceased. Tamil Nadu government ordered a high‑level probe, while TVK chief Vijay moved court seeking CBI/SIT investigation[reference:7][reference:8]. Relief measures and political fallout continue to unfold.</div>
-            <a href="#" class="read-more">Investigation updates →</a>
-          </div>
-
-          <!-- News 4: Heatwave & rainfall relief -->
-          <div class="news-item">
-            <div class="news-meta"><span>🌦️ WEATHER ALERT</span> <span>🔹 Today</span></div>
-            <div class="news-title">IMD: Light rain in parts of TN, but Karur sizzles at 41°C; heatwave persists</div>
-            <div class="news-snippet">On April 8, Karur recorded 41°C (second hottest in the state after Vellore's 42.2°C). The IMD forecasts isolated thunderstorms across south Tamil Nadu, offering some respite, yet temperatures remain 2–3°C above normal. Residents advised to stay hydrated and avoid peak sun hours[reference:9][reference:10].</div>
-            <a href="#" class="read-more">Full weather outlook →</a>
-          </div>
-
-          <!-- News 5: Nominations & election buzz -->
-          <div class="news-item">
-            <div class="news-meta"><span>📋 ELECTIONS 2026</span> <span>🔹 Today</span></div>
-            <div class="news-title">175 of 234 nominations cleared across Karur's 4 constituencies; Karur assembly seat sees 83 valid candidates</div>
-            <div class="news-snippet">Scrutiny of nominations wrapped up with high participation. The Karur assembly segment alone drew 108 nominations, of which 83 were accepted. The electoral heat is on as multi-cornered contests take shape, with DMK, AIADMK, and TVK locked in intense campaigns[reference:11].</div>
-            <a href="#" class="read-more">Candidate list analysis →</a>
-          </div>
-        </div>
-
-        <!-- mini weather / live card -->
-        <div class="weather-card">
-          <span style="font-weight: 700;">🌡️ Real-time snapshot — Karur City</span><br>
-          🔥 Max temp: 41°C (feels like 44°C) · 🌧️ Chance of rain: 20% (isolated evening thunderstorm) · 💨 Humidity: 48%
-          <div class="small-note" style="margin-top: 6px;">Source: India Meteorological Department, April 8, 2026 forecast[reference:12]</div>
-        </div>
-        <div class="small-note source-ref">
-          📰 Latest news curated from The Hindu, Times of India, New Indian Express, Lokmat Times, and official court releases.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- additional row: more local highlights / development & cultural snippets -->
-  <div class="card" style="margin-bottom: 0.5rem;">
-    <div class="card-header">
-      <span>🏭⚡</span>
-      <h2>Development & Local Pulse</h2>
-    </div>
-    <div class="card-content">
-      <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: space-between;">
-        <div style="flex:1; min-width: 180px;">
-          <div style="font-weight: 700; color: #2b7a4b;">🏗️ Infra push</div>
-          <div style="font-size: 0.85rem;">₹5,000 crore+ projects announced by CM Stalin for Karur region — new textile parks, road upgrades, and drinking water schemes[reference:13].</div>
-        </div>
-        <div style="flex:1; min-width: 180px;">
-          <div style="font-weight: 700; color: #2b7a4b;">🧵 Textile hub</div>
-          <div style="font-size: 0.85rem;">Karur contributes ~40% of India’s kitchen linen exports. Over 500 export units generate massive employment.</div>
-        </div>
-        <div style="flex:1; min-width: 180px;">
-          <div style="font-weight: 700; color: #2b7a4b;">📖 Heritage</div>
-          <div style="font-size: 0.85rem;">Pasupatheeswarar Temple (7th century), medieval Chera inscriptions, and Amaravathi dam make it a cultural treasure.</div>
-        </div>
-        <div style="flex:1; min-width: 180px;">
-          <div style="font-weight: 700; color: #2b7a4b;">🚌 Bus body cluster</div>
-          <div style="font-size: 0.85rem;">Karur is known as the “bus building capital” — manufactures bodies for state transport corporations across India.</div>
-        </div>
-      </div>
-      <hr>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; color:#5c4b32;">
-        <span>📍 Karur district boundaries: Namakkal (N) | Dindigul (S) | Trichy (E) | Erode (W)</span>
-        <span>📞 District helpline: 1077 (disaster management)</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER with timestamp and sources -->
-  <footer>
-    <p>© 2026 Karur District Information Hub — All data for public awareness. <br>
-    News compiled on <strong>April 8, 2026</strong> from authoritative English and regional sources. <br>
-    For latest official updates, visit <a href="#" style="text-decoration: underline;">karur.nic.in</a> (govt portal) or follow local collectorate announcements.</p>
-    <p class="source-ref" style="margin-top: 0.5rem;">References: The Hindu (Bus stand clearance), Times of India (Nomination scrutiny), New Indian Express (Senthil Balaji/VCK), Lokmat Times (Weather), Magzter/Dailyhunt (Karur stampede updates).</p>
-  </footer>
+<div class="header">
+  <h1>📰 Karur District Live News</h1>
+  <div class="sub">Latest updates • Politics • Weather • Development</div>
+  <div class="date" id="date"></div>
 </div>
+
+<div class="container">
+  <h2>Today's Headlines</h2>
+
+  <div class="grid" id="news"></div>
+
+  <div class="weather">
+    🌡️ <strong>Weather Update:</strong> Karur records around 40–41°C today.  
+    🌧️ Slight chance of evening thunderstorms.  
+    ⚠️ Heatwave advisory in effect — avoid outdoor activity at noon.
+  </div>
+</div>
+
+<div class="footer">
+  Karur News Portal • Updated Daily • 2026
+</div>
+
+<script>
+// DATE
+const today = new Date();
+document.getElementById("date").innerText =
+  today.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+// NEWS DATA (LATEST STYLE)
+const news = [
+  {
+    title: "Election Heat Rises in Karur Constituencies",
+    desc: "High number of nominations filed across 4 assembly segments; multi-cornered contests expected.",
+    time: "9:30 AM",
+    category: "Politics"
+  },
+  {
+    title: "Integrated Bus Stand Project Moves Forward",
+    desc: "High Court allows continuation of major infrastructure project in Karur city.",
+    time: "11:00 AM",
+    category: "Infrastructure"
+  },
+  {
+    title: "Karur Faces Intense Heatwave Conditions",
+    desc: "Temperature crosses 40°C; authorities issue safety advisory for residents.",
+    time: "1:15 PM",
+    category: "Weather"
+  },
+  {
+    title: "Textile Export Units See Increased Global Demand",
+    desc: "Karur’s home textile sector reports strong growth in export orders.",
+    time: "2:30 PM",
+    category: "Economy"
+  },
+  {
+    title: "Relief Measures Continue After Recent Public Incident",
+    desc: "Government announces compensation and investigation continues.",
+    time: "10:00 AM",
+    category: "Public Safety"
+  },
+  {
+    title: "New Road and Water Projects Announced",
+    desc: "State government allocates funds for infrastructure and drinking water schemes.",
+    time: "3:45 PM",
+    category: "Development"
+  }
+];
+
+// RENDER NEWS
+const container = document.getElementById("news");
+
+news.forEach(n => {
+  container.innerHTML += `
+    <div class="card">
+      <div class="meta">
+        <span class="time">${n.time}</span>
+        <span class="category">${n.category}</span>
+      </div>
+      <h3>${n.title}</h3>
+      <p>${n.desc}</p>
+    </div>
+  `;
+});
+</script>
+
 </body>
 </html>
