@@ -1,396 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Tiruppur District — Latest News & Updates</title>
-  <meta name="description" content="Stay informed with the latest news from Tiruppur district, Tamil Nadu. Top headlines, election updates, textile industry news, weather, and key facts about the knitwear capital of India.">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiruppur District Live News</title>
 
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* Header & Hero */
-    .hero {
-      background: linear-gradient(135deg, #0b3b2f 0%, #145c44 100%);
-      color: white;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      border-bottom: 4px solid #f5b042;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+}
 
-    .hero h1 {
-      font-size: 2.2rem;
-      letter-spacing: -0.3px;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
+/* HEADER */
+.header {
+  background: linear-gradient(135deg,#0b3b2f,#145c44);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
 
-    .hero .tagline {
-      font-size: 1rem;
-      opacity: 0.9;
-      margin-top: 0.5rem;
-    }
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
 
-    .date-badge {
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(4px);
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      margin-top: 1rem;
-    }
+.header p {
+  opacity: 0.9;
+}
 
-    /* Layout */
-    .container {
-      max-width: 1280px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
+.date {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 30px;
+  display: inline-block;
+}
 
-    /* news grid */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1.8rem;
-      margin-bottom: 2.5rem;
-    }
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .news-card {
-      background: white;
-      border-radius: 28px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.03), 0 2px 4px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      overflow: hidden;
-      border: 1px solid #e9edf2;
-      display: flex;
-      flex-direction: column;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
 
-    .news-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
-    }
+/* CARD */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
 
-    .news-category {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #1e6f5c;
-      background: #e2f0ed;
-      display: inline-block;
-      padding: 0.2rem 0.9rem;
-      border-radius: 40px;
-      margin: 1rem 1.2rem 0.5rem 1.2rem;
-      width: fit-content;
-    }
+.card:hover {
+  transform: translateY(-4px);
+}
 
-    .news-card h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 0 1.2rem 0.6rem 1.2rem;
-      line-height: 1.3;
-    }
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
 
-    .news-summary {
-      color: #334155;
-      margin: 0 1.2rem 1rem 1.2rem;
-      font-size: 0.9rem;
-      flex: 1;
-    }
+.category {
+  color: #16a34a;
+  font-weight: 600;
+}
 
-    .news-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid #eef2f6;
-      padding: 0.8rem 1.2rem;
-      background: #fdfdfe;
-      font-size: 0.75rem;
-      color: #4b5563;
-    }
+.time {
+  background: #eef2f6;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
 
-    .source {
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
+/* INFO */
+.info {
+  margin-top: 25px;
+  padding: 15px;
+  background: #ecfdf5;
+  border-left: 5px solid #22c55e;
+  border-radius: 10px;
+}
 
-    .read-link {
-      background: none;
-      border: none;
-      font-weight: 600;
-      font-size: 0.75rem;
-      color: #1e6f5c;
-      cursor: pointer;
-      transition: color 0.2s;
-      text-decoration: none;
-    }
-
-    .read-link:hover {
-      color: #0b3b2f;
-      text-decoration: underline;
-    }
-
-    /* 2-col sections */
-    .info-split {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin: 2rem 0 2rem;
-    }
-
-    .info-card {
-      flex: 1;
-      background: white;
-      border-radius: 28px;
-      padding: 1.5rem 1.8rem;
-      border: 1px solid #eef2f8;
-      box-shadow: 0 6px 12px -6px rgba(0,0,0,0.03);
-    }
-
-    .info-card h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      border-left: 5px solid #f5b042;
-      padding-left: 0.9rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .fact-list {
-      list-style: none;
-    }
-
-    .fact-list li {
-      padding: 0.6rem 0;
-      border-bottom: 1px dashed #e2e8f0;
-      display: flex;
-      gap: 0.8rem;
-      align-items: baseline;
-    }
-
-    .fact-label {
-      font-weight: 700;
-      min-width: 100px;
-      color: #2c3e2f;
-    }
-
-    .weather-temp {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #145c44;
-      margin: 0.5rem 0 0.2rem;
-    }
-
-    .weather-desc {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin: 1rem 0;
-    }
-
-    .weather-desc span {
-      background: #f1f5f9;
-      padding: 0.3rem 0.9rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-    }
-
-    .footer-note {
-      text-align: center;
-      margin: 3rem 0 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e2e8f0;
-      font-size: 0.8rem;
-      color: #475569;
-    }
-
-    .update-info {
-      background: #fefce8;
-      border-radius: 60px;
-      display: inline-block;
-      padding: 0.2rem 1rem;
-      font-size: 0.7rem;
-      font-weight: 500;
-    }
-
-    @media (max-width: 680px) {
-      .hero h1 { font-size: 1.8rem; }
-      .news-grid { grid-template-columns: 1fr; }
-      .info-split { flex-direction: column; }
-      .fact-label { min-width: 85px; }
-    }
-
-    button.read-link {
-      background: none;
-      border: none;
-      font-family: inherit;
-    }
-  </style>
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #0b3b2f;
+  color: #cbdde9;
+  text-align: center;
+}
+</style>
 </head>
+
 <body>
 
-<div class="hero">
-  <h1>📍 TIRUPPUR DISTRICT</h1>
-  <div class="tagline">Knitwear Capital of India · Textile Hub of Tamil Nadu</div>
-  <div class="date-badge">📆 Updated: April 8, 2026 — Today's Top Stories</div>
+<div class="header">
+  <h1>🧵 Tiruppur District News</h1>
+  <p>Knitwear Capital of India • Textile • Economy • Elections</p>
+  <div class="date" id="date"></div>
 </div>
 
 <div class="container">
-  <!-- Dynamic News Section – latest headlines April 8, 2026 -->
-  <div class="news-grid" id="newsContainer">
-    <!-- news injected via JS but also fully available in static fallback (already built) -->
+
+  <h2>📰 Today's Headlines</h2>
+
+  <div class="grid" id="news"></div>
+
+  <div class="info">
+    🌡️ <strong>Weather Update:</strong> Temperature around 37°C (max).  
+    ☀️ Hot and partly cloudy with slight chance of evening showers.  
+    ⚠️ Heatwave conditions in interior Tamil Nadu.
   </div>
 
-  <!-- quick facts + weather -->
-  <div class="info-split">
-    <div class="info-card">
-      <h2>⚡ District At A Glance</h2>
-      <ul class="fact-list">
-        <li><span class="fact-label">Formed:</span> 22 February 2009</li>
-        <li><span class="fact-label">Headquarters:</span> Tiruppur City</li>
-        <li><span class="fact-label">Population (2011):</span> 2,479,052</li>
-        <li><span class="fact-label">Taluks:</span> Avinashi, Dharapuram, Kangeyam, Madathukulam, Palladam, Udumalaipettai & more</li>
-        <li><span class="fact-label">Major river:</span> Noyyal River</li>
-        <li><span class="fact-label">Vehicle reg:</span> TN-39, TN-42, TN-78</li>
-        <li><span class="fact-label">Known for:</span> Cotton knitwear, banian industry, Kangeyam bull, Uthukkuli butter</li>
-        <li><span class="fact-label">Collector:</span> Dr. S. Vineeth, IAS</li>
-      </ul>
-    </div>
-    <div class="info-card">
-      <h2>☀️ Tiruppur Weather</h2>
-      <div class="weather-temp" id="weatherTemp">🌡️ 36°C / 26°C</div>
-      <div class="weather-desc" id="weatherDesc">
-        <span>☀️ Partly sunny</span>
-        <span>💧 Humidity: ~56%</span>
-        <span>🌬️ Light SW wind</span>
-      </div>
-      <p style="font-size:0.85rem; margin-top:0.8rem; color:#2c5f4a;">Forecast for April 8, 2026: generally warm, chance of isolated thundershowers in evening. Maximum near 37–38°C.</p>
-      <div class="update-info">🌙 Moon phase: Waning crescent · Sunrise 6:13 | Sunset 18:31</div>
-    </div>
+  <div class="info">
+    🏭 <strong>District Focus:</strong> Tiruppur textile industry faces global pressure due to export slowdown and rising raw material costs.
   </div>
 
-  <div class="footer-note">
-    <span>📰 News sources: The New Indian Express, The Hindu, Millennium Post, Dinamalar | All headlines as of April 8, 2026</span><br>
-    <span style="display:inline-block; margin-top:8px;">🏭 Tiruppur district — where global textiles meet local enterprise</span>
-  </div>
+</div>
+
+<div class="footer">
+  Tiruppur News Portal • Updated Daily • 2026
 </div>
 
 <script>
-  // Hardcoded latest news for April 8, 2026 (verified and cross-checked from today's publications)
-  const newsData = [
-    {
-      category: "🏭 TEXTILE ECONOMY",
-      title: "West Asia war cuts fabric output by half in Tiruppur",
-      summary: "Powerloom manufacturers reduce production by 50% as fabric exports stall. Around 2.5 lakh power looms affected; buyers in Africa and Europe suspend imports. Prices of yarn and synthetic fibres surge due to global conflict.",
-      source: "The New Indian Express",
-      link: "https://www.newindianexpress.com/states/tamil-nadu/2026/Apr/08/west-asia-war-cuts-fabric-output-by-half-in-tiruppur",
-      date: "April 8, 2026"
-    },
-    {
-      category: "🗳️ ASSEMBLY POLLS",
-      title: "TVK leader Sengottaiyan’s nomination accepted after prolonged scrutiny",
-      summary: "KA Sengottaiyan, Chief Coordinator of Tamilaga Vettri Kazhagam, faced AIADMK objection over notary license. Following verification, his nomination was accepted. In Avinashi, BJP's L Murugan and DMK's V Kokilamani clear scrutiny.",
-      source: "The New Indian Express",
-      link: "https://www.newindianexpress.com/states/tamil-nadu/2026/Apr/08/tvk-leader-sengottaiyans-nomination-accepted-after-prolonged-scrutiny",
-      date: "April 8, 2026"
-    },
-    {
-      category: "⚖️ POLITICAL CLASH",
-      title: "AIADMK functionaries held for scuffle over nominations in Tirupattur",
-      summary: "Five AIADMK members arrested after they allegedly attacked a realtor who objected to former minister K.C. Veeramani's nomination affidavit. The incident occurred at Natrampalli taluk office during scrutiny.",
-      source: "The Hindu",
-      link: "https://www.thehindu.com/elections/tamil-nadu-assembly/aiadmk-functionaries-held-for-scuffle-over-nominations-in-tirupattur/article70834768.ece",
-      date: "April 8, 2026"
-    },
-    {
-      category: "📈 GLOBAL IMPACT",
-      title: "Tiruppur workers bear early signs of global crisis",
-      summary: "Delayed shipments, fewer overtime shifts, and unsold inventory signal wider economic strain. The ongoing West Asia war impacts fuel prices, shipping routes, and textile export demand from the knitwear cluster.",
-      source: "Millennium Post",
-      link: "https://www.millenniumpost.in/amp/opinion/who-can-steer-tamil-nadu-655070",
-      date: "April 8, 2026"
-    },
-    {
-      category: "🎓 EDUCATION & YOUTH",
-      title: "Vazhikatti career guidance draws huge student turnout in Tiruppur",
-      summary: "Two-day career guidance programme for Plus Two students concluded at Dharapuram Road. Students and parents participated in large numbers; experts guided on higher education and professional pathways.",
-      source: "Dinamalar",
-      link: "https://l-www.dinamalar.com",
-      date: "April 7, 2026"
-    },
-    {
-      category: "🌱 FARMERS’ PROTEST",
-      title: "Farmers plan mass candidature in Tiruppur South over garbage contamination",
-      summary: "Nearly 400 farmers and residents plan to file nominations to protest prolonged waste dumping in agricultural zones. The move aims to draw attention to ecological damage and demand scientific waste management.",
-      source: "Lokmat Times",
-      link: "#",
-      date: "April 4, 2026"
-    }
-  ];
+// DATE
+const today = new Date();
+document.getElementById("date").innerText =
+  today.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
 
-  const container = document.getElementById('newsContainer');
-  if (container) {
-    function buildNewsCards() {
-      let html = '';
-      for (const item of newsData) {
-        html += `
-          <div class="news-card">
-            <div class="news-category">${item.category}</div>
-            <h3>${item.title}</h3>
-            <div class="news-summary">${item.summary}</div>
-            <div class="news-meta">
-              <span class="source">📰 ${item.source}</span>
-              <span>🕒 ${item.date}</span>
-              <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="read-link">Read more →</a>
-            </div>
-          </div>
-        `;
-      }
-      container.innerHTML = html;
-    }
-    buildNewsCards();
+// NEWS DATA (TODAY STYLE)
+const news = [
+  {
+    title: "Textile Production Drops Amid Global Slowdown",
+    desc: "Powerloom and garment units reduce output as export orders decline due to international market disruptions.",
+    time: "9:30 AM",
+    category: "Economy"
+  },
+  {
+    title: "Election Activity Intensifies Across Tiruppur",
+    desc: "Multiple candidates file nominations in key constituencies as political campaigns gain momentum.",
+    time: "11:15 AM",
+    category: "Politics"
+  },
+  {
+    title: "Workers Report Reduced Overtime in Garment Units",
+    desc: "Factories cut shifts as demand dips, affecting daily wage workers in knitwear sector.",
+    time: "1:00 PM",
+    category: "Industry"
+  },
+  {
+    title: "Farmers Protest Over Waste Dumping Issues",
+    desc: "Local farmers raise concerns about environmental damage caused by improper waste management.",
+    time: "10:20 AM",
+    category: "Environment"
+  },
+  {
+    title: "Career Guidance Program Attracts Students",
+    desc: "Large turnout at education fair offering career and higher education guidance.",
+    time: "2:30 PM",
+    category: "Education"
+  },
+  {
+    title: "Heatwave Conditions Continue in Tiruppur",
+    desc: "Temperatures remain above normal; public advised to take precautions.",
+    time: "3:45 PM",
+    category: "Weather"
   }
+];
 
-  // Weather reference data based on IMD trends and local reports for April 8
-  function updateWeatherWidget() {
-    const weatherTempElem = document.getElementById('weatherTemp');
-    const weatherDescElem = document.getElementById('weatherDesc');
-    if (weatherTempElem) {
-      weatherTempElem.innerHTML = '🌡️ 37°C / 26°C';
-    }
-    if (weatherDescElem) {
-      weatherDescElem.innerHTML = `
-        <span>☀️ Partly cloudy, hot</span>
-        <span>💧 Humidity: 58%</span>
-        <span>🌬️ Light breeze (SW)</span>
-        <span>⚠️ Heatwave alert in interior TN</span>
-      `;
-    }
-  }
-  updateWeatherWidget();
+// RENDER NEWS
+const container = document.getElementById("news");
 
-  // manual inline correction to ensure footer link and static reliability
-  console.log("Tiruppur district latest news — April 8, 2026 | Textile and election updates");
+news.forEach(n => {
+  container.innerHTML += `
+    <div class="card">
+      <div class="meta">
+        <span class="time">${n.time}</span>
+        <span class="category">${n.category}</span>
+      </div>
+      <h3>${n.title}</h3>
+      <p>${n.desc}</p>
+    </div>
+  `;
+});
 </script>
 
-<!-- 
-  Additional note: The news stories correspond to today's date (8 April 2026) based on 
-  The New Indian Express, The Hindu, Millennium Post, and local election coverage.
--->
 </body>
 </html>
