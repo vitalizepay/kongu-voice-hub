@@ -7,8 +7,11 @@ import TrendingSidebar from "@/components/TrendingSidebar";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import { sampleArticles, categories } from "@/data/sampleNews";
+import { explainedArticles } from "@/data/explainedArticles";
 import NewsCard from "@/components/NewsCard";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { BookOpen, ArrowRight, Vote, Clock } from "lucide-react";
 
 export default function Index() {
   return (
