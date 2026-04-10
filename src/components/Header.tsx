@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Menu, X, Sun, Moon } from "lucide-react";
+import { Search, Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,16 +10,25 @@ const navItems = [
   { label: "Politics", path: "/pages/politics.html" },
   { label: "Business", path: "/category/business" },
   { label: "Agriculture", path: "/category/agriculture" },
-  { label: "Education", path: "/category/education" },
-  { label: "Jobs", path: "/category/jobs" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
+];
+
+const districtPages = [
+  { label: "Coimbatore", path: "/pages/coimbatore.html" },
+  { label: "Erode", path: "/pages/erode.html" },
+  { label: "Tiruppur", path: "/pages/tiruppur.html" },
+  { label: "Salem", path: "/pages/salem.html" },
+  { label: "Namakkal", path: "/pages/namakkal.html" },
+  { label: "Karur", path: "/pages/karur.html" },
+  { label: "Nilgiris", path: "/pages/nilgiris.html" },
 ];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [districtOpen, setDistrictOpen] = useState(false);
 
   const toggleDark = () => {
     setDarkMode(!darkMode);
@@ -80,6 +89,21 @@ export default function Header() {
 
         <nav className="hidden lg:flex items-center gap-1 pb-2 px-2 overflow-x-auto">
           {navItems.map(item => renderNavLink(item))}
+          {/* District News Dropdown */}
+          <div className="relative" onMouseEnter={() => setDistrictOpen(true)} onMouseLeave={() => setDistrictOpen(false)}>
+            <button className="px-3 py-1.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors whitespace-nowrap flex items-center gap-1">
+              District News <ChevronDown size={14} />
+            </button>
+            {districtOpen && (
+              <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-xl shadow-lg py-2 min-w-[180px] z-50">
+                {districtPages.map(d => (
+                  <a key={d.label} href={d.path} className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors">
+                    {d.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
         <AnimatePresence>
@@ -99,6 +123,14 @@ export default function Header() {
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="lg:hidden overflow-hidden bg-card border-t border-border">
             <nav className="flex flex-col p-4 gap-1">
               {navItems.map(item => renderNavLink(item, true))}
+              <div className="mt-2 pt-2 border-t border-border">
+                <p className="px-4 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">District News</p>
+                {districtPages.map(d => (
+                  <a key={d.label} href={d.path} onClick={() => setMobileOpen(false)} className="px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors block">
+                    {d.label}
+                  </a>
+                ))}
+              </div>
               <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border">
                 <button onClick={toggleDark} className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground">
                   {darkMode ? <Sun size={18} /> : <Moon size={18} />}

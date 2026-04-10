@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- EZOIC CMP SCRIPT -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiruppur District Live News</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg,#0b3b2f,#145c44);
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.header p {
+  opacity: 0.9;
+}
+
+.date {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.category {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.time {
+  background: #eef2f6;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* INFO */
+.info {
+  margin-top: 25px;
+  padding: 15px;
+  background: #ecfdf5;
+  border-left: 5px solid #22c55e;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #0b3b2f;
+  color: #cbdde9;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🧵 Tiruppur District News</h1>
+  <p>Knitwear Capital of India • Textile • Economy • Elections</p>
+  <div class="date" id="date"></div>
+</div>
+
+<div class="container">
+
+  <h2>📰 Today's Headlines</h2>
+
+  <div class="grid" id="news"></div>
+
+  <div class="info">
+    🌡️ <strong>Weather Update:</strong> Temperature around 37°C (max).  
+    ☀️ Hot and partly cloudy with slight chance of evening showers.  
+    ⚠️ Heatwave conditions in interior Tamil Nadu.
+  </div>
+
+  <div class="info">
+    🏭 <strong>District Focus:</strong> Tiruppur textile industry faces global pressure due to export slowdown and rising raw material costs.
+  </div>
+
+</div>
+
+<div class="footer">
+  Tiruppur News Portal • Updated Daily • 2026
+</div>
+
+<script>
+// DATE
+const today = new Date();
+document.getElementById("date").innerText =
+  today.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+// NEWS DATA (TODAY STYLE)
+const news = [
+  {
+    title: "Textile Production Drops Amid Global Slowdown",
+    desc: "Powerloom and garment units reduce output as export orders decline due to international market disruptions.",
+    time: "9:30 AM",
+    category: "Economy"
+  },
+  {
+    title: "Election Activity Intensifies Across Tiruppur",
+    desc: "Multiple candidates file nominations in key constituencies as political campaigns gain momentum.",
+    time: "11:15 AM",
+    category: "Politics"
+  },
+  {
+    title: "Workers Report Reduced Overtime in Garment Units",
+    desc: "Factories cut shifts as demand dips, affecting daily wage workers in knitwear sector.",
+    time: "1:00 PM",
+    category: "Industry"
+  },
+  {
+    title: "Farmers Protest Over Waste Dumping Issues",
+    desc: "Local farmers raise concerns about environmental damage caused by improper waste management.",
+    time: "10:20 AM",
+    category: "Environment"
+  },
+  {
+    title: "Career Guidance Program Attracts Students",
+    desc: "Large turnout at education fair offering career and higher education guidance.",
+    time: "2:30 PM",
+    category: "Education"
+  },
+  {
+    title: "Heatwave Conditions Continue in Tiruppur",
+    desc: "Temperatures remain above normal; public advised to take precautions.",
+    time: "3:45 PM",
+    category: "Weather"
+  }
+];
+
+// RENDER NEWS
+const container = document.getElementById("news");
+
+news.forEach(n => {
+  container.innerHTML += `
+    <div class="card">
+      <div class="meta">
+        <span class="time">${n.time}</span>
+        <span class="category">${n.category}</span>
+      </div>
+      <h3>${n.title}</h3>
+      <p>${n.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

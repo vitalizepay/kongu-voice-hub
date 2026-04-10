@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- EZOIC CMP SCRIPT -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karur District Live News</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f6f8fb;
+  color: #1e2a3e;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg,#1f5e3a,#2b7a4b);
+  color: white;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.sub {
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.date {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.category {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.time {
+  background: #eef2f6;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* WEATHER */
+.weather {
+  margin-top: 25px;
+  padding: 15px;
+  background: #eef3ea;
+  border-left: 5px solid #f4a261;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #1f5e3a;
+  color: #cbdde9;
+  text-align: center;
+  font-size: 0.85rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>📰 Karur District Live News</h1>
+  <div class="sub">Latest updates • Politics • Weather • Development</div>
+  <div class="date" id="date"></div>
+</div>
+
+<div class="container">
+  <h2>Today's Headlines</h2>
+
+  <div class="grid" id="news"></div>
+
+  <div class="weather">
+    🌡️ <strong>Weather Update:</strong> Karur records around 40–41°C today.  
+    🌧️ Slight chance of evening thunderstorms.  
+    ⚠️ Heatwave advisory in effect — avoid outdoor activity at noon.
+  </div>
+</div>
+
+<div class="footer">
+  Karur News Portal • Updated Daily • 2026
+</div>
+
+<script>
+// DATE
+const today = new Date();
+document.getElementById("date").innerText =
+  today.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+// NEWS DATA (LATEST STYLE)
+const news = [
+  {
+    title: "Election Heat Rises in Karur Constituencies",
+    desc: "High number of nominations filed across 4 assembly segments; multi-cornered contests expected.",
+    time: "9:30 AM",
+    category: "Politics"
+  },
+  {
+    title: "Integrated Bus Stand Project Moves Forward",
+    desc: "High Court allows continuation of major infrastructure project in Karur city.",
+    time: "11:00 AM",
+    category: "Infrastructure"
+  },
+  {
+    title: "Karur Faces Intense Heatwave Conditions",
+    desc: "Temperature crosses 40°C; authorities issue safety advisory for residents.",
+    time: "1:15 PM",
+    category: "Weather"
+  },
+  {
+    title: "Textile Export Units See Increased Global Demand",
+    desc: "Karur’s home textile sector reports strong growth in export orders.",
+    time: "2:30 PM",
+    category: "Economy"
+  },
+  {
+    title: "Relief Measures Continue After Recent Public Incident",
+    desc: "Government announces compensation and investigation continues.",
+    time: "10:00 AM",
+    category: "Public Safety"
+  },
+  {
+    title: "New Road and Water Projects Announced",
+    desc: "State government allocates funds for infrastructure and drinking water schemes.",
+    time: "3:45 PM",
+    category: "Development"
+  }
+];
+
+// RENDER NEWS
+const container = document.getElementById("news");
+
+news.forEach(n => {
+  container.innerHTML += `
+    <div class="card">
+      <div class="meta">
+        <span class="time">${n.time}</span>
+        <span class="category">${n.category}</span>
+      </div>
+      <h3>${n.title}</h3>
+      <p>${n.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

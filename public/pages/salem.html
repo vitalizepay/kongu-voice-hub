@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- EZOIC CMP SCRIPT -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salem District Live News</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#f1f5f9;
+}
+
+/* HERO */
+.hero {
+    background:linear-gradient(135deg,#065f46,#134e4a);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.hero h1 { font-size:2.5rem; margin-bottom:10px; }
+.hero p { opacity:0.9; }
+
+.container {
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* NEWS */
+.news-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card {
+    background:white;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.06);
+    transition:0.2s;
+}
+
+.card:hover { transform:translateY(-5px); }
+
+.time {
+    font-size:0.8rem;
+    color:#16a34a;
+    margin-bottom:6px;
+}
+
+.title {
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.desc {
+    font-size:0.9rem;
+    color:#475569;
+}
+
+.topbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.btn {
+    padding:6px 14px;
+    border-radius:20px;
+    border:1px solid #cbd5f5;
+    background:white;
+    cursor:pointer;
+}
+
+/* FOOTER */
+.footer {
+    margin-top:30px;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>Salem District</h1>
+    <p>Steel City • Mango Capital • Live Updates</p>
+    <p id="date"></p>
+</div>
+
+<div class="container">
+
+<div class="topbar">
+    <h2>📰 Today's Headlines</h2>
+    <button class="btn" onclick="loadNews()">Refresh</button>
+</div>
+
+<div id="news" class="news-grid"></div>
+
+</div>
+
+<div class="footer">
+    © 2026 Salem Live News Portal
+</div>
+
+<script>
+
+// Date
+const now = new Date();
+document.getElementById("date").innerText =
+    now.toDateString() + " • " + now.toLocaleTimeString();
+
+// Fallback news (today realistic)
+const fallback = [
+{
+title:"Yercaud sees surge in tourists after light rainfall",
+desc:"Cool climate attracts weekend visitors; police deploy additional safety patrols.",
+time:"09:15 AM"
+},
+{
+title:"Salem mango arrivals increase in wholesale markets",
+desc:"Farmers report good yield; prices remain stable across Tamil Nadu.",
+time:"10:40 AM"
+},
+{
+title:"New flyover plan announced to ease Salem traffic",
+desc:"State govt approves proposal near Five Roads junction.",
+time:"11:20 AM"
+},
+{
+title:"Salem Steel Plant reports rise in production output",
+desc:"Officials highlight improved efficiency and export demand.",
+time:"12:05 PM"
+},
+{
+title:"Free medical camp benefits 900 residents",
+desc:"Health department conducts large-scale rural outreach program.",
+time:"08:50 AM"
+},
+{
+title:"Heavy rain warning issued for Salem district",
+desc:"IMD predicts showers across hill regions and nearby plains.",
+time:"01:10 PM"
+}
+];
+
+// Render
+function render(newsData) {
+    const container = document.getElementById("news");
+    container.innerHTML = "";
+
+    newsData.forEach(n => {
+        container.innerHTML += `
+        <div class="card">
+            <div class="time">Today • ${n.time}</div>
+            <div class="title">${n.title}</div>
+            <div class="desc">${n.desc}</div>
+        </div>
+        `;
+    });
+}
+
+// Load news (can plug API later)
+function loadNews() {
+    render(fallback);
+}
+
+// Init
+loadNews();
+
+</script>
+
+</body>
+</html>

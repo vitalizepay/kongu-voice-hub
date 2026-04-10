@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- EZOIC CMP SCRIPT -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nilgiris District Live News</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #eef7f0;
+  color: #1b3a1f;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg,#1b5e20,#2e7d32);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+.date {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.category {
+  color: #ef6c00;
+  font-weight: 600;
+}
+
+.time {
+  background: #eef2f6;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* SIDEBAR INFO */
+.info {
+  margin-top: 25px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-left: 5px solid #66bb6a;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #1b5e20;
+  color: #cfe9cd;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>🌿 Nilgiris District News</h1>
+  <p>Queen of Hill Stations • Live Updates • Environment • Tourism</p>
+  <div class="date" id="date"></div>
+</div>
+
+<div class="container">
+
+  <h2>📰 Today's Headlines</h2>
+
+  <div class="grid" id="news"></div>
+
+  <div class="info">
+    🌦️ <strong>Weather Update:</strong> Heavy rainfall across Ooty, Gudalur & Kundha.  
+    ⚠️ Landslide alerts in ghat roads.  
+    🌡️ Temperature ranges between 10°C – 18°C.
+  </div>
+
+  <div class="info">
+    🌱 <strong>District Focus:</strong> Sustainable tourism and eco-protection measures are being strengthened to preserve the fragile Nilgiri Biosphere ecosystem.
+  </div>
+
+</div>
+
+<div class="footer">
+  Nilgiris News Portal • Updated Daily • 2026
+</div>
+
+<script>
+// DATE
+const today = new Date();
+document.getElementById("date").innerText =
+  today.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+// NEWS DATA (LATEST STYLE)
+const news = [
+  {
+    title: "Heavy Rains Continue in Nilgiris, Schools Closed in Multiple Taluks",
+    desc: "Authorities announce holidays in Ooty, Gudalur and Kundha regions due to persistent rainfall and road blockages.",
+    time: "8:30 AM",
+    category: "Weather"
+  },
+  {
+    title: "Madras High Court Bans Heli-Tourism in Nilgiris",
+    desc: "Court emphasizes protection of fragile ecosystem and restricts commercial helicopter rides.",
+    time: "11:00 AM",
+    category: "Environment"
+  },
+  {
+    title: "Tea Workers Protest for Wage Revision",
+    desc: "Thousands of estate workers demand fair wages and better working conditions.",
+    time: "1:15 PM",
+    category: "Labour"
+  },
+  {
+    title: "Nilgiri Mountain Railway Resumes Services",
+    desc: "UNESCO heritage toy train back after temporary suspension due to landslides.",
+    time: "10:20 AM",
+    category: "Tourism"
+  },
+  {
+    title: "Sustainable Tourism Plan Launched in Ooty",
+    desc: "District administration promotes eco-tourism and heritage trails under new initiatives.",
+    time: "2:30 PM",
+    category: "Development"
+  },
+  {
+    title: "Wildlife Movement Increases Near Human Settlements",
+    desc: "Forest department issues alert as elephants spotted near villages.",
+    time: "4:00 PM",
+    category: "Wildlife"
+  }
+];
+
+// RENDER NEWS
+const container = document.getElementById("news");
+
+news.forEach(n => {
+  container.innerHTML += `
+    <div class="card">
+      <div class="meta">
+        <span class="time">${n.time}</span>
+        <span class="category">${n.category}</span>
+      </div>
+      <h3>${n.title}</h3>
+      <p>${n.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
