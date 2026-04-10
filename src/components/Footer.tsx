@@ -27,36 +27,34 @@ export default function Footer() {
               <a href="/pages/politics.html" className="hover:opacity-100 hover:text-primary transition-colors">Politics</a>
               <Link to="/" className="hover:opacity-100 hover:text-primary transition-colors">Business</Link>
               <Link to="/" className="hover:opacity-100 hover:text-primary transition-colors">Agriculture</Link>
-              <Link to="/" className="hover:opacity-100 hover:text-primary transition-colors">Jobs</Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-display font-bold mb-4">District News</h4>
+            <div className="flex flex-col gap-2 text-sm opacity-70">
+              <a href="/pages/coimbatore.html" className="hover:opacity-100 hover:text-primary transition-colors">Coimbatore</a>
+              <a href="/pages/erode.html" className="hover:opacity-100 hover:text-primary transition-colors">Erode</a>
+              <a href="/pages/tiruppur.html" className="hover:opacity-100 hover:text-primary transition-colors">Tiruppur</a>
+              <a href="/pages/salem.html" className="hover:opacity-100 hover:text-primary transition-colors">Salem</a>
+              <a href="/pages/namakkal.html" className="hover:opacity-100 hover:text-primary transition-colors">Namakkal</a>
+              <a href="/pages/karur.html" className="hover:opacity-100 hover:text-primary transition-colors">Karur</a>
+              <a href="/pages/nilgiris.html" className="hover:opacity-100 hover:text-primary transition-colors">Nilgiris</a>
             </div>
           </div>
 
           <div>
             <h4 className="font-display font-bold mb-4">Company</h4>
-            <div className="flex flex-col gap-2 text-sm opacity-70">
+            <div className="flex flex-col gap-2 text-sm opacity-70 mb-5">
               <Link to="/about" className="hover:opacity-100 hover:text-primary transition-colors">About Us</Link>
               <Link to="/contact" className="hover:opacity-100 hover:text-primary transition-colors">Contact Us</Link>
               <Link to="/privacy-policy" className="hover:opacity-100 hover:text-primary transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:opacity-100 hover:text-primary transition-colors">Terms & Conditions</Link>
               <Link to="/disclaimer" className="hover:opacity-100 hover:text-primary transition-colors">Disclaimer</Link>
             </div>
-          </div>
-
-          <div>
-            <h4 className="font-display font-bold mb-4">Stay Connected</h4>
-            <div className="space-y-3 text-sm opacity-70 mb-5">
+            <div className="space-y-2 text-sm opacity-70">
               <p className="flex items-center gap-2"><MapPin size={14} /> Coimbatore, Tamil Nadu</p>
-              <p className="flex items-center gap-2"><Phone size={14} /> +91 422 XXX XXXX</p>
               <p className="flex items-center gap-2"><Mail size={14} /> editor@kongutimes.in</p>
-            </div>
-            <div>
-              <p className="text-sm font-medium mb-2">Newsletter</p>
-              <div className="flex gap-2">
-                <input type="email" placeholder="Your email" className="flex-1 px-3 py-2 rounded-lg bg-background/10 border border-background/20 text-sm placeholder:opacity-50 focus:outline-none focus:border-primary" />
-                <button className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
-                  Subscribe
-                </button>
-              </div>
             </div>
           </div>
         </div>
