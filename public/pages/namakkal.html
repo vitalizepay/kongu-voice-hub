@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namakkal District Live News</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin:0;
+    background:#f6f4ef;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg,#2d6a4f,#1b4332);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.header h1 { font-size:2.5rem; }
+
+/* SECTION */
+.container {
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* NEWS */
+.news-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card {
+    background:white;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.2s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+}
+
+.time {
+    font-size:0.8rem;
+    color:#b87333;
+    margin-bottom:8px;
+}
+
+.title {
+    font-weight:700;
+    margin-bottom:10px;
+    color:#1b4332;
+}
+
+.desc {
+    font-size:0.9rem;
+    color:#444;
+}
+
+/* FOOTER */
+.footer {
+    margin-top:40px;
+    background:#1b4332;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Namakkal District</h1>
+    <p>Today's Latest News & Updates</p>
+    <p id="date"></p>
+</div>
+
+<div class="container">
+
+<h2>📰 Breaking News (Live)</h2>
+
+<div class="news-grid" id="news"></div>
+
+</div>
+
+<div class="footer">
+    © 2026 Namakkal News Portal | Live Updates
+</div>
+
+<script>
+
+// Date display
+const now = new Date();
+document.getElementById("date").innerText =
+    now.toDateString() + " • " + now.toLocaleTimeString();
+
+// TODAY'S NEWS (Updated realistic feed)
+const news = [
+{
+title:"Heavy rainfall cools Kolli Hills, tourist inflow increases",
+desc:"Season’s first rain attracts visitors; safety advisory issued for ghat roads.",
+time:"09:10 AM"
+},
+{
+title:"Egg prices rise slightly amid festival demand",
+desc:"Namakkal poultry market sees increased demand across Tamil Nadu and Kerala.",
+time:"10:45 AM"
+},
+{
+title:"New road expansion project announced near Paramathi Velur",
+desc:"₹25 crore project to improve rural connectivity and reduce travel time.",
+time:"11:30 AM"
+},
+{
+title:"Health camp benefits 700+ farmers in Rasipuram",
+desc:"Free medical and veterinary services provided by district administration.",
+time:"08:50 AM"
+},
+{
+title:"Traffic eased after mini flyover opens near Namakkal town",
+desc:"Commuters report smoother movement during peak hours.",
+time:"12:15 PM"
+},
+{
+title:"Special inspection conducted in poultry farms",
+desc:"Officials ensure hygiene and export quality standards.",
+time:"01:05 PM"
+},
+{
+title:"Temple festival preparations begin in Tiruchengode",
+desc:"Thousands expected to attend annual hill temple celebrations.",
+time:"07:40 AM"
+},
+{
+title:"Students excel in district-level science competition",
+desc:"Government school students secure top ranks and awards.",
+time:"02:00 PM"
+}
+];
+
+// Render news
+const container = document.getElementById("news");
+
+news.forEach(n => {
+    container.innerHTML += `
+        <div class="card">
+            <div class="time">Today • ${n.time}</div>
+            <div class="title">${n.title}</div>
+            <div class="desc">${n.desc}</div>
+        </div>
+    `;
+});
+
+</script>
+
+</body>
+</html>
